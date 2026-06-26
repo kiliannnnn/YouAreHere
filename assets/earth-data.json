@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Planetary readings",
+    "updated": "2026-06-26",
+    "source": "Illustrative sample dataset — replace with a live feed. Schema is stable; the globe re-colors itself from these values.",
+    "note": "Land dots warm toward the dominant nearby event hue; severity (1–5) and proximity drive the blend. Global climate metrics gently shift the whole sphere."
+  },
+  "population": {
+    "asOf": "2026-06-26T00:00:00Z",
+    "count": 8170500000,
+    "perSecond": 2.3
+  },
+  "climate": [
+    { "key": "temp",   "label": "Global temp anomaly", "value": 1.32,  "unit": "°C", "trend": "up",   "context": "vs. 1850–1900 average" },
+    { "key": "co2",    "label": "Atmospheric CO\u2082",   "value": 426,   "unit": "ppm","trend": "up",   "context": "monthly mean" },
+    { "key": "sea",    "label": "Mean sea level",      "value": 104,   "unit": "mm", "trend": "up",   "context": "rise since 1993" },
+    { "key": "ice",    "label": "Arctic sea ice",      "value": 4.2,   "unit": "M km\u00b2","trend": "down","context": "annual minimum" },
+    { "key": "forest", "label": "Tree cover loss",     "value": 3.7,   "unit": "M ha","trend": "up",   "context": "past year" }
+  ],
+  "events": [
+    { "id": "e01", "type": "wildfire",   "name": "Boreal wildfires",        "place": "Northern Canada",      "lat": 60.2,  "lon": -115.0, "severity": 4, "date": "2026-06-18" },
+    { "id": "e02", "type": "wildfire",   "name": "Mediterranean fires",     "place": "Greece",               "lat": 38.5,  "lon": 23.0,   "severity": 3, "date": "2026-06-22" },
+    { "id": "e03", "type": "flood",      "name": "Monsoon flooding",        "place": "Bangladesh",           "lat": 23.7,  "lon": 90.4,   "severity": 5, "date": "2026-06-20" },
+    { "id": "e04", "type": "flood",      "name": "River flooding",          "place": "Rhine Valley",         "lat": 50.9,  "lon": 7.0,    "severity": 2, "date": "2026-06-15" },
+    { "id": "e05", "type": "cyclone",    "name": "Tropical cyclone Mawar",  "place": "Western Pacific",      "lat": 14.0,  "lon": 134.0,  "severity": 4, "date": "2026-06-24" },
+    { "id": "e06", "type": "cyclone",    "name": "Cyclone offshore",        "place": "Bay of Bengal",        "lat": 16.0,  "lon": 88.0,   "severity": 3, "date": "2026-06-21" },
+    { "id": "e07", "type": "earthquake", "name": "M6.8 earthquake",         "place": "Sumatra",              "lat": 0.5,   "lon": 99.0,   "severity": 4, "date": "2026-06-19" },
+    { "id": "e08", "type": "earthquake", "name": "M5.9 earthquake",         "place": "Central Türkiye",      "lat": 38.8,  "lon": 35.5,   "severity": 3, "date": "2026-06-12" },
+    { "id": "e09", "type": "drought",    "name": "Prolonged drought",       "place": "Horn of Africa",       "lat": 4.0,   "lon": 42.0,   "severity": 5, "date": "2026-06-01" },
+    { "id": "e10", "type": "drought",    "name": "Reservoir drawdown",      "place": "Southwest US",         "lat": 36.0,  "lon": -113.0, "severity": 3, "date": "2026-06-10" },
+    { "id": "e11", "type": "heatwave",   "name": "Record heatwave",         "place": "South Asia",           "lat": 28.6,  "lon": 77.2,   "severity": 5, "date": "2026-06-17" },
+    { "id": "e12", "type": "heatwave",   "name": "Heat dome",               "place": "Iberian Peninsula",    "lat": 40.0,  "lon": -3.7,   "severity": 3, "date": "2026-06-23" },
+    { "id": "e13", "type": "volcano",    "name": "Volcanic activity",       "place": "Iceland",              "lat": 64.8,  "lon": -22.0,  "severity": 2, "date": "2026-06-09" },
+    { "id": "e14", "type": "wildfire",   "name": "Amazon fires",            "place": "Brazil",               "lat": -8.0,  "lon": -62.0,  "severity": 3, "date": "2026-06-16" },
+    { "id": "e15", "type": "flood",      "name": "Flash flooding",          "place": "East Africa",          "lat": -1.3,  "lon": 36.8,   "severity": 2, "date": "2026-06-14" },
+    { "id": "e16", "type": "cyclone",    "name": "Severe storms",           "place": "US Midwest",           "lat": 39.0,  "lon": -94.6,  "severity": 2, "date": "2026-06-25" }
+  ]
+}

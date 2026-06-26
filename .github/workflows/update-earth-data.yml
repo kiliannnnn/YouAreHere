@@ -1,0 +1,31 @@
+name: Update Earth Data
+
+# Refreshes assets/earth-data.json from public data feeds once a day, and on demand.
+on:
+  schedule:
+    - cron: '17 5 * * *'      # 05:17 UTC daily (off the top of the hour to dodge load spikes)
+  workflow_dispatch: {}        # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write              # allows the job to commit the refreshed JSON back to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build earth-data.json
+        run: node scripts/build-earth-data.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name  "earth-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/earth-data.json
+          git diff --staged --quiet || git commit -m "data: refresh readings ($(date -u +%FT%TZ))"
+          git push
