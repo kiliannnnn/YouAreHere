@@ -20,6 +20,8 @@ jobs:
           node-version: '20'
 
       - name: Build earth-data.json
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
         run: node scripts/build-earth-data.mjs
 
       - name: Commit changes

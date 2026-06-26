@@ -17,7 +17,7 @@ const OUT = 'assets/earth-data.json';
 // Update these from the cited sources when new figures are published; the script keeps them
 // if it can't fetch a fresher number automatically.
 const CLIMATE_FALLBACK = [
-  { key: 'temp',   label: 'Global temp anomaly', value: 1.32, unit: '°C',     trend: 'up',   context: 'vs. 1850–1900 average', source: 'NASA GISTEMP' },
+  { key: 'temp',   label: 'Global temp anomaly', value: 1.32, unit: '°C',     trend: 'up',   context: 'vs. 1951–1980 mean', source: 'NASA GISTEMP' },
   { key: 'co2',    label: 'Atmospheric CO\u2082', value: 426,  unit: 'ppm',    trend: 'up',   context: 'monthly mean',           source: 'NOAA GML, Mauna Loa' },
   { key: 'sea',    label: 'Mean sea level',      value: 104,  unit: 'mm',     trend: 'up',   context: 'rise since 1993',        source: 'NASA Sea Level Change' },
   { key: 'ice',    label: 'Arctic sea ice',      value: 4.2,  unit: 'M km\u00b2', trend: 'down', context: 'annual minimum',       source: 'NSIDC Sea Ice Index' },
@@ -88,30 +88,61 @@ async function eonet() {
   return out;
 }
 
-// GDACS — multi-hazard alert levels (green/orange/red). Optional; skipped silently on failure.
-const GDACS_MAP = { EQ: 'earthquake', TC: 'cyclone', FL: 'flood', DR: 'drought', VO: 'volcano', WF: 'wildfire' };
-async function gdacs() {
-  const d = await getJSON('https://www.gdacs.org/gdacsapi/api/events/geteventlist/MAP');
-  return (d.features || []).map(f => {
-    const p = f.properties || {};
-    const type = GDACS_MAP[p.eventtype];
-    if (!type) return null;
-    const [lon, lat] = f.geometry.coordinates;
-    const sev = p.alertlevel === 'Red' ? 5 : p.alertlevel === 'Orange' ? 3 : 2;
+// NASA FIRMS — global active-fire detections (VIIRS). Thousands of pixels, so we bin them into
+// hotspots and weight severity by fire radiative power (FRP). Needs a free MAP_KEY via env var;
+// if unset, it's skipped silently and EONET's (US-centric) wildfires are used instead.
+async function firms() {
+  const key = process.env.FIRMS_MAP_KEY;
+  if (!key) { console.warn('FIRMS: no FIRMS_MAP_KEY set — skipping global fires'); return []; }
+  const csv = await getText(`https://firms.modaps.eosdis.nasa.gov/api/area/csv/${key}/VIIRS_SNPP_NRT/world/2`);
+  const lines = csv.trim().split('\n');
+  if (lines.length < 2) return [];
+  const head = lines[0].split(',');
+  const iLat = head.indexOf('latitude'), iLon = head.indexOf('longitude'),
+        iFrp = head.indexOf('frp'), iConf = head.indexOf('confidence'), iDate = head.indexOf('acq_date');
+  if (iLat < 0 || iLon < 0) { console.warn('FIRMS: unexpected CSV header'); return []; }
+  const cells = new Map();
+  for (let r = 1; r < lines.length; r++) {
+    const c = lines[r].split(',');
+    const conf = c[iConf];
+    if (conf === 'l' || conf === 'L') continue;              // drop low-confidence (VIIRS letter scale)
+    if (/^\d+$/.test(conf) && +conf < 50) continue;          // drop low-confidence (MODIS numeric scale)
+    const lat = +c[iLat], lon = +c[iLon], frp = +c[iFrp] || 0;
+    if (!isFinite(lat) || !isFinite(lon)) continue;
+    const gk = Math.round(lat / 1.5) + ',' + Math.round(lon / 1.5);  // ~165 km bins
+    let cell = cells.get(gk);
+    if (!cell) { cell = { sx: 0, sy: 0, wn: 0, n: 0, frp: 0, date: '' }; cells.set(gk, cell); }
+    const w = frp + 1;
+    cell.sx += lon * w; cell.sy += lat * w; cell.wn += w;
+    cell.n++; cell.frp += frp;
+    const d = c[iDate]; if (d > cell.date) cell.date = d;
+  }
+  const arr = [...cells.values()].filter(c => c.n >= 3);      // need a few detections to count as a hotspot
+  arr.sort((a, b) => b.frp - a.frp);
+  return arr.slice(0, 22).map((c, i) => {
+    const lon = c.sx / c.wn, lat = c.sy / c.wn;
+    const sev = c.frp > 600 ? 5 : c.frp > 250 ? 4 : c.frp > 90 ? 3 : c.frp > 30 ? 2 : 1;
     return {
-      id: 'gdacs-' + p.eventid, type,
-      name: p.name || p.htmldescription || `${type} event`,
-      place: p.country || '', lat, lon, severity: sev,
-      date: (p.fromdate || new Date().toISOString()).slice(0, 10)
+      id: `firms-${i}-${Math.round(lat)}_${Math.round(lon)}`, type: 'wildfire',
+      name: 'Active wildfires', place: '',
+      lat: +lat.toFixed(3), lon: +lon.toFixed(3), severity: sev,
+      date: c.date || new Date().toISOString().slice(0, 10)
     };
-  }).filter(Boolean);
+  });
 }
 
 function dedupeAndCap(events) {
-  // drop near-duplicates (same type within ~1.2°) keeping the higher severity
+  // guard: only finite, in-range coordinates ever reach the globe (rejects polygon/garbage geometry)
+  const valid = events.filter(e =>
+    Number.isFinite(e.lat) && Number.isFinite(e.lon) &&
+    Math.abs(e.lat) <= 90 && Math.abs(e.lon) <= 180);
+  // drop exact id duplicates, then near-duplicates (same type within ~1.2°), keeping higher severity
+  const byId = new Set();
   const kept = [];
-  for (const e of events.sort((a, b) => b.severity - a.severity || (a.date < b.date ? 1 : -1))) {
+  for (const e of valid.sort((a, b) => b.severity - a.severity || (a.date < b.date ? 1 : -1))) {
+    if (byId.has(e.id)) continue;
     if (kept.some(k => k.type === e.type && Math.abs(k.lat - e.lat) < 1.2 && Math.abs(k.lon - e.lon) < 1.2)) continue;
+    byId.add(e.id);
     kept.push(e);
     if (kept.length >= MAX_EVENTS) break;
   }
@@ -161,15 +192,19 @@ async function main() {
   let prev = {};
   try { prev = JSON.parse(await readFile(OUT, 'utf8')); } catch {}
 
-  const results = await Promise.allSettled([usgsQuakes(), eonet(), gdacs()]);
+  const results = await Promise.allSettled([usgsQuakes(), eonet(), firms()]);
   let events = [];
-  const names = ['USGS', 'EONET', 'GDACS'];
+  const names = ['USGS', 'EONET', 'FIRMS'];
   results.forEach((r, i) => {
     if (r.status === 'fulfilled') { events.push(...r.value); console.log(`${names[i]}: ${r.value.length}`); }
     else console.warn(`${names[i]} failed:`, r.reason?.message);
   });
   if (!events.length && prev.events) { console.warn('all event feeds failed — keeping previous events'); events = prev.events; }
-  else events = dedupeAndCap(events);
+  else {
+    // if FIRMS supplied global fires, drop EONET's US-centric wildfires to avoid double coverage
+    if (events.some(e => e.id.startsWith('firms-'))) events = events.filter(e => !(e.id.startsWith('eonet-') && e.type === 'wildfire'));
+    events = dedupeAndCap(events);
+  }
 
   const climate = await buildClimate(prev.climate);
 
@@ -179,7 +214,7 @@ async function main() {
     meta: {
       title: 'Planetary readings',
       updated: now.toISOString().slice(0, 10),
-      source: 'USGS · NASA EONET · GDACS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.',
+      source: 'USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.',
       note: 'Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend.'
     },
     population: {

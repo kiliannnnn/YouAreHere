@@ -10,15 +10,16 @@ from authoritative public feeds, so the readings stay current with no backend to
 | Reading            | Source                                  | Notes |
 |--------------------|-----------------------------------------|-------|
 | Earthquakes        | USGS real-time GeoJSON                   | magnitude → severity 1–5 |
-| Wildfires / storms / volcanoes / floods / drought | NASA EONET v3 | open-event tracker |
-| Multi-hazard alerts| GDACS (optional)                        | green/orange/red → severity |
+| Wildfires (global) | NASA FIRMS (VIIRS active fire)           | needs free MAP_KEY; clustered into hotspots, severity by FRP |
+| Storms / volcanoes / floods / drought | NASA EONET v3        | open-event tracker, browser-fetchable |
 | CO₂                | NOAA Global Monitoring Lab (Mauna Loa)  | latest monthly mean |
 | Temp anomaly       | NASA GISTEMP                            | latest month, °C |
 | Sea level / ice / forest | maintained constants              | update from cited sources (slow-moving) |
 | Population         | UN WPP anchor + per-second extrapolation| globe tickers it live from `asOf` |
 
 Each feed is fetched in its own try/catch — if one is down, the previous value is kept,
-so the file never ends up broken or empty.
+so the file never ends up broken or empty. A final validation step drops any event whose
+coordinates aren't finite and in range, so malformed geometry can never reach the globe.
 
 `.github/workflows/update-earth-data.yml` runs the script daily (05:17 UTC) and on demand,
 then commits the refreshed JSON back to the repo.
@@ -26,11 +27,15 @@ then commits the refreshed JSON back to the repo.
 ## Setup (one time)
 
 1. Create a GitHub repo and push this project to it (the whole folder is fine).
-2. In **Settings → Actions → General → Workflow permissions**, choose **Read and write permissions**
+2. **(Optional, for global wildfires)** Get a free FIRMS map key at
+   <https://firms.modaps.eosdis.nasa.gov/api/map_key/> and add it to the repo under
+   **Settings → Secrets and variables → Actions → New repository secret**, named `FIRMS_MAP_KEY`.
+   Without it, the pipeline still runs and falls back to EONET wildfires (US-centric).
+3. In **Settings → Actions → General → Workflow permissions**, choose **Read and write permissions**
    (the workflow already requests `contents: write`, but the repo setting must allow it).
-3. Go to the **Actions** tab → **Update Earth Data** → **Run workflow** to do a first run now.
+4. Go to the **Actions** tab → **Update Earth Data** → **Run workflow** to do a first run now.
    After that it runs automatically every day.
-4. Host the site (e.g. GitHub Pages). The published `earth-data.json` updates itself each day,
+5. Host the site (e.g. GitHub Pages). The published `earth-data.json` updates itself each day,
    and the globe re-colors on next load.
 
 ## Tuning
