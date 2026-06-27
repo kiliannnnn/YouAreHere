@@ -32,7 +32,7 @@
     #yah-botleft{ bottom:24px; left:24px; }
     #yah-botright{ bottom:24px; right:24px; }
   }
-  @media (max-width:680px){
+  @media (max-width:620px){
     #yah-head{ top:16px; left:16px; right:16px; }
     #yah-head .yah-eyebrow{ display:none; }
     #yah-head h1{ font-size:clamp(26px,9vw,38px) !important; }
@@ -41,25 +41,24 @@
     #yah-topright .yah-eyebrow{ font-size:10px; }
     #yah-clock{ font-size:21px !important; margin-top:5px !important; }
     #yah-sky{ font-size:9.5px !important; }
-    /* bottom controls become full-width stacked rows so the three clusters never overlap */
-    #yah-botleft{ left:16px; right:16px; bottom:150px; pointer-events:none; }
+    #yah-botleft{ bottom:16px; left:16px; pointer-events:none; }
     #yah-botleft .yah-label{ font-size:9px !important; letter-spacing:.2em !important; margin-bottom:4px !important; }
     #yah-pop{ font-size:18px !important; }
     #yah-readings{ pointer-events:auto; margin-top:12px !important; font-size:10px !important; padding:8px 12px !important; }
-    #yah-readings .yah-rfull{ display:none; }
-    #yah-botright{ left:16px; right:16px; bottom:92px; flex-direction:row; align-items:center; justify-content:flex-start; gap:8px; }
+    #yah-botright{ bottom:16px; right:16px; gap:10px; }
     #yah-botright .yah-credits{ display:none; }
     #yah-rotate{ display:none; }
     #yah-sound, #yah-share{ font-size:10px !important; padding:8px 12px !important; }
-    #yah-invite{ left:16px; right:16px; bottom:20px; transform:none !important; justify-content:center; font-size:14px !important; padding:14px 20px !important; gap:10px !important; }
+    #yah-readings .yah-rfull{ display:none; }
+    #yah-invitelabel{ display:none; }
+    #yah-invite{ padding:14px !important; gap:0 !important; }
+    #yah-invite > span:first-child{ width:15px !important; height:15px !important; }
     #yah-hint{ font-size:10px !important; bottom:auto !important; top:84px !important; }
+    #yah-invite{ font-size:13px !important; bottom:84px !important; }
     #yah-panel{ width:100vw !important; border-left:none !important; }
   }
-  @media (max-width:680px) and (max-height:620px){
-    #yah-botleft{ bottom:122px; }
-    #yah-botleft .yah-label{ display:none; }
-    #yah-botright{ bottom:68px; }
-    #yah-invite{ bottom:14px !important; }
+  @media (max-width:620px) and (max-height:560px){
+    #yah-invite{ bottom:16px !important; }
     #yah-hint{ display:none; }
   }
 </style>
@@ -376,13 +375,13 @@ class Component extends DCLogic {
   bindPointer(){
     const c=this.els.canvas;
     const down=e=>{ this.dragging=true; this.fly=null; this.lastX=e.clientX; this.lastY=e.clientY; this._downX=e.clientX; this._downY=e.clientY; this._downT=performance.now(); c.style.cursor='grabbing'; this.markInteract(); };
-    const move=e=>{ const r=c.getBoundingClientRect(); this.mx=e.clientX-r.left; this.my=e.clientY-r.top; if(!this.dragging||this.pinching) return; const dx=e.clientX-this.lastX, dy=e.clientY-this.lastY; this.lastX=e.clientX; this.lastY=e.clientY; this.ay+=dx*0.0052; this.ax+=dy*0.0052; this.ayVel=dx*0.0052; this.axVel=dy*0.0052; };  // free, unclamped tilt — rotate in any direction
+    const move=e=>{ const r=c.getBoundingClientRect(); this.mx=e.clientX-r.left; this.my=e.clientY-r.top; if(!this.dragging) return; const dx=e.clientX-this.lastX, dy=e.clientY-this.lastY; this.lastX=e.clientX; this.lastY=e.clientY; this.ay+=dx*0.0052; this.ax=Math.max(-1.15,Math.min(1.15,this.ax+dy*0.0052)); this.ayVel=dx*0.0052; this.axVel=dy*0.0052; };
     const up=e=>{ if(this.dragging && e){ const dist=Math.hypot(e.clientX-this._downX,e.clientY-this._downY), dt=performance.now()-this._downT; if(dist<6 && dt<450) this.pickGlobe(e.clientX,e.clientY); } this.dragging=false; c.style.cursor='grab'; };
     c.addEventListener('pointerdown',down); window.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
     // Trackpad-native wheel: pinch (ctrl+wheel) zooms, two-finger slide rotates. Mouse users get keyboard zoom (+/-).
     c.addEventListener('wheel',e=>{ e.preventDefault(); this.markInteract();
       if(e.ctrlKey){ const f=Math.exp(-e.deltaY*0.01); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }
-      else { this.fly=null; this.ay-=e.deltaX*0.0045; this.ax-=e.deltaY*0.0045; this.ayVel=-e.deltaX*0.0009; this.axVel=-e.deltaY*0.0009; }  // reversed trackpad pan
+      else { this.fly=null; this.ay+=e.deltaX*0.0045; this.ax=Math.max(-1.15,Math.min(1.15,this.ax+e.deltaY*0.0045)); this.ayVel=e.deltaX*0.0009; this.axVel=e.deltaY*0.0009; }
     },{passive:false});
     // keyboard: arrows rotate, +/- zoom, space toggles drift
     window.addEventListener('keydown',e=>{
@@ -390,19 +389,15 @@ class Component extends DCLogic {
       if(e.key===' '){ e.preventDefault(); this.toggleRotate(); }
       else if(e.key==='ArrowLeft'){ this.fly=null; this.ay-=0.09; this.markInteract(); }
       else if(e.key==='ArrowRight'){ this.fly=null; this.ay+=0.09; this.markInteract(); }
-      else if(e.key==='ArrowUp'){ this.fly=null; this.ax+=0.07; this.markInteract(); }
-      else if(e.key==='ArrowDown'){ this.fly=null; this.ax-=0.07; this.markInteract(); }
+      else if(e.key==='ArrowUp'){ this.fly=null; this.ax=Math.min(1.15,this.ax+0.07); this.markInteract(); }
+      else if(e.key==='ArrowDown'){ this.fly=null; this.ax=Math.max(-1.15,this.ax-0.07); this.markInteract(); }
       else if(e.key==='+'||e.key==='='){ this.zoomT=Math.min(this.ZMAX,this.zoomT*1.12); }
       else if(e.key==='-'||e.key==='_'){ this.zoomT=Math.max(this.ZMIN,this.zoomT/1.12); }
     });
     // pinch
     let pd=0, pz=1;
-    // pinch zoom — while two fingers are down we set this.pinching so the rotate handler bails out,
-    // so zooming in/out no longer drags the globe around.
-    c.addEventListener('touchstart',e=>{ if(e.touches.length>=2){ this.pinching=true; this.dragging=false; pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); pz=this.zoomT; } },{passive:true});
-    c.addEventListener('touchmove',e=>{ if(e.touches.length>=2 && pd){ e.preventDefault(); const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,pz*d/pd)); } },{passive:false});
-    const endPinch=e=>{ if(!e.touches || e.touches.length<2){ this.pinching=false; pd=0; } };
-    c.addEventListener('touchend',endPinch); c.addEventListener('touchcancel',endPinch);
+    c.addEventListener('touchstart',e=>{ if(e.touches.length===2){ pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); pz=this.zoomT; } },{passive:true});
+    c.addEventListener('touchmove',e=>{ if(e.touches.length===2 && pd){ e.preventDefault(); const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,pz*d/pd)); } },{passive:false});
   }
 
   markInteract(){ if(this.interacted) return; this.interacted=true; this.animT.hint=0; }
@@ -539,7 +534,7 @@ class Component extends DCLogic {
 
     // rotation
     if(this.fly){ this.fly.t+=dt; let p=Math.min(1,this.fly.t/this.fly.dur); const e=1-Math.pow(1-p,3); this.ay=this.fly.ay0+(this.fly.ay-this.fly.ay0)*e; this.ax=this.fly.ax0+(this.fly.ax-this.fly.ax0)*e; if(p>=1){ this.flyHold=this.flyHold||t; if(t-this.flyHold>3800){ this.fly=null; this.flyHold=0; } } }
-    else if(!this.dragging){ this.ay+=(this.autoRotate?this.auto:0) + this.ayVel; this.ax+=this.axVel; this.ayVel*=0.965; this.axVel*=0.965; }  // higher decay -> more glide/inertia after a flick; no tilt re-centering
+    else if(!this.dragging){ this.ay+=(this.autoRotate?this.auto:0) + this.ayVel; this.ax+=this.axVel; this.ayVel*=0.93; this.axVel*=0.93; if(this.autoRotate) this.ax+=(0-this.ax)*0.004; }
 
     // zoom smoothing
     this.zoom += (this.zoomT-this.zoom)*0.12;
@@ -598,46 +593,26 @@ class Component extends DCLogic {
       for(let k=0;k<RIP.length;k++){ const rp=RIP[k]; const dotp=x*rp.v[0]+y*rp.v[1]+zc*rp.v[2]; const ang=Math.acos(dotp<-1?-1:dotp>1?1:dotp); const diff=ang-rp.ring; const g=Math.exp(-(diff*diff)/0.05)*rp.fade; if(g>0.01){ rr*=1-0.62*g; a=Math.min(1,a*(1+0.5*g)); } }
       // sun illumination: dot of earth-fixed position with the subsolar direction -> soft terminator
       const illum=x*sun[0]+y*sun[1]+zc*sun[2];
-      let L=(illum+0.3)/0.6; if(L<0)L=0; if(L>1)L=1;   // wider band -> softer terminator blend
+      let L=(illum+0.16)/0.32; if(L<0)L=0; if(L>1)L=1;
       const aL=a*(0.22+0.78*L);
       const rL=rr*(0.58+0.42*L);
       if(illum>=0){ if(LD[i]){ BL.x[nl]=sxp;BL.y[nl]=syp;BL.r[nl]=rL;BL.a[nl]=aL;nl++; } else { BW.x[nw]=sxp;BW.y[nw]=syp;BW.r[nw]=rL;BW.a[nw]=aL;nw++; } }
-      else {
-        // night side: keep a solid, opaque-enough presence so the dark hemisphere always
-        // reads as NIGHT regardless of the (local-time) theme — only a gentle fade near the
-        // terminator. Without this, dots go faint and the light theme shows through as cream.
-        const aN=a*(0.62+0.38*L);
-        const rN=rr*(0.72+0.28*L);
-        if(LD[i]){ BLn.x[nln]=sxp;BLn.y[nln]=syp;BLn.r[nln]=rN;BLn.a[nln]=aN;nln++; } else { BWn.x[nwn]=sxp;BWn.y[nwn]=syp;BWn.r[nwn]=rN;BWn.a[nwn]=aN;nwn++; } }
+      else { if(LD[i]){ BLn.x[nln]=sxp;BLn.y[nln]=syp;BLn.r[nln]=rL;BLn.a[nln]=aL;nln++; } else { BWn.x[nwn]=sxp;BWn.y[nwn]=syp;BWn.r[nwn]=rL;BWn.a[nwn]=aL;nwn++; } }
     }
 
     // ---- the sun's light: warm wash centred on the subsolar point (drawn under the dots) ----
     const sp=this.rot(sun,sy,cyk,sx,cxk);
     if(sp[2]>-0.15){ const gx=cx+sp[0]*R, gy=cy-sp[1]*R, gr=R*1.08; const ga2=0.22*Math.max(0,Math.min(1,sp[2]+0.3)); const gg=ctx.createRadialGradient(gx,gy,0,gx,gy,gr); gg.addColorStop(0,'rgba(255,236,196,'+ga2.toFixed(3)+')'); gg.addColorStop(0.45,'rgba(255,221,170,'+(ga2*0.34).toFixed(3)+')'); gg.addColorStop(1,'rgba(255,221,170,0)'); ctx.fillStyle=gg; ctx.beginPath(); ctx.arc(gx,gy,gr,0,7); ctx.fill(); }
 
-    // ---- anti-solar shadow wash: a cool darkness over the night hemisphere. Scaled by how
-    // light the background is, so it's invisible on the dark night theme but firmly sells the
-    // night side as NIGHT when the local-time theme has gone creamy/daylight. Drawn under dots. ----
-    const bgL=this.cur.bg0[0]/255;                         // ~0.02 night theme -> ~0.92 day theme
-    if(bgL>0.18){
-      const ap=this.rot([-sun[0],-sun[1],-sun[2]],sy,cyk,sx,cxk);
-      if(ap[2]>-0.15){ const ax=cx+ap[0]*R, ayp=cy-ap[1]*R, ar=R*1.7; const aw=0.85*Math.max(0,Math.min(1,ap[2]+0.32))*bgL;
-        // clip to the globe disc so the shadow never bleeds past the planet's edge
-        ctx.save(); ctx.beginPath(); ctx.arc(cx,cy,R,0,7); ctx.clip();
-        // wide, gentle falloff -> the dark spreads further and the terminator border blends softly into daylight
-        const ag=ctx.createRadialGradient(ax,ayp,0,ax,ayp,ar); ag.addColorStop(0,'rgba(8,13,28,'+aw.toFixed(3)+')'); ag.addColorStop(0.4,'rgba(8,13,28,'+(aw*0.78).toFixed(3)+')'); ag.addColorStop(0.68,'rgba(8,13,28,'+(aw*0.4).toFixed(3)+')'); ag.addColorStop(0.85,'rgba(8,13,28,'+(aw*0.15).toFixed(3)+')'); ag.addColorStop(1,'rgba(8,13,28,0)'); ctx.fillStyle=ag; ctx.beginPath(); ctx.arc(ax,ayp,ar,0,7); ctx.fill();
-        ctx.restore(); }
-    }
+    // night-side colours: dim + cool, derived from the live palette
+    const dimc=(c,to,m)=>'rgb('+Math.round(c[0]+(to[0]-c[0])*m)+','+Math.round(c[1]+(to[1]-c[1])*m)+','+Math.round(c[2]+(to[2]-c[2])*m)+')';
+    const waterNightStr=dimc(water,[8,14,34],0.6), landNightStr=dimc(land,[16,30,46],0.58);
 
-    // night-side colours: FIXED dark + cool (not theme-derived), so the night hemisphere stays
-    // dark even when the daytime theme is creamy — that's what makes city lights read.
-    const waterNightStr='rgb(9,14,28)', landNightStr='rgb(20,29,40)';
-
-    // draw night side first (dark, opaque enough to hold against a light background)
+    // draw night side first (faint, cool)
     ctx.fillStyle=waterNightStr;
-    for(let i=0;i<nwn;i++){ ctx.globalAlpha=Math.min(1,BWn.a[i]*0.95); const r=BWn.r[i]*0.82; ctx.fillRect(BWn.x[i]-r*0.5,BWn.y[i]-r*0.5,r,r); }
+    for(let i=0;i<nwn;i++){ ctx.globalAlpha=BWn.a[i]*0.7; const r=BWn.r[i]*0.76; ctx.fillRect(BWn.x[i]-r*0.5,BWn.y[i]-r*0.5,r,r); }
     ctx.fillStyle=landNightStr;
-    for(let i=0;i<nln;i++){ ctx.globalAlpha=Math.min(1,BLn.a[i]*1.15); const r=BLn.r[i]*1.04; ctx.fillRect(BLn.x[i]-r*0.5,BLn.y[i]-r*0.5,r,r); }
+    for(let i=0;i<nln;i++){ ctx.globalAlpha=Math.min(1,BLn.a[i]*1.1); const r=BLn.r[i]*1.05; ctx.fillRect(BLn.x[i]-r*0.5,BLn.y[i]-r*0.5,r,r); }
     // draw day side (bright, full colour)
     ctx.fillStyle=waterStr;
     for(let i=0;i<nw;i++){ ctx.globalAlpha=BW.a[i]*0.6; const r=BW.r[i]*0.78; ctx.fillRect(BW.x[i]-r*0.5,BW.y[i]-r*0.5,r,r); }
