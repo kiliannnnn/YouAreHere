@@ -27,39 +27,52 @@
     #yah-head{ top:24px; left:24px; right:24px; max-width:none; pointer-events:none; }
     #yah-head h1{ font-size:clamp(30px,7vw,48px) !important; }
     #yah-poem{ font-size:14px; max-width:min(300px,60vw); }
-    #yah-topright{ top:24px; right:24px; pointer-events:none; }
+    #yah-topright{ top:24px !important; right:24px !important; pointer-events:none; }
     #yah-clock{ font-size:26px !important; }
-    #yah-botleft{ bottom:24px; left:24px; }
-    #yah-botright{ bottom:24px; right:24px; }
+    #yah-botleft{ bottom:24px !important; left:24px !important; }
+    #yah-botright{ bottom:24px !important; right:24px !important; }
   }
-  @media (max-width:620px){
-    #yah-head{ top:16px; left:16px; right:16px; }
+  @media (max-width:680px){
+    #yah-head{ top:16px !important; left:max(16px,env(safe-area-inset-left)) !important; right:max(16px,env(safe-area-inset-right)) !important; }
     #yah-head .yah-eyebrow{ display:none; }
     #yah-head h1{ font-size:clamp(26px,9vw,38px) !important; }
     #yah-poem{ display:none; }
-    #yah-topright{ top:16px; right:16px; }
+    #yah-topright{ top:16px !important; right:max(16px,env(safe-area-inset-right)) !important; }
     #yah-topright .yah-eyebrow{ font-size:10px; }
+    #yah-topright span#yah-phase{ color:rgba(var(--ink),.82) !important; }
     #yah-clock{ font-size:21px !important; margin-top:5px !important; }
-    #yah-sky{ font-size:9.5px !important; }
-    #yah-botleft{ bottom:16px; left:16px; pointer-events:none; }
-    #yah-botleft .yah-label{ font-size:9px !important; letter-spacing:.2em !important; margin-bottom:4px !important; }
+    #yah-sky{ font-size:9.5px !important; color:rgba(var(--ink),.7) !important; }
+    /* people-alive cluster, bottom-left */
+    #yah-botleft{ left:max(16px,env(safe-area-inset-left)) !important; right:auto !important; bottom:max(16px,env(safe-area-inset-bottom)) !important; pointer-events:none; }
+    #yah-botleft .yah-label{ font-size:9px !important; letter-spacing:.2em !important; margin-bottom:4px !important; color:rgba(var(--ink),.8) !important; }
     #yah-pop{ font-size:18px !important; }
-    #yah-readings{ pointer-events:auto; margin-top:12px !important; font-size:10px !important; padding:8px 12px !important; }
-    #yah-botright{ bottom:16px; right:16px; gap:10px; }
-    #yah-botright .yah-credits{ display:none; }
-    #yah-rotate{ display:none; }
-    #yah-sound, #yah-share{ font-size:10px !important; padding:8px 12px !important; }
+    #yah-readings{ pointer-events:auto; margin-top:12px !important; font-size:10px !important; padding:8px 12px !important; color:rgba(var(--ink),.92) !important; }
     #yah-readings .yah-rfull{ display:none; }
-    #yah-invitelabel{ display:none; }
-    #yah-invite{ padding:14px !important; gap:0 !important; }
-    #yah-invite > span:first-child{ width:15px !important; height:15px !important; }
-    #yah-hint{ font-size:10px !important; bottom:auto !important; top:84px !important; }
-    #yah-invite{ font-size:13px !important; bottom:84px !important; }
+    /* right controls stacked vertically, bottom-right */
+    #yah-botright{ left:auto !important; right:max(16px,env(safe-area-inset-right)) !important; bottom:max(16px,env(safe-area-inset-bottom)) !important; flex-direction:column !important; align-items:flex-end !important; gap:10px !important; }
+    #yah-botright > div:first-child{ flex-direction:column !important; align-items:flex-end !important; gap:10px !important; }
+    #yah-botright .yah-credits{ display:none; }
+    /* compact, logo-only controls */
+    #yah-sound, #yah-share, #yah-rotate, #yah-labels{ font-size:10px !important; padding:10px !important; gap:0 !important; justify-content:center !important; }
+    #yah-sound .yah-blabel, #yah-share .yah-blabel, #yah-rotate .yah-blabel, #yah-labels .yah-blabel{ display:none !important; }
+    #yah-share span:last-child{ font-size:14px !important; }
+    /* find-me: compact, left-aligned, with clear gap above the people cluster */
+    #yah-invite{ left:max(16px,env(safe-area-inset-left)) !important; right:auto !important; bottom:124px !important; transform:none !important; justify-content:center; font-size:13px !important; padding:11px 16px !important; gap:9px !important; }
+    #yah-invitelabel{ display:none !important; }
+    #yah-invitelabel-sm{ display:inline !important; }
+    #yah-hint{ font-size:10px !important; bottom:auto !important; top:84px !important; color:rgba(var(--ink),.7) !important; }
     #yah-panel{ width:100vw !important; border-left:none !important; }
   }
-  @media (max-width:620px) and (max-height:560px){
-    #yah-invite{ bottom:16px !important; }
-    #yah-hint{ display:none; }
+  /* very small devices: find-me shows only its logo */
+  @media (max-width:380px){
+    #yah-invitelabel-sm{ display:none !important; }
+    #yah-invite{ padding:11px !important; gap:0 !important; }
+    #yah-invite > span:first-child{ width:12px !important; height:12px !important; }
+  }
+  @media (max-width:680px) and (max-height:560px){
+    #yah-botleft .yah-label{ display:none; }
+    #yah-invite{ bottom:96px !important; }
+    #yah-hint{ display:none !important; }
   }
 </style>
 <template id="__bundler_thumbnail">
@@ -67,7 +80,8 @@
 </template>
 </helmet>
 <div id="yah-root" style="position:fixed;inset:0;color:rgb(var(--ink));background:radial-gradient(128% 120% at 50% 40%, rgb(var(--bg1)) 0%, rgb(var(--bg0)) 72%);">
-  <canvas id="yah-canvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab;"></canvas>
+  <canvas id="yah-glcanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;"></canvas>
+  <canvas id="yah-canvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab;background:transparent;"></canvas>
   <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(135% 105% at 50% 50%, transparent 52%, rgba(0,0,0,.30) 100%);"></div>
 
   <header id="yah-head" style="position:absolute;top:34px;left:40px;max-width:44vw;z-index:5;">
@@ -77,10 +91,10 @@
   </header>
 
   <div id="yah-topright" style="position:absolute;top:34px;right:40px;text-align:right;z-index:5;font-family:'IBM Plex Mono',monospace;">
-    <div style="display:flex;align-items:center;justify-content:flex-end;gap:9px;font-size:11px;letter-spacing:.26em;color:rgb(var(--ink-dim));">
-      <span id="yah-phasedot" style="width:7px;height:7px;border-radius:50%;background:rgb(var(--accent));box-shadow:0 0 10px rgb(var(--accent));"></span>
+    <button id="yah-themetoggle" title="Theme · auto / day / night" style="display:inline-flex;align-items:center;justify-content:flex-end;gap:9px;font-size:11px;letter-spacing:.26em;color:rgb(var(--ink-dim));font-family:'IBM Plex Mono',monospace;background:transparent;border:none;cursor:pointer;padding:2px 0;opacity:.72;transition:opacity .2s,color .2s;" style-hover="opacity:1;color:rgb(var(--ink));">
+      <span id="yah-themeicon" style="display:inline-flex;align-items:center;color:rgb(var(--accent));"><span id="yah-phasedot" style="width:7px;height:7px;border-radius:50%;background:rgb(var(--accent));box-shadow:0 0 10px rgb(var(--accent));"></span></span>
       <span id="yah-phase">NIGHT</span>
-    </div>
+    </button>
     <div id="yah-clock" style="font-size:31px;font-weight:300;letter-spacing:.01em;color:rgb(var(--ink));margin-top:8px;font-variant-numeric:tabular-nums;">--:--:--</div>
     <div id="yah-sky" style="font-size:11px;color:rgb(var(--ink-dim));margin-top:3px;letter-spacing:.08em;">your local sky</div>
   </div>
@@ -95,9 +109,10 @@
 
   <div id="yah-botright" style="position:absolute;bottom:32px;right:40px;z-index:5;display:flex;flex-direction:column;align-items:flex-end;gap:16px;">
     <div style="display:flex;gap:10px;">
-      <button id="yah-rotate" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-rotateglyph" style="width:7px;height:7px;border-radius:50%;background:rgb(var(--accent));border:1.5px solid rgb(var(--accent));"></span><span class="yah-blabel">SPIN</span></button>
-      <button id="yah-sound" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-soundglyph" style="width:7px;height:7px;border-radius:50%;border:1.5px solid rgb(var(--ink-dim));"></span>SOUND</button>
-      <button id="yah-share" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;" style-hover="background:rgba(var(--ink),.09);">SHARE &#8599;</button>
+      <button id="yah-rotate" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-rotateglyph" style="display:inline-flex;color:rgb(var(--accent));flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span><span class="yah-blabel">SPIN</span></button>
+      <button id="yah-labels" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-labelsglyph" style="display:inline-flex;color:rgb(var(--accent));flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span><span class="yah-blabel">LABELS</span></button>
+      <button id="yah-sound" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-soundglyph" style="display:inline-flex;color:rgb(var(--ink-dim));flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg></span><span class="yah-blabel">SOUND</span></button>
+      <button id="yah-share" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:6px;" style-hover="background:rgba(var(--ink),.09);"><span style="display:inline-flex;color:inherit;flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg></span><span class="yah-blabel">SHARE</span></button>
     </div>
     <div class="yah-credits" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:rgb(var(--ink-dim));text-align:right;line-height:1.7;">
       DOT&middot;EARTH &mdash; 2026<br><a id="yah-contact" href="#" style="color:rgb(var(--ink-dim));text-decoration:none;border-bottom:1px solid rgba(var(--ink),.22);padding-bottom:1px;">made for everyone aboard</a>
@@ -106,11 +121,11 @@
 
   <div id="yah-hint" style="position:absolute;left:50%;bottom:100px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:rgb(var(--ink-dim));opacity:0;pointer-events:none;z-index:5;">DRAG TO TURN &middot; TAP TO CONNECT</div>
 
-  <button id="yah-invite" style="position:absolute;left:50%;bottom:36px;transform:translate(-50%,0);opacity:0;pointer-events:none;display:inline-flex;align-items:center;gap:11px;background:rgb(var(--ink));color:rgb(var(--bg0));border:none;font-size:14.5px;font-weight:500;padding:14px 24px;border-radius:999px;cursor:pointer;box-shadow:0 10px 34px rgba(0,0,0,.4);z-index:6;">
-    <span style="width:9px;height:9px;border-radius:50%;border:2px solid rgb(var(--bg0));"></span><span id="yah-invitelabel">Find my place on Earth</span>
+  <button id="yah-invite" style="position:absolute;right:40px;bottom:148px;transform:none;opacity:0;pointer-events:none;display:inline-flex;align-items:center;gap:11px;background:rgb(var(--ink));color:rgb(var(--bg0));border:none;font-size:14.5px;font-weight:500;padding:14px 24px;border-radius:999px;cursor:pointer;box-shadow:0 10px 34px rgba(0,0,0,.4);z-index:6;">
+    <span style="width:9px;height:9px;border-radius:50%;border:2px solid rgb(var(--bg0));"></span><span id="yah-invitelabel">Find my place on Earth</span><span id="yah-invitelabel-sm" style="display:none;">Find me</span>
   </button>
 
-  <aside id="yah-panel" style="position:absolute;top:0;right:0;bottom:0;width:min(384px,88vw);background:rgba(var(--bg0),.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-left:1px solid rgba(var(--ink),.12);transform:translateX(101%);z-index:20;display:flex;flex-direction:column;">
+  <aside id="yah-panel" style="position:absolute;top:0;right:0;bottom:0;width:min(384px,88vw);background:rgba(var(--bg0),.9);border-left:1px solid rgba(var(--ink),.12);transform:translateX(101%);z-index:20;display:flex;flex-direction:column;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;padding:30px 28px 18px;border-bottom:1px solid rgba(var(--ink),.1);">
       <div>
         <div style="font-weight:600;font-size:19px;letter-spacing:-.01em;">Planetary readings</div>
@@ -132,13 +147,15 @@ class Component extends DCLogic {
     if (this._init) return; this._init = true;
     const $ = id => document.getElementById(id);
     this.els = {
-      root:$('yah-root'), canvas:$('yah-canvas'), clock:$('yah-clock'), phase:$('yah-phase'),
+      root:$('yah-root'), canvas:$('yah-canvas'), glcanvas:$('yah-glcanvas'), clock:$('yah-clock'), phase:$('yah-phase'), themeicon:$('yah-themeicon'),
       sky:$('yah-sky'), pop:$('yah-pop'), poem:$('yah-poem'), invite:$('yah-invite'),
-      inviteLabel:$('yah-invitelabel'), hint:$('yah-hint'),
+      inviteLabel:$('yah-invitelabel'), inviteLabelSm:$('yah-invitelabel-sm'), hint:$('yah-hint'),
       panel:$('yah-panel'), panelBody:$('yah-panelbody'), updated:$('yah-updated'),
-      toast:$('yah-toast'), soundGlyph:$('yah-soundglyph'), rotateGlyph:$('yah-rotateglyph')
+      toast:$('yah-toast'), soundGlyph:$('yah-soundglyph'), rotateGlyph:$('yah-rotateglyph'), labelsGlyph:$('yah-labelsglyph')
     };
+    this.labelsOn=true;
     this.ctx = this.els.canvas.getContext('2d');
+    this.initGL();   // sets this.gl when WebGL is available; everything degrades to Canvas2D if not
 
     // ---- constants -----------------------------------------------------
     this.D2R = Math.PI/180; this.R2D = 180/Math.PI;
@@ -173,6 +190,8 @@ class Component extends DCLogic {
 
     this.resize();
     window.addEventListener('resize', ()=>this.resize());
+    // pause all rendering while the tab is hidden -> zero background CPU/GPU draw
+    document.addEventListener('visibilitychange', ()=>{ this._hidden=document.hidden; if(!document.hidden) this._tprev=performance.now(); });
     this.bindPointer();
     this.bindUI();
 
@@ -211,7 +230,7 @@ class Component extends DCLogic {
     // One sphere is the most even arrangement possible (overlaying several causes moiré / clumps).
     // High density keeps it clean and detailed at every zoom; dot SIZE scales with zoom so close-up
     // it reads as a fine even stipple rather than fat blobs.
-    const N = 30000; this.N = N;
+    const N = 12000; this.N = N;
     this.X=new Float32Array(N); this.Y=new Float32Array(N); this.Z=new Float32Array(N); this.land=new Uint8Array(N);
     let data=null,W=0,H=0;
     if(img){ const c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight; const cx=c.getContext('2d'); cx.drawImage(img,0,0); try{ const id=cx.getImageData(0,0,c.width,c.height); data=id.data; W=c.width; H=c.height; }catch(e){ data=null; } }
@@ -226,6 +245,7 @@ class Component extends DCLogic {
       this.land[i]=isLand;
     }
     this.pointsReady = true;
+    this.uploadGL();
   }
 
   // ---- data ----------------------------------------------------------
@@ -308,8 +328,12 @@ class Component extends DCLogic {
     const rising=h<12;
     this.elev=elev; this.rising=rising;
     this.tgt = this.paletteFor(elev);
+    // manual theme override (discreet top-right toggle): force the palette while leaving the
+    // globe's real geographic sun position untouched, so day/night lighting stays accurate.
+    if(this.themeMode==='day') this.tgt=this.cloneP(this.DAY);
+    else if(this.themeMode==='night') this.tgt=this.cloneP(this.NIGHT);
     // phase label
-    let ph; if(elev>14) ph='DAYLIGHT'; else if(elev>2) ph='GOLDEN HOUR'; else if(elev>-8) ph=(rising?'DAWN':'DUSK'); else ph='NIGHT';
+    let ph; if(this.themeMode==='day') ph='DAY'; else if(this.themeMode==='night') ph='NIGHT'; else if(elev>14) ph='DAYLIGHT'; else if(elev>2) ph='GOLDEN HOUR'; else if(elev>-8) ph=(rising?'DAWN':'DUSK'); else ph='NIGHT';
     this.els.phase.textContent=ph;
   }
 
@@ -354,12 +378,11 @@ class Component extends DCLogic {
       const amp=night*depth*tw;
       if(amp<0.02) continue;
       const rad=(0.9+c.w*0.85)*(0.7+0.5*depth);
-      const g=ctx.createRadialGradient(px,py,0,px,py,rad*3.4);
-      g.addColorStop(0,'rgba(255,212,150,'+(0.5*amp).toFixed(3)+')');
-      g.addColorStop(0.5,'rgba(255,196,128,'+(0.18*amp).toFixed(3)+')');
-      g.addColorStop(1,'rgba(255,196,128,0)');
-      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,rad*3.4,0,7); ctx.fill();
-      ctx.globalAlpha=Math.min(1,amp*1.15); ctx.fillStyle='rgb(255,238,200)'; ctx.beginPath(); ctx.arc(px,py,rad*0.5,0,7); ctx.fill(); ctx.globalAlpha=1;
+      // layered glow for a more luminous, qualitative city light:
+      // 1) wide warm amber halo  2) mid golden bloom  3) hot near-white core
+      ctx.globalAlpha=Math.min(0.32,0.2*amp); ctx.fillStyle='rgb(255,176,96)'; ctx.beginPath(); ctx.arc(px,py,rad*3.0,0,7); ctx.fill();
+      ctx.globalAlpha=Math.min(0.6,0.4*amp); ctx.fillStyle='rgb(255,206,140)'; ctx.beginPath(); ctx.arc(px,py,rad*1.5,0,7); ctx.fill();
+      ctx.globalAlpha=Math.min(1,amp*1.3); ctx.fillStyle='rgb(255,247,224)'; ctx.beginPath(); ctx.arc(px,py,rad*0.46,0,7); ctx.fill(); ctx.globalAlpha=1;
     }
   }
 
@@ -375,13 +398,13 @@ class Component extends DCLogic {
   bindPointer(){
     const c=this.els.canvas;
     const down=e=>{ this.dragging=true; this.fly=null; this.lastX=e.clientX; this.lastY=e.clientY; this._downX=e.clientX; this._downY=e.clientY; this._downT=performance.now(); c.style.cursor='grabbing'; this.markInteract(); };
-    const move=e=>{ const r=c.getBoundingClientRect(); this.mx=e.clientX-r.left; this.my=e.clientY-r.top; if(!this.dragging) return; const dx=e.clientX-this.lastX, dy=e.clientY-this.lastY; this.lastX=e.clientX; this.lastY=e.clientY; this.ay+=dx*0.0052; this.ax=Math.max(-1.15,Math.min(1.15,this.ax+dy*0.0052)); this.ayVel=dx*0.0052; this.axVel=dy*0.0052; };
+    const move=e=>{ const r=c.getBoundingClientRect(); this.mx=e.clientX-r.left; this.my=e.clientY-r.top; if(!this.dragging||this.pinching) return; const dx=e.clientX-this.lastX, dy=e.clientY-this.lastY; this.lastX=e.clientX; this.lastY=e.clientY; this.ay+=dx*0.0052; this.ax+=dy*0.0052; this.ayVel=dx*0.0052; this.axVel=dy*0.0052; };  // free, unclamped tilt — rotate in any direction
     const up=e=>{ if(this.dragging && e){ const dist=Math.hypot(e.clientX-this._downX,e.clientY-this._downY), dt=performance.now()-this._downT; if(dist<6 && dt<450) this.pickGlobe(e.clientX,e.clientY); } this.dragging=false; c.style.cursor='grab'; };
     c.addEventListener('pointerdown',down); window.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
     // Trackpad-native wheel: pinch (ctrl+wheel) zooms, two-finger slide rotates. Mouse users get keyboard zoom (+/-).
     c.addEventListener('wheel',e=>{ e.preventDefault(); this.markInteract();
       if(e.ctrlKey){ const f=Math.exp(-e.deltaY*0.01); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }
-      else { this.fly=null; this.ay+=e.deltaX*0.0045; this.ax=Math.max(-1.15,Math.min(1.15,this.ax+e.deltaY*0.0045)); this.ayVel=e.deltaX*0.0009; this.axVel=e.deltaY*0.0009; }
+      else { this.fly=null; this.ay-=e.deltaX*0.0045; this.ax-=e.deltaY*0.0045; this.ayVel=-e.deltaX*0.0009; this.axVel=-e.deltaY*0.0009; }  // reversed trackpad pan
     },{passive:false});
     // keyboard: arrows rotate, +/- zoom, space toggles drift
     window.addEventListener('keydown',e=>{
@@ -389,15 +412,19 @@ class Component extends DCLogic {
       if(e.key===' '){ e.preventDefault(); this.toggleRotate(); }
       else if(e.key==='ArrowLeft'){ this.fly=null; this.ay-=0.09; this.markInteract(); }
       else if(e.key==='ArrowRight'){ this.fly=null; this.ay+=0.09; this.markInteract(); }
-      else if(e.key==='ArrowUp'){ this.fly=null; this.ax=Math.min(1.15,this.ax+0.07); this.markInteract(); }
-      else if(e.key==='ArrowDown'){ this.fly=null; this.ax=Math.max(-1.15,this.ax-0.07); this.markInteract(); }
+      else if(e.key==='ArrowUp'){ this.fly=null; this.ax+=0.07; this.markInteract(); }
+      else if(e.key==='ArrowDown'){ this.fly=null; this.ax-=0.07; this.markInteract(); }
       else if(e.key==='+'||e.key==='='){ this.zoomT=Math.min(this.ZMAX,this.zoomT*1.12); }
       else if(e.key==='-'||e.key==='_'){ this.zoomT=Math.max(this.ZMIN,this.zoomT/1.12); }
     });
     // pinch
     let pd=0, pz=1;
-    c.addEventListener('touchstart',e=>{ if(e.touches.length===2){ pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); pz=this.zoomT; } },{passive:true});
-    c.addEventListener('touchmove',e=>{ if(e.touches.length===2 && pd){ e.preventDefault(); const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,pz*d/pd)); } },{passive:false});
+    // pinch zoom — while two fingers are down we set this.pinching so the rotate handler bails out,
+    // so zooming in/out no longer drags the globe around.
+    c.addEventListener('touchstart',e=>{ if(e.touches.length>=2){ this.pinching=true; this.dragging=false; pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); pz=this.zoomT; } },{passive:true});
+    c.addEventListener('touchmove',e=>{ if(e.touches.length>=2 && pd){ e.preventDefault(); const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,pz*d/pd)); } },{passive:false});
+    const endPinch=e=>{ if(!e.touches || e.touches.length<2){ this.pinching=false; pd=0; } };
+    c.addEventListener('touchend',endPinch); c.addEventListener('touchcancel',endPinch);
   }
 
   markInteract(){ if(this.interacted) return; this.interacted=true; this.animT.hint=0; }
@@ -409,6 +436,8 @@ class Component extends DCLogic {
     $('yah-close').addEventListener('click',()=>this.closePanel());
     $('yah-sound').addEventListener('click',()=>this.toggleSound());
     $('yah-rotate').addEventListener('click',()=>this.toggleRotate());
+    $('yah-labels').addEventListener('click',()=>this.toggleLabels());
+    $('yah-themetoggle').addEventListener('click',()=>this.cycleTheme());
     $('yah-share').addEventListener('click',()=>this.share());
     $('yah-contact').addEventListener('click',(e)=>{ e.preventDefault(); this.share(); });
   }
@@ -417,8 +446,16 @@ class Component extends DCLogic {
     this.autoRotate=!this.autoRotate;
     this.markInteract();
     const gl=this.els.rotateGlyph;
-    if(gl){ gl.style.background=this.autoRotate?'rgb(var(--accent))':'transparent'; gl.style.borderColor=this.autoRotate?'rgb(var(--accent))':'rgb(var(--ink-dim))'; }
+    if(gl){ gl.style.color=this.autoRotate?'rgb(var(--accent))':'rgb(var(--ink-dim))'; }
     this.toast(this.autoRotate?'drifting':'paused here');
+  }
+
+  toggleLabels(){
+    this.labelsOn=!this.labelsOn;
+    this.markInteract();
+    const gl=this.els.labelsGlyph;
+    if(gl){ gl.style.color=this.labelsOn?'rgb(var(--accent))':'rgb(var(--ink-dim))'; }
+    this.toast(this.labelsOn?'labels on':'labels off');
   }
 
   openPanel(){ this.animT.panel=1; }
@@ -427,12 +464,14 @@ class Component extends DCLogic {
   showInvite(){ if(this.user) return; this.markInteract(); this.animT.invite=1; }
   hideInvite(){ this.animT.invite=0; }
 
+  setInviteLabel(long, short){ if(this.els.inviteLabel) this.els.inviteLabel.textContent=long; if(this.els.inviteLabelSm) this.els.inviteLabelSm.textContent=short; }
+
   geolocate(){
-    this.els.inviteLabel.textContent='Looking for you…';
+    this.setInviteLabel('Looking for you…','Looking…');
     if(!navigator.geolocation){ this.hideInvite(); return; }
     navigator.geolocation.getCurrentPosition(
       p=>this.setUser(p.coords.latitude,p.coords.longitude),
-      ()=>{ this.els.inviteLabel.textContent='Find my place on Earth'; this.hideInvite(); },
+      ()=>{ this.setInviteLabel('Find my place on Earth','Find me'); this.hideInvite(); },
       {enableHighAccuracy:false,timeout:9000,maximumAge:600000}
     );
   }
@@ -502,8 +541,10 @@ class Component extends DCLogic {
     this.soundOn=!this.soundOn;
     const g=this.audio.master.gain; const now=this.audio.ac.currentTime;
     g.cancelScheduledValues(now); g.setValueAtTime(g.value,now); g.linearRampToValueAtTime(this.soundOn?0.075:0, now+(this.soundOn?2.2:1.1));
-    this.els.soundGlyph.style.background = this.soundOn?'rgb(var(--accent))':'transparent';
-    this.els.soundGlyph.style.borderColor = this.soundOn?'rgb(var(--accent))':'rgb(var(--ink-dim))';
+    const onSvg='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>';
+    const muteSvg='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
+    this.els.soundGlyph.innerHTML = this.soundOn?onSvg:muteSvg;
+    this.els.soundGlyph.style.color = this.soundOn?'rgb(var(--accent))':'rgb(var(--ink-dim))';
   }
 
   share(){
@@ -518,10 +559,15 @@ class Component extends DCLogic {
 
   // ---- sizing --------------------------------------------------------
   resize(){
-    const dpr=Math.min(2,window.devicePixelRatio||1); this.dpr=dpr;
+    const dpr=Math.min(1.5,window.devicePixelRatio||1); this.dpr=dpr;
+    // The globe (WebGL layer) renders at 1x — the soft stipple hides the lower resolution, and it
+    // roughly halves the pixels the GPU must rasterize + composite each frame. The 2D overlay
+    // (crisp marker text) stays at full dpr.
+    this.glDpr=1;
     const w=window.innerWidth, h=window.innerHeight; this.w=w; this.h=h;
     this.els.canvas.width=w*dpr; this.els.canvas.height=h*dpr;
     this.ctx.setTransform(dpr,0,0,dpr,0,0);
+    if(this.els.glcanvas){ this.els.glcanvas.width=w*this.glDpr; this.els.glcanvas.height=h*this.glDpr; }
     this.Rg=Math.min(w,h)*0.345;
     this.cx=w*0.5; this.cy=h*0.5;
   }
@@ -529,12 +575,19 @@ class Component extends DCLogic {
   // ---- main loop -----------------------------------------------------
   loop(t){
     this._raf=requestAnimationFrame(this._loop);
+    if(this._hidden) return;
+    // Frame limiter: render at 60fps only while actively interacting, otherwise 30fps.
+    // The globe is an ambient drift, so halving its frame rate roughly halves CPU/GPU load
+    // (and heat) with no perceptible loss at rest.
+    const interval=(this.dragging||this.fly||Math.abs(this.zoom-this.zoomT)>0.001)?16:(this.autoRotate?40:42);
+    if(t-(this._lastDraw||0) < interval-2) return;
+    this._lastDraw=t;
     try{
     const dt=Math.min(50,t-this._tprev); this._tprev=t;
 
     // rotation
     if(this.fly){ this.fly.t+=dt; let p=Math.min(1,this.fly.t/this.fly.dur); const e=1-Math.pow(1-p,3); this.ay=this.fly.ay0+(this.fly.ay-this.fly.ay0)*e; this.ax=this.fly.ax0+(this.fly.ax-this.fly.ax0)*e; if(p>=1){ this.flyHold=this.flyHold||t; if(t-this.flyHold>3800){ this.fly=null; this.flyHold=0; } } }
-    else if(!this.dragging){ this.ay+=(this.autoRotate?this.auto:0) + this.ayVel; this.ax+=this.axVel; this.ayVel*=0.93; this.axVel*=0.93; if(this.autoRotate) this.ax+=(0-this.ax)*0.004; }
+    else if(!this.dragging){ this.ay+=(this.autoRotate?this.auto:0) + this.ayVel; this.ax+=this.axVel; this.ayVel*=0.965; this.axVel*=0.965; }  // higher decay -> more glide/inertia after a flick; no tilt re-centering
 
     // zoom smoothing
     this.zoom += (this.zoomT-this.zoom)*0.12;
@@ -542,21 +595,177 @@ class Component extends DCLogic {
 
     // parallax smoothing
     const tx=(this.mx-this.cx)*0.02, ty=(this.my-this.cy)*0.015;
+    this._parMoving=Math.abs(tx-this.px)>0.15||Math.abs(ty-this.py)>0.15;
     this.px+=(tx-this.px)*0.06; this.py+=(ty-this.py)*0.06;
 
-    // theme lerp
-    for(const k in this.cur){ this.cur[k]=this.mix(this.cur[k],this.tgt[k],0.05); }
-    if(!this._vf || t-this._vf>40){ this.applyVars(); this._vf=t; }
-    this.els.root.style.background='radial-gradient(128% 120% at 50% 40%, rgb('+this.cur.bg1.map(Math.round).join(',')+') 0%, rgb('+this.cur.bg0.map(Math.round).join(',')+') 72%)';
+    // theme lerp (track residual motion so the canvas can idle once it has settled)
+    let themeDelta=0;
+    for(const k in this.cur){ const c=this.cur[k], g=this.tgt[k]; for(let j=0;j<3;j++){ const dd=g[j]-c[j]; c[j]+=dd*0.05; themeDelta+=dd<0?-dd:dd; } }
+    // Only push CSS variables to :root while the theme is actually transitioning. Writing them
+    // every frame re-invalidates everything that references them (both full-screen gradients +
+    // the panel) and forces a continuous full-page recomposite — a standing GPU cost that has
+    // nothing to do with the canvas. When settled, we leave :root alone.
+    if((themeDelta>0.15 || !this._appliedVars) && (!this._vf || t-this._vf>40)){ this.applyVars(); this._vf=t; this._appliedVars=1;
+      const bg='radial-gradient(128% 120% at 50% 40%, rgb('+this.cur.bg1.map(Math.round).join(',')+') 0%, rgb('+this.cur.bg0.map(Math.round).join(',')+') 72%)';
+      if(bg!==this._lastBg){ this.els.root.style.background=bg; this._lastBg=bg; }
+    }
 
-    try{ this.draw(t); }catch(err){ if(!this._loggedErr){ this._loggedErr=1; console.error('DRAW ERROR:', err && err.message, err && err.stack); } }
+    // DOM transitions still ease every frame (cheap); track residual so we keep painting while they move
+    let animDelta=0; for(const k in this.anim){ const dd=this.animT[k]-this.anim[k]; animDelta+=dd<0?-dd:dd; }
+
+    // ---- Idle skip: only repaint the canvases when something is actually moving. With the drift
+    // paused (SPIN off) and everything settled, we stop clearing/redrawing, so the GPU compositor
+    // reuses the last frame and the whole thing drops to ~0% CPU/GPU. This is the real heat fix. ----
+    const inertia=(this.ayVel<0?-this.ayVel:this.ayVel)>2e-4||(this.axVel<0?-this.axVel:this.axVel)>2e-4;
+    const needsDraw=this.autoRotate||this.dragging||this.fly||inertia||this._parMoving||themeDelta>0.4||animDelta>0.003||(this.ripples&&this.ripples.length>0)||Math.abs(this.zoom-this.zoomT)>0.001;
+    if(needsDraw){ try{ this.draw(t); }catch(err){ if(!this._loggedErr){ this._loggedErr=1; console.error('DRAW ERROR:', err && err.message, err && err.stack); } } }
     this.updateText(t);
-    { const A=this.anim, T=this.animT, e=this.els; for(const k in A){ A[k]+=(T[k]-A[k])*0.14; }
+    // Only touch the transition DOM while it's actually easing — writing identical transforms/
+    // opacities every frame keeps those layers "dirty" and re-composited for no reason.
+    if(animDelta>0.0006 || this._animSettling!==false){ this._animSettling = animDelta>0.0006;
+      const A=this.anim, T=this.animT, e=this.els; for(const k in A){ A[k]+=(T[k]-A[k])*0.14; }
       e.panel.style.transform='translateX('+((1-A.panel)*101).toFixed(2)+'%)';
+      // Apply the (expensive) frosted-glass blur ONLY while the panel is actually on-screen. A
+      // backdrop-filter left on an off-screen element makes the compositor re-blur every frame
+      // forever — a constant GPU drain that no amount of canvas idling can fix.
+      const blurOn=A.panel>0.012;
+      if(blurOn!==this._blurOn){ this._blurOn=blurOn; e.panel.style.backdropFilter=blurOn?'blur(20px)':'none'; e.panel.style.webkitBackdropFilter=blurOn?'blur(20px)':'none'; }
       e.invite.style.opacity=A.invite.toFixed(3); e.invite.style.pointerEvents=T.invite>0.5?'auto':'none';
       e.hint.style.opacity=A.hint.toFixed(3);
       e.toast.style.opacity=A.toast.toFixed(3); e.toast.style.transform='translate(-50%,'+((1-A.toast)*8).toFixed(1)+'px)'; }
     }catch(e){ if(!window.__loopErr){ window.__loopErr=(e&&e.stack)||String(e); console.error('LOOP ERR', e); } }
+  }
+
+  // ---- WebGL globe -----------------------------------------------------
+  initGL(){
+    try{
+      const gl=this.els.glcanvas.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:false,depth:false})
+             ||this.els.glcanvas.getContext('experimental-webgl',{alpha:true,antialias:false,premultipliedAlpha:false,depth:false});
+      if(!gl) return;
+      const vs=`
+        attribute vec3 aPos; attribute float aLand;
+        uniform float uSy,uCy,uSx,uCx,uR,uBaseR,uDpr;
+        uniform vec2 uCenter,uViewport; uniform vec3 uSun;
+        uniform vec3 uRipDir[4]; uniform float uRipRing[4]; uniform float uRipFade[4];
+        varying float vIllum,vDepth,vLand,vRip;
+        void main(){
+          float x=aPos.x,y=aPos.y,z=aPos.z;
+          float x1=x*uCy+z*uSy;
+          float z1=-x*uSy+z*uCy;
+          float y2=y*uCx-z1*uSx;
+          float z2=y*uSx+z1*uCx;
+          if(z2<-0.16){ gl_Position=vec4(2.0,2.0,2.0,1.0); gl_PointSize=0.0; return; }
+          float sxp=uCenter.x+x1*uR;
+          float syp=uCenter.y-y2*uR;
+          gl_Position=vec4(sxp/uViewport.x*2.0-1.0, 1.0-syp/uViewport.y*2.0, 0.0, 1.0);
+          float tdepth=(z2+1.0)*0.5;
+          float illum=x*uSun.x+y*uSun.y+z*uSun.z;
+          float L=clamp((illum+0.3)/0.6,0.0,1.0);
+          float dw=smoothstep(-0.30,0.30,illum);
+          // expanding wave: each ripple is an angular ring sweeping out from the tapped point;
+          // dots inside the band briefly shrink + brighten (the original dot-wave look).
+          float ripSize=1.0, ripAmp=0.0;
+          for(int i=0;i<4;i++){
+            if(uRipFade[i]<=0.0) continue;
+            float dp=clamp(x*uRipDir[i].x+y*uRipDir[i].y+z*uRipDir[i].z,-1.0,1.0);
+            float diff=acos(dp)-uRipRing[i];
+            float g=exp(-(diff*diff)/0.05)*uRipFade[i];
+            ripSize*=1.0-0.62*g; ripAmp+=0.5*g;
+          }
+          vRip=ripAmp;
+          float rMul=mix(0.72+0.28*L, 0.58+0.42*L, dw);
+          float landMul=mix(0.80,1.08,aLand);
+          gl_PointSize=max(1.0, uBaseR*(0.5+0.5*tdepth)*rMul*landMul*uDpr*1.45*ripSize);
+          vIllum=illum; vDepth=z2; vLand=aLand;
+        }`;
+      const fs=`
+        precision mediump float;
+        varying float vIllum,vDepth,vLand,vRip;
+        uniform vec3 uDayLand,uDayWater,uNightLand,uNightWater;
+        void main(){
+          vec2 d=gl_PointCoord-vec2(0.5);
+          float dist=dot(d,d);
+          if(dist>0.25) discard;
+          float L=clamp((vIllum+0.3)/0.6,0.0,1.0);
+          float dw=smoothstep(-0.30,0.30,vIllum);
+          vec3 dayC=mix(uDayWater,uDayLand,vLand);
+          vec3 nightC=mix(uNightWater,uNightLand,vLand);
+          vec3 col=mix(nightC,dayC,dw);
+          float a=clamp(vDepth+0.18,0.04,1.0);
+          float aDay=a*(0.34+0.66*L)*mix(0.9,1.25,vLand);
+          float aNight=a*(0.7+0.3*L)*mix(1.0,1.18,vLand);
+          float alpha=clamp(mix(aNight,aDay,dw)*(1.0+0.5*vRip),0.0,1.0);
+          float edge=smoothstep(0.25,0.14,dist);
+          gl_FragColor=vec4(col,alpha*edge);
+        }`;
+      const prog=this._mkProg(gl,vs,fs); if(!prog) return;
+      this.gl=gl; this.glProg=prog; gl.useProgram(prog);
+      const u=n=>gl.getUniformLocation(prog,n);
+      this.glLoc={
+        aPos:gl.getAttribLocation(prog,'aPos'), aLand:gl.getAttribLocation(prog,'aLand'),
+        uSy:u('uSy'),uCy:u('uCy'),uSx:u('uSx'),uCx:u('uCx'),uR:u('uR'),uBaseR:u('uBaseR'),uDpr:u('uDpr'),
+        uCenter:u('uCenter'),uViewport:u('uViewport'),uSun:u('uSun'),
+        uDayLand:u('uDayLand'),uDayWater:u('uDayWater'),uNightLand:u('uNightLand'),uNightWater:u('uNightWater'),
+        uRipDir:u('uRipDir'),uRipRing:u('uRipRing'),uRipFade:u('uRipFade')
+      };
+      this.glBuf=gl.createBuffer(); this.glLandBuf=gl.createBuffer();
+      gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+      gl.disable(gl.DEPTH_TEST);
+      // if the GL context is lost, fall back to Canvas2D so the globe never disappears
+      this.els.glcanvas.addEventListener('webglcontextlost', e=>{ e.preventDefault(); this.gl=null; this.glReady=false; });
+      if(this.pointsReady) this.uploadGL();
+    }catch(e){ this.gl=null; }
+  }
+  _mkProg(gl,vsrc,fsrc){
+    const mk=(type,src)=>{ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){ console.warn('shader',gl.getShaderInfoLog(s)); return null; } return s; };
+    const v=mk(gl.VERTEX_SHADER,vsrc), f=mk(gl.FRAGMENT_SHADER,fsrc); if(!v||!f) return null;
+    const p=gl.createProgram(); gl.attachShader(p,v); gl.attachShader(p,f); gl.linkProgram(p);
+    if(!gl.getProgramParameter(p,gl.LINK_STATUS)){ console.warn('link',gl.getProgramInfoLog(p)); return null; }
+    return p;
+  }
+  uploadGL(){
+    const gl=this.gl; if(!gl||!this.pointsReady) return;
+    const N=this.N, pos=new Float32Array(N*3), land=new Float32Array(N);
+    for(let i=0;i<N;i++){ pos[i*3]=this.X[i]; pos[i*3+1]=this.Y[i]; pos[i*3+2]=this.Z[i]; land[i]=this.land[i]; }
+    gl.bindBuffer(gl.ARRAY_BUFFER,this.glBuf); gl.bufferData(gl.ARRAY_BUFFER,pos,gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ARRAY_BUFFER,this.glLandBuf); gl.bufferData(gl.ARRAY_BUFFER,land,gl.STATIC_DRAW);
+    this.glReady=true;
+  }
+  drawGL(cx,cy,R){
+    const gl=this.gl, L=this.glLoc; if(!gl||!this.glReady) return;
+    gl.viewport(0,0,this.els.glcanvas.width,this.els.glcanvas.height);
+    gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.useProgram(this.glProg);
+    gl.uniform1f(L.uSy,Math.sin(this.ay)); gl.uniform1f(L.uCy,Math.cos(this.ay));
+    gl.uniform1f(L.uSx,Math.sin(this.ax)); gl.uniform1f(L.uCx,Math.cos(this.ax));
+    gl.uniform2f(L.uCenter,cx,cy); gl.uniform2f(L.uViewport,this.w,this.h);
+    gl.uniform1f(L.uR,R); gl.uniform1f(L.uBaseR,Math.max(1.0,this.Rg*0.0125*Math.sqrt(this.zoom))); gl.uniform1f(L.uDpr,this.glDpr);
+    const sun=this.sunVec||[0,0,1]; gl.uniform3f(L.uSun,sun[0],sun[1],sun[2]);
+    const d=v=>new Float32Array([v[0]/255,v[1]/255,v[2]/255]);
+    gl.uniform3fv(L.uDayLand,d(this.cur.land)); gl.uniform3fv(L.uDayWater,d(this.cur.water));
+    gl.uniform3fv(L.uNightLand,new Float32Array([40/255,58/255,74/255]));
+    gl.uniform3fv(L.uNightWater,new Float32Array([28/255,48/255,92/255]));
+    // feed up to 4 live ripples (expanding angular rings) to the dot-wave shader
+    const rdir=new Float32Array(12), rring=new Float32Array(4), rfade=new Float32Array(4);
+    const now=performance.now(), R4=this.ripples;
+    for(let k=R4.length-1;k>=0;k--){ if((now-R4[k].t0)/1000>1.75) R4.splice(k,1); }
+    for(let k=0;k<4;k++){ const rp=R4[k]; if(rp){ const age=(now-rp.t0)/1000; rdir[k*3]=rp.vec[0]; rdir[k*3+1]=rp.vec[1]; rdir[k*3+2]=rp.vec[2]; rring[k]=age*2.5; rfade[k]=Math.max(0,1-age/1.75); } else { rfade[k]=0; } }
+    gl.uniform3fv(L.uRipDir,rdir); gl.uniform1fv(L.uRipRing,rring); gl.uniform1fv(L.uRipFade,rfade);
+    gl.bindBuffer(gl.ARRAY_BUFFER,this.glBuf); gl.enableVertexAttribArray(L.aPos); gl.vertexAttribPointer(L.aPos,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,this.glLandBuf); gl.enableVertexAttribArray(L.aLand); gl.vertexAttribPointer(L.aLand,1,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.POINTS,0,this.N);
+  }
+
+  // one-shot tap/locate feedback: an expanding ring on the 2D overlay (replaces the old per-dot ripple)
+  drawRipples(ctx,t,cx,cy,R,sy,cyk,sx,cxk){
+    if(!this.ripples||!this.ripples.length) return;
+    const accStr=this.cur.acc.map(Math.round).join(',');
+    for(let k=this.ripples.length-1;k>=0;k--){ const rp=this.ripples[k]; const age=(t-rp.t0)/1000; if(age>1.75){ this.ripples.splice(k,1); continue; }
+      const r=this.rot(rp.vec,sy,cyk,sx,cxk); if(r[2]<0.02) continue;
+      const px=cx+r[0]*R, py=cy-r[1]*R, fade=1-age/1.75;
+      ctx.globalAlpha=0.4*fade*Math.min(1,r[2]+0.3); ctx.strokeStyle='rgb('+accStr+')'; ctx.lineWidth=1.5;
+      ctx.beginPath(); ctx.arc(px,py,Math.max(3,age*R*1.1),0,7); ctx.stroke(); ctx.globalAlpha=1;
+    }
   }
 
   draw(t){
@@ -564,62 +773,31 @@ class Component extends DCLogic {
     if(!this.pointsReady) return;
     const cx=this.cx+this.px, cy=this.cy+this.py, R=this.Rg*this.zoom;
     const sy=Math.sin(this.ay),cyk=Math.cos(this.ay),sx=Math.sin(this.ax),cxk=Math.cos(this.ax);
-    const land=this.cur.land, water=this.cur.water;
-    const landStr='rgb('+land.map(Math.round).join(',')+')';
-    const waterStr='rgb('+water.map(Math.round).join(',')+')';
-    const baseR=Math.max(1.0,this.Rg*0.0125*Math.sqrt(this.zoom));
-    // scratch buffers — day + night, land + water (terminator shading)
-    if(!this._bw){ this._bw={x:[],y:[],r:[],a:[]}; this._bl={x:[],y:[],r:[],a:[]}; this._bwn={x:[],y:[],r:[],a:[]}; this._bln={x:[],y:[],r:[],a:[]}; }
-    const BW=this._bw,BL=this._bl,BWn=this._bwn,BLn=this._bln; let nw=0,nl=0,nwn=0,nln=0;
     const tt=t*0.001;
-    const X=this.X,Y=this.Y,Zc=this.Z,LD=this.land,N=this.N;
     const sun=this.sunVec||[0,0,1];
-    const FOC=this.focus?this.focus.vec:null;   // selected place stays gently lit
-    // advance one-shot ripples (expanding angular ring, fading over ~1.7s)
-    const RIP=[];
-    for(let k=this.ripples.length-1;k>=0;k--){ const rp=this.ripples[k]; const age=(t-rp.t0)/1000; if(age>1.75){ this.ripples.splice(k,1); continue; } RIP.push({v:rp.vec, ring:age*2.5, fade:1-age/1.75}); }
-    for(let i=0;i<N;i++){
-      const x=X[i],y=Y[i],zc=Zc[i];
-      const x1=x*cyk+zc*sy; const z1=-x*sy+zc*cyk;
-      const y2=y*cxk - z1*sx; const z2=y*sx + z1*cxk;
-      if(z2<-0.16) continue;
-      const sxp=cx+x1*R, syp=cy-y2*R;
-      const tdepth=(z2+1)*0.5;
-      let a=z2+0.18; if(a>1)a=1; if(a<0.04)a=0.04; a*=a>0.5?1:0.9;
-      let rr=baseR*(0.5+0.5*tdepth);
-      // selected place: a soft persistent spotlight that brightens nearby dots
-      if(FOC){ const fd=x*FOC[0]+y*FOC[1]+zc*FOC[2]; if(fd>0.86){ const s=(fd-0.86)/0.14; a=Math.min(1,a+s*0.5); rr*=1+s*0.18; } }
-      // one-shot ripples: an expanding ring momentarily shrinks the dots it passes over
-      for(let k=0;k<RIP.length;k++){ const rp=RIP[k]; const dotp=x*rp.v[0]+y*rp.v[1]+zc*rp.v[2]; const ang=Math.acos(dotp<-1?-1:dotp>1?1:dotp); const diff=ang-rp.ring; const g=Math.exp(-(diff*diff)/0.05)*rp.fade; if(g>0.01){ rr*=1-0.62*g; a=Math.min(1,a*(1+0.5*g)); } }
-      // sun illumination: dot of earth-fixed position with the subsolar direction -> soft terminator
-      const illum=x*sun[0]+y*sun[1]+zc*sun[2];
-      let L=(illum+0.16)/0.32; if(L<0)L=0; if(L>1)L=1;
-      const aL=a*(0.22+0.78*L);
-      const rL=rr*(0.58+0.42*L);
-      if(illum>=0){ if(LD[i]){ BL.x[nl]=sxp;BL.y[nl]=syp;BL.r[nl]=rL;BL.a[nl]=aL;nl++; } else { BW.x[nw]=sxp;BW.y[nw]=syp;BW.r[nw]=rL;BW.a[nw]=aL;nw++; } }
-      else { if(LD[i]){ BLn.x[nln]=sxp;BLn.y[nln]=syp;BLn.r[nln]=rL;BLn.a[nln]=aL;nln++; } else { BWn.x[nwn]=sxp;BWn.y[nwn]=syp;BWn.r[nwn]=rL;BWn.a[nwn]=aL;nwn++; } }
-    }
 
-    // ---- the sun's light: warm wash centred on the subsolar point (drawn under the dots) ----
+    // ---- DOTS: GPU path (WebGL, ~one draw call) with a Canvas2D fallback ----
+    if(this.gl && this.glReady){ this.drawGL(cx,cy,R); }
+    else { this.drawDots2D(ctx,t,cx,cy,R,sy,cyk,sx,cxk); }
+
+    // ---- the sun's light: warm wash centred on the subsolar point ----
     const sp=this.rot(sun,sy,cyk,sx,cxk);
     if(sp[2]>-0.15){ const gx=cx+sp[0]*R, gy=cy-sp[1]*R, gr=R*1.08; const ga2=0.22*Math.max(0,Math.min(1,sp[2]+0.3)); const gg=ctx.createRadialGradient(gx,gy,0,gx,gy,gr); gg.addColorStop(0,'rgba(255,236,196,'+ga2.toFixed(3)+')'); gg.addColorStop(0.45,'rgba(255,221,170,'+(ga2*0.34).toFixed(3)+')'); gg.addColorStop(1,'rgba(255,221,170,0)'); ctx.fillStyle=gg; ctx.beginPath(); ctx.arc(gx,gy,gr,0,7); ctx.fill(); }
 
-    // night-side colours: dim + cool, derived from the live palette
-    const dimc=(c,to,m)=>'rgb('+Math.round(c[0]+(to[0]-c[0])*m)+','+Math.round(c[1]+(to[1]-c[1])*m)+','+Math.round(c[2]+(to[2]-c[2])*m)+')';
-    const waterNightStr=dimc(water,[8,14,34],0.6), landNightStr=dimc(land,[16,30,46],0.58);
+    // ---- anti-solar shadow wash: cool darkness over the night hemisphere, only visible once the
+    // local-time theme has gone light/creamy (so the dark side still reads as NIGHT). ----
+    const bgL=this.cur.bg0[0]/255;
+    if(bgL>0.18){
+      const ap=this.rot([-sun[0],-sun[1],-sun[2]],sy,cyk,sx,cxk);
+      if(ap[2]>-0.15){ const ax=cx+ap[0]*R, ayp=cy-ap[1]*R, ar=R*1.7; const aw=0.85*Math.max(0,Math.min(1,ap[2]+0.32))*bgL;
+        ctx.save(); ctx.beginPath(); ctx.arc(cx,cy,R,0,7); ctx.clip();
+        const ag=ctx.createRadialGradient(ax,ayp,0,ax,ayp,ar); ag.addColorStop(0,'rgba(8,13,28,'+aw.toFixed(3)+')'); ag.addColorStop(0.4,'rgba(8,13,28,'+(aw*0.78).toFixed(3)+')'); ag.addColorStop(0.68,'rgba(8,13,28,'+(aw*0.4).toFixed(3)+')'); ag.addColorStop(0.85,'rgba(8,13,28,'+(aw*0.15).toFixed(3)+')'); ag.addColorStop(1,'rgba(8,13,28,0)'); ctx.fillStyle=ag; ctx.beginPath(); ctx.arc(ax,ayp,ar,0,7); ctx.fill();
+        ctx.restore(); }
+    }
 
-    // draw night side first (faint, cool)
-    ctx.fillStyle=waterNightStr;
-    for(let i=0;i<nwn;i++){ ctx.globalAlpha=BWn.a[i]*0.7; const r=BWn.r[i]*0.76; ctx.fillRect(BWn.x[i]-r*0.5,BWn.y[i]-r*0.5,r,r); }
-    ctx.fillStyle=landNightStr;
-    for(let i=0;i<nln;i++){ ctx.globalAlpha=Math.min(1,BLn.a[i]*1.1); const r=BLn.r[i]*1.05; ctx.fillRect(BLn.x[i]-r*0.5,BLn.y[i]-r*0.5,r,r); }
-    // draw day side (bright, full colour)
-    ctx.fillStyle=waterStr;
-    for(let i=0;i<nw;i++){ ctx.globalAlpha=BW.a[i]*0.6; const r=BW.r[i]*0.78; ctx.fillRect(BW.x[i]-r*0.5,BW.y[i]-r*0.5,r,r); }
-    ctx.fillStyle=landStr;
-    for(let i=0;i<nl;i++){ ctx.globalAlpha=Math.min(1,BL.a[i]*1.25); const r=BL.r[i]*1.12; ctx.fillRect(BL.x[i]-r*0.5,BL.y[i]-r*0.5,r,r); }
-    ctx.globalAlpha=1;
-
+    // ---- one-shot tap ripples now render as the dot-wave in the WebGL shader (drawGL). The
+    //      Canvas2D ring is only a fallback when WebGL is unavailable. ----
+    if(!this.gl||!this.glReady) this.drawRipples(ctx,t,cx,cy,R,sy,cyk,sx,cxk);
     // ---- city lights: warm points that glow only on the night side ----
     this.drawCityLights(ctx,cx,cy,R,sy,cyk,sx,cxk,tt);
 
@@ -648,7 +826,57 @@ class Component extends DCLogic {
     }
   }
 
+  // Canvas2D fallback for the globe dots (used only when WebGL is unavailable).
+  drawDots2D(ctx,t,cx,cy,R,sy,cyk,sx,cxk){
+    const baseR=Math.max(1.0,this.Rg*0.0125*Math.sqrt(this.zoom));
+    if(!this._bw){ this._bw={x:[],y:[],r:[],a:[]}; this._bl={x:[],y:[],r:[],a:[]}; this._bwn={x:[],y:[],r:[],a:[]}; this._bln={x:[],y:[],r:[],a:[]}; }
+    const BW=this._bw,BL=this._bl,BWn=this._bwn,BLn=this._bln; let nw=0,nl=0,nwn=0,nln=0;
+    const X=this.X,Y=this.Y,Zc=this.Z,LD=this.land,N=this.N;
+    const sun=this.sunVec||[0,0,1];
+    for(let i=0;i<N;i++){
+      const x=X[i],y=Y[i],zc=Zc[i];
+      const x1=x*cyk+zc*sy; const z1=-x*sy+zc*cyk;
+      const y2=y*cxk - z1*sx; const z2=y*sx + z1*cxk;
+      if(z2<-0.16) continue;
+      const sxp=cx+x1*R, syp=cy-y2*R;
+      const tdepth=(z2+1)*0.5;
+      let a=z2+0.18; if(a>1)a=1; if(a<0.04)a=0.04; a*=a>0.5?1:0.9;
+      const rr=baseR*(0.5+0.5*tdepth);
+      const illum=x*sun[0]+y*sun[1]+zc*sun[2];
+      let L=(illum+0.3)/0.6; if(L<0)L=0; if(L>1)L=1;
+      const TW=0.30; let dw=(illum+TW)/(2*TW); if(dw<0)dw=0; if(dw>1)dw=1; dw=dw*dw*(3-2*dw);
+      const aL=a*(0.22+0.78*L), rL=rr*(0.58+0.42*L);
+      const aN=a*(0.62+0.38*L), rN=rr*(0.72+0.28*L);
+      if(dw>0.004){ const ad=aL*dw; if(LD[i]){ BL.x[nl]=sxp;BL.y[nl]=syp;BL.r[nl]=rL;BL.a[nl]=ad;nl++; } else { BW.x[nw]=sxp;BW.y[nw]=syp;BW.r[nw]=rL;BW.a[nw]=ad;nw++; } }
+      if(dw<0.996){ const an=aN*(1-dw); if(LD[i]){ BLn.x[nln]=sxp;BLn.y[nln]=syp;BLn.r[nln]=rN;BLn.a[nln]=an;nln++; } else { BWn.x[nwn]=sxp;BWn.y[nwn]=syp;BWn.r[nwn]=rN;BWn.a[nwn]=an;nwn++; } }
+    }
+    const landStr='rgb('+this.cur.land.map(Math.round).join(',')+')', waterStr='rgb('+this.cur.water.map(Math.round).join(',')+')';
+    this.drawBatch(ctx,BWn,nwn,'rgb(9,14,28)',0.95,0.82);
+    this.drawBatch(ctx,BLn,nln,'rgb(20,29,40)',1.15,1.04);
+    this.drawBatch(ctx,BW,nw,waterStr,0.6,0.78);
+    this.drawBatch(ctx,BL,nl,landStr,1.25,1.12);
+    ctx.globalAlpha=1;
+  }
+
+  // Batched dot renderer: bucket dots by quantized alpha into Path2D groups, fill each group once.
+  // Turns ~thousands of globalAlpha+fillRect calls into ~11 fills per colour group.
+  drawBatch(ctx,B,n,fill,am,rm){
+    if(n<=0) return;
+    const L=11, P=this._pbuf||(this._pbuf=[]);
+    for(let l=0;l<L;l++) P[l]=new Path2D();
+    for(let i=0;i<n;i++){
+      let a=B.a[i]*am; if(a<0.03) continue; if(a>1)a=1;
+      let li=(a*L)|0; if(li>=L)li=L-1;
+      const r=B.r[i]*rm, h=r*0.5;
+      P[li].rect(B.x[i]-h,B.y[i]-h,r,r);
+    }
+    ctx.fillStyle=fill;
+    for(let l=0;l<L;l++){ ctx.globalAlpha=(l+0.5)/L; ctx.fill(P[l]); }
+    ctx.globalAlpha=1;
+  }
+
   rot(v,sy,cyk,sx,cxk){ const x1=v[0]*cyk+v[2]*sy; const z1=-v[0]*sy+v[2]*cyk; const y2=v[1]*cxk-z1*sx; const z2=v[1]*sx+z1*cxk; return [x1,y2,z2]; }
+  roundRect(ctx,x,y,w,h,r){ if(ctx.roundRect){ ctx.beginPath(); ctx.roundRect(x,y,w,h,r); return; } r=Math.min(r,h/2,w/2); ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
   rotDepth(v,sy,cyk,sx,cxk){ const z1=-v[0]*sy+v[2]*cyk; return v[1]*sx+z1*cxk; }
 
   drawArcs(ctx,cx,cy,R,sy,cyk,sx,cxk,tt){
@@ -658,7 +886,7 @@ class Component extends DCLogic {
     if(!this.focus) return;
     let pairs=[];
     this.events.forEach(e=>pairs.push([this.latlonToVec(e.lat,e.lon),this.focus.vec,e]));
-    const STEPS=42;
+    const STEPS=30;
     pairs.forEach((pr,idx)=>{
       const a=pr[0],b=pr[1];
       let dotp=a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; dotp=Math.max(-1,Math.min(1,dotp)); const om=Math.acos(dotp); if(om<1e-3) return; const so=Math.sin(om);
@@ -680,20 +908,47 @@ class Component extends DCLogic {
       const c=this.TYPE[e.type]||[255,255,255]; const cs=c.join(',');
       const pulse=0.5+0.5*Math.sin(tt*2.0 + e.lat);
       const rad=1.7+e.severity*0.5;
-      // soft halo (tight, so continents stay legible)
-      const g=ctx.createRadialGradient(px,py,0,px,py,rad*2.4); g.addColorStop(0,'rgba('+cs+','+(0.4*r[2]).toFixed(3)+')'); g.addColorStop(1,'rgba('+cs+',0)');
-      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,rad*2.4,0,7); ctx.fill();
+      // soft halo as a cheap alpha disc (no per-frame gradient allocation)
+      ctx.globalAlpha=Math.min(0.5,0.45*r[2]); ctx.fillStyle='rgb('+cs+')'; ctx.beginPath(); ctx.arc(px,py,rad*1.6,0,7); ctx.fill(); ctx.globalAlpha=1;
       // pulsing ring radiates outward then fades
       ctx.strokeStyle='rgba('+cs+','+(0.45*(1-pulse)*r[2]).toFixed(3)+')'; ctx.lineWidth=1; ctx.beginPath(); ctx.arc(px,py,rad+pulse*rad*2.0,0,7); ctx.stroke();
       // crisp core
       ctx.globalAlpha=Math.min(1,r[2]+0.3); ctx.fillStyle='rgb('+cs+')'; ctx.beginPath(); ctx.arc(px,py,rad*0.7,0,7); ctx.fill(); ctx.globalAlpha=1;
       if(r[2]>fd){ fd=r[2]; frontMost={e,px,py,c:cs}; }
     });
-    if(frontMost){ const f=frontMost; ctx.font='500 12px "IBM Plex Mono", monospace'; ctx.textBaseline='middle';
-      const label=f.e.name+'  ·  '+f.e.place;
-      const lx=f.px+14, ly=f.py-12;
-      ctx.strokeStyle='rgba('+f.c+',.7)'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(f.px+5,f.py-5); ctx.lineTo(lx-4,ly); ctx.stroke();
-      ctx.fillStyle='rgb('+this.cur.ink.map(Math.round).join(',')+')'; ctx.fillText(label,lx,ly);
+    if(frontMost && this.labelsOn){ const f=frontMost; ctx.font='500 12px "IBM Plex Mono", monospace'; ctx.textBaseline='middle';
+      let label=f.e.name+'  ·  '+f.e.place;
+      const margin=12, dotW=14, padX=11, bh=24, gap=14;
+      // truncate the label if the pill would be wider than the screen (long names on phones)
+      const maxBw=this.w-margin*2;
+      let tw=ctx.measureText(label).width;
+      if(tw+padX*2+dotW>maxBw){
+        const allow=maxBw-padX*2-dotW;
+        while(label.length>4 && ctx.measureText(label+'\u2026').width>allow){ label=label.slice(0,-1); }
+        label+='\u2026'; tw=ctx.measureText(label).width;
+      }
+      const bw=tw+padX*2+dotW;
+      // horizontal: prefer right of the marker, flip left if it would overflow, then clamp on-screen
+      let bx = (f.px+gap+bw<=this.w-margin) ? f.px+gap
+             : (f.px-gap-bw>=margin)        ? f.px-gap-bw
+             :                                f.px+gap;
+      bx=Math.max(margin, Math.min(bx, this.w-margin-bw));
+      // vertical: keep the pill fully on-screen
+      let by=Math.max(margin, Math.min((f.py-12)-bh/2, this.h-margin-bh));
+      const ly=by+bh/2;
+      // leader line from marker to the nearest edge of the pill
+      const anchorX=(bx>f.px)?bx:bx+bw;
+      ctx.strokeStyle='rgba('+f.c+',.7)'; ctx.lineWidth=1; ctx.beginPath();
+      ctx.moveTo(f.px+(anchorX>f.px?5:-5), f.py-5); ctx.lineTo(anchorX+(anchorX>f.px?-4:4), ly); ctx.stroke();
+      // soft, blurred dark pill behind the text so it stays readable over land and water
+      ctx.save();
+      ctx.shadowColor='rgba(0,0,0,.5)'; ctx.shadowBlur=14; ctx.shadowOffsetY=1;
+      ctx.fillStyle='rgba(6,10,18,.66)';
+      this.roundRect(ctx,bx,by,bw,bh,bh/2); ctx.fill();
+      ctx.restore();
+      // severity dot + white label
+      ctx.fillStyle='rgb('+f.c+')'; ctx.beginPath(); ctx.arc(bx+padX+1,ly,3,0,7); ctx.fill();
+      ctx.fillStyle='#ffffff'; ctx.fillText(label,bx+padX+dotW,ly);
     }
   }
 
