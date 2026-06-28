@@ -231,7 +231,7 @@ class Component extends DCLogic {
     // One sphere is the most even arrangement possible (overlaying several causes moiré / clumps).
     // High density keeps it clean and detailed at every zoom; dot SIZE scales with zoom so close-up
     // it reads as a fine even stipple rather than fat blobs.
-    const N = 26000; this.N = N;
+    const N = 32000; this.N = N;
     this.X=new Float32Array(N); this.Y=new Float32Array(N); this.Z=new Float32Array(N); this.land=new Uint8Array(N);
     let data=null,W=0,H=0;
     if(img){ const c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight; const cx=c.getContext('2d'); cx.drawImage(img,0,0); try{ const id=cx.getImageData(0,0,c.width,c.height); data=id.data; W=c.width; H=c.height; }catch(e){ data=null; } }
@@ -334,7 +334,7 @@ class Component extends DCLogic {
     if(this.themeMode==='day') this.tgt=this.cloneP(this.DAY);
     else if(this.themeMode==='night') this.tgt=this.cloneP(this.NIGHT);
     // phase label
-    let ph; if(this.themeMode==='day') ph='DAY'; else if(this.themeMode==='night') ph='NIGHT'; else if(elev>14) ph='DAYLIGHT'; else if(elev>2) ph='GOLDEN HOUR'; else if(elev>-8) ph=(rising?'DAWN':'DUSK'); else ph='NIGHT';
+    let ph; if(this.themeMode==='day') ph='DAY'; else if(this.themeMode==='night') ph='NIGHT'; else ph=(this.cur.bg0[0]>128?'DAY':'NIGHT');
     this.els.phase.textContent=ph;
     this.updateThemeIcon();
   }
@@ -403,9 +403,11 @@ class Component extends DCLogic {
     const move=e=>{ const r=c.getBoundingClientRect(); this.mx=e.clientX-r.left; this.my=e.clientY-r.top; if(!this.dragging||this.pinching) return; const dx=e.clientX-this.lastX, dy=e.clientY-this.lastY; this.lastX=e.clientX; this.lastY=e.clientY; this.ay+=dx*0.0052; this.ax+=dy*0.0052; this.ayVel=dx*0.0052; this.axVel=dy*0.0052; };  // free, unclamped tilt — rotate in any direction
     const up=e=>{ if(this.dragging && e){ const dist=Math.hypot(e.clientX-this._downX,e.clientY-this._downY), dt=performance.now()-this._downT; if(dist<6 && dt<450) this.pickGlobe(e.clientX,e.clientY); } this.dragging=false; c.style.cursor='grab'; };
     c.addEventListener('pointerdown',down); window.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
-    // Trackpad-native wheel: pinch (ctrl+wheel) zooms, two-finger slide rotates. Mouse users get keyboard zoom (+/-).
+    // Trackpad-native wheel: pinch (ctrl+wheel) zooms, two-finger slide rotates.
+    // Mouse wheel zooms (mouse wheels send pure-vertical, large, quantized deltas with no deltaX).
     c.addEventListener('wheel',e=>{ e.preventDefault(); this.markInteract();
-      if(e.ctrlKey){ const f=Math.exp(-e.deltaY*0.01); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }
+      const isMouseWheel = !e.ctrlKey && e.deltaX===0 && Math.abs(e.deltaY)>=24 && Number.isInteger(e.deltaY);
+      if(e.ctrlKey || isMouseWheel){ const f=Math.exp(-e.deltaY*(isMouseWheel?0.0015:0.01)); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }
       else { this.fly=null; this.ay-=e.deltaX*0.0045; this.ax-=e.deltaY*0.0045; this.ayVel=-e.deltaX*0.0009; this.axVel=-e.deltaY*0.0009; }  // reversed trackpad pan
     },{passive:false});
     // keyboard: arrows rotate, +/- zoom, space toggles drift
