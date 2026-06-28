@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <div id="yah-hint" style="position:absolute;left:50%;bottom:100px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:rgb(var(--ink-dim));opacity:0;pointer-events:none;z-index:5;">DRAG TO TURN &middot; TAP TO CONNECT</div>
+  <div id="yah-hint" style="position:absolute;left:50%;bottom:100px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:rgb(var(--ink-dim));opacity:0;pointer-events:none;z-index:5;display:none;"></div>
 
   <button id="yah-invite" style="position:absolute;right:40px;bottom:148px;transform:none;opacity:0;pointer-events:none;display:inline-flex;align-items:center;gap:11px;background:rgb(var(--ink));color:rgb(var(--bg0));border:none;font-size:14.5px;font-weight:500;padding:14px 24px;border-radius:999px;cursor:pointer;box-shadow:0 10px 34px rgba(0,0,0,.4);z-index:6;">
     <span style="width:9px;height:9px;border-radius:50%;border:2px solid rgb(var(--bg0));"></span><span id="yah-invitelabel">Find my place on Earth</span><span id="yah-invitelabel-sm" style="display:none;">Find me</span>
@@ -154,6 +154,7 @@ class Component extends DCLogic {
       toast:$('yah-toast'), soundGlyph:$('yah-soundglyph'), rotateGlyph:$('yah-rotateglyph'), labelsGlyph:$('yah-labelsglyph')
     };
     this.labelsOn=true;
+    this.themeMode='auto';   // 'auto' (local time) | 'day' | 'night' — discreet top-right toggle
     this.ctx = this.els.canvas.getContext('2d');
     this.initGL();   // sets this.gl when WebGL is available; everything degrades to Canvas2D if not
 
@@ -230,7 +231,7 @@ class Component extends DCLogic {
     // One sphere is the most even arrangement possible (overlaying several causes moiré / clumps).
     // High density keeps it clean and detailed at every zoom; dot SIZE scales with zoom so close-up
     // it reads as a fine even stipple rather than fat blobs.
-    const N = 12000; this.N = N;
+    const N = 26000; this.N = N;
     this.X=new Float32Array(N); this.Y=new Float32Array(N); this.Z=new Float32Array(N); this.land=new Uint8Array(N);
     let data=null,W=0,H=0;
     if(img){ const c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight; const cx=c.getContext('2d'); cx.drawImage(img,0,0); try{ const id=cx.getImageData(0,0,c.width,c.height); data=id.data; W=c.width; H=c.height; }catch(e){ data=null; } }
@@ -335,6 +336,7 @@ class Component extends DCLogic {
     // phase label
     let ph; if(this.themeMode==='day') ph='DAY'; else if(this.themeMode==='night') ph='NIGHT'; else if(elev>14) ph='DAYLIGHT'; else if(elev>2) ph='GOLDEN HOUR'; else if(elev>-8) ph=(rising?'DAWN':'DUSK'); else ph='NIGHT';
     this.els.phase.textContent=ph;
+    this.updateThemeIcon();
   }
 
   paletteFor(e){
@@ -458,6 +460,25 @@ class Component extends DCLogic {
     this.toast(this.labelsOn?'labels on':'labels off');
   }
 
+  // discreet day/night theme explorer: each click flips to the opposite of what's shown now
+  cycleTheme(){
+    const isLight = this.cur.bg0[0] > 128;
+    this.themeMode = isLight ? 'night' : 'day';
+    this.markInteract();
+    this.refreshSolar();   // retargets the palette (this.tgt) honoring the override; loop lerps cur → tgt
+    this.updateThemeIcon();
+    this.toast(this.themeMode==='day'?'theme · day':'theme · night');
+  }
+
+  updateThemeIcon(){
+    const el=this.els.themeicon; if(!el) return;
+    // icon reflects the theme currently shown (sun = light, moon = dark)
+    const light = (this.themeMode==='day') || (this.themeMode==='auto' && this.cur.bg0[0] > 128);
+    const sun='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"></circle><line x1="12" y1="2" x2="12" y2="4.6"></line><line x1="12" y1="19.4" x2="12" y2="22"></line><line x1="4.2" y1="4.2" x2="6" y2="6"></line><line x1="18" y1="18" x2="19.8" y2="19.8"></line><line x1="2" y1="12" x2="4.6" y2="12"></line><line x1="19.4" y1="12" x2="22" y2="12"></line><line x1="4.2" y1="19.8" x2="6" y2="18"></line><line x1="18" y1="6" x2="19.8" y2="4.2"></line></svg>';
+    const moon='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"></path></svg>';
+    el.innerHTML = light ? sun : moon;
+  }
+
   openPanel(){ this.animT.panel=1; }
   closePanel(){ this.animT.panel=0; }
 
@@ -579,7 +600,7 @@ class Component extends DCLogic {
     // Frame limiter: render at 60fps only while actively interacting, otherwise 30fps.
     // The globe is an ambient drift, so halving its frame rate roughly halves CPU/GPU load
     // (and heat) with no perceptible loss at rest.
-    const interval=(this.dragging||this.fly||Math.abs(this.zoom-this.zoomT)>0.001)?16:(this.autoRotate?40:42);
+    const interval=(this.dragging||this.fly||this._themeAnim||Math.abs(this.zoom-this.zoomT)>0.001)?16:(this.autoRotate?22:28);
     if(t-(this._lastDraw||0) < interval-2) return;
     this._lastDraw=t;
     try{
@@ -600,7 +621,8 @@ class Component extends DCLogic {
 
     // theme lerp (track residual motion so the canvas can idle once it has settled)
     let themeDelta=0;
-    for(const k in this.cur){ const c=this.cur[k], g=this.tgt[k]; for(let j=0;j<3;j++){ const dd=g[j]-c[j]; c[j]+=dd*0.05; themeDelta+=dd<0?-dd:dd; } }
+    for(const k in this.cur){ const c=this.cur[k], g=this.tgt[k]; for(let j=0;j<3;j++){ const dd=g[j]-c[j]; c[j]+=dd*0.1; themeDelta+=dd<0?-dd:dd; } }
+    this._themeAnim = themeDelta>0.5;   // run at full FPS while the theme is actively crossfading
     // Only push CSS variables to :root while the theme is actually transitioning. Writing them
     // every frame re-invalidates everything that references them (both full-screen gradients +
     // the panel) and forces a continuous full-page recomposite — a standing GPU cost that has
@@ -617,7 +639,7 @@ class Component extends DCLogic {
     // paused (SPIN off) and everything settled, we stop clearing/redrawing, so the GPU compositor
     // reuses the last frame and the whole thing drops to ~0% CPU/GPU. This is the real heat fix. ----
     const inertia=(this.ayVel<0?-this.ayVel:this.ayVel)>2e-4||(this.axVel<0?-this.axVel:this.axVel)>2e-4;
-    const needsDraw=this.autoRotate||this.dragging||this.fly||inertia||this._parMoving||themeDelta>0.4||animDelta>0.003||(this.ripples&&this.ripples.length>0)||Math.abs(this.zoom-this.zoomT)>0.001;
+    const needsDraw=this.autoRotate||this.dragging||this.fly||inertia||this._parMoving||themeDelta>0.08||animDelta>0.003||(this.ripples&&this.ripples.length>0)||Math.abs(this.zoom-this.zoomT)>0.001;
     if(needsDraw){ try{ this.draw(t); }catch(err){ if(!this._loggedErr){ this._loggedErr=1; console.error('DRAW ERROR:', err && err.message, err && err.stack); } } }
     this.updateText(t);
     // Only touch the transition DOM while it's actually easing — writing identical transforms/
