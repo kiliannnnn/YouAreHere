@@ -53,8 +53,8 @@
     #yah-botright > div:first-child{ flex-direction:column !important; align-items:flex-end !important; gap:10px !important; }
     #yah-botright .yah-credits{ display:none; }
     /* compact, logo-only controls */
-    #yah-sound, #yah-share, #yah-rotate, #yah-labels{ font-size:10px !important; padding:10px !important; gap:0 !important; justify-content:center !important; }
-    #yah-sound .yah-blabel, #yah-share .yah-blabel, #yah-rotate .yah-blabel, #yah-labels .yah-blabel{ display:none !important; }
+    #yah-share, #yah-rotate, #yah-labels{ font-size:10px !important; padding:10px !important; gap:0 !important; justify-content:center !important; }
+    #yah-share .yah-blabel, #yah-rotate .yah-blabel, #yah-labels .yah-blabel{ display:none !important; }
     #yah-share span:last-child{ font-size:14px !important; }
     /* find-me: compact, left-aligned, with clear gap above the people cluster */
     #yah-invite{ left:max(16px,env(safe-area-inset-left)) !important; right:auto !important; bottom:124px !important; transform:none !important; justify-content:center; font-size:13px !important; padding:11px 16px !important; gap:9px !important; }
@@ -111,7 +111,6 @@
     <div style="display:flex;gap:10px;">
       <button id="yah-rotate" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-rotateglyph" style="display:inline-flex;color:rgb(var(--accent));flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span><span class="yah-blabel">SPIN</span></button>
       <button id="yah-labels" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-labelsglyph" style="display:inline-flex;color:rgb(var(--accent));flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span><span class="yah-blabel">LABELS</span></button>
-      <button id="yah-sound" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;" style-hover="background:rgba(var(--ink),.09);"><span id="yah-soundglyph" style="display:inline-flex;color:rgb(var(--ink-dim));flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg></span><span class="yah-blabel">SOUND</span></button>
       <button id="yah-share" style="background:transparent;border:1px solid rgba(var(--ink),.18);color:rgb(var(--ink));font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:9px 15px;border-radius:999px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:6px;" style-hover="background:rgba(var(--ink),.09);"><span style="display:inline-flex;color:inherit;flex:none;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg></span><span class="yah-blabel">SHARE</span></button>
     </div>
     <div class="yah-credits" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:rgb(var(--ink-dim));text-align:right;line-height:1.7;">
@@ -125,7 +124,7 @@
     <span style="width:9px;height:9px;border-radius:50%;border:2px solid rgb(var(--bg0));"></span><span id="yah-invitelabel">Find my place on Earth</span><span id="yah-invitelabel-sm" style="display:none;">Find me</span>
   </button>
 
-  <aside id="yah-panel" style="position:absolute;top:0;right:0;bottom:0;width:min(384px,88vw);background:rgba(var(--bg0),.9);border-left:1px solid rgba(var(--ink),.12);transform:translateX(101%);z-index:20;display:flex;flex-direction:column;">
+  <aside id="yah-panel" style="position:absolute;top:0;right:0;bottom:0;width:min(384px,88vw);background:rgba(var(--bg0),.94);border-left:1px solid rgba(var(--ink),.12);transform:translateX(101%);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform;z-index:20;display:flex;flex-direction:column;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;padding:30px 28px 18px;border-bottom:1px solid rgba(var(--ink),.1);">
       <div>
         <div style="font-weight:600;font-size:19px;letter-spacing:-.01em;">Planetary readings</div>
@@ -151,7 +150,7 @@ class Component extends DCLogic {
       sky:$('yah-sky'), pop:$('yah-pop'), poem:$('yah-poem'), invite:$('yah-invite'),
       inviteLabel:$('yah-invitelabel'), inviteLabelSm:$('yah-invitelabel-sm'), hint:$('yah-hint'),
       panel:$('yah-panel'), panelBody:$('yah-panelbody'), updated:$('yah-updated'),
-      toast:$('yah-toast'), soundGlyph:$('yah-soundglyph'), rotateGlyph:$('yah-rotateglyph'), labelsGlyph:$('yah-labelsglyph')
+      toast:$('yah-toast'), rotateGlyph:$('yah-rotateglyph'), labelsGlyph:$('yah-labelsglyph')
     };
     this.labelsOn=true;
     this.themeMode='auto';   // 'auto' (local time) | 'day' | 'night' — discreet top-right toggle
@@ -227,26 +226,47 @@ class Component extends DCLogic {
   latlonToVec(lat,lon){ const la=lat*this.D2R, lo=lon*this.D2R; const cl=Math.cos(la); return [cl*Math.sin(lo), Math.sin(la), cl*Math.cos(lo)]; }
 
   buildPoints(img){
-    // ---- Single even fibonacci sphere ----
-    // One sphere is the most even arrangement possible (overlaying several causes moiré / clumps).
-    // High density keeps it clean and detailed at every zoom; dot SIZE scales with zoom so close-up
-    // it reads as a fine even stipple rather than fat blobs.
-    const N = 32000; this.N = N;
-    this.X=new Float32Array(N); this.Y=new Float32Array(N); this.Z=new Float32Array(N); this.land=new Uint8Array(N);
+    // Decode the land mask ONCE and cache it, so we can cheaply regenerate the sphere at any
+    // dot count later (for zoom level-of-detail) without re-reading the image.
     let data=null,W=0,H=0;
     if(img){ const c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight; const cx=c.getContext('2d'); cx.drawImage(img,0,0); try{ const id=cx.getImageData(0,0,c.width,c.height); data=id.data; W=c.width; H=c.height; }catch(e){ data=null; } }
+    this._mask={data,W,H};
+    this.baseDots = 32000;        // dots at zoom=1 (the reference even density)
+    this.maxDots = 110000;        // ceiling when fully zoomed in
+    // allocate at the ceiling once; we draw only `this.currentCount` of them
+    this.X=new Float32Array(this.maxDots); this.Y=new Float32Array(this.maxDots); this.Z=new Float32Array(this.maxDots); this.land=new Uint8Array(this.maxDots);
+    this.currentCount=0;
+    this.rebuild(this.baseDots);
+    this.pointsReady = true;
+  }
+
+  // Generate a NATIVE Fibonacci sphere of exactly `count` points — perfectly even at ANY count,
+  // so every zoom level shows the identical, uniform dot density (just more or fewer dots).
+  rebuild(count){
+    count=Math.max(6000, Math.min(this.maxDots, count|0));
+    const m=this._mask, data=m&&m.data, W=m&&m.W, H=m&&m.H;
     const ga=Math.PI*(3-Math.sqrt(5));
-    for(let i=0;i<N;i++){
-      let y=1-((i+0.5)/N)*2; if(y>1)y=1; if(y<-1)y=-1;
+    const X=this.X,Y=this.Y,Z=this.Z,LD=this.land;
+    for(let i=0;i<count;i++){
+      let y=1-((i+0.5)/count)*2; if(y>1)y=1; if(y<-1)y=-1;
       const r=Math.sqrt(Math.max(0,1-y*y)); const th=ga*i;
       const x=Math.cos(th)*r, z=Math.sin(th)*r;
-      this.X[i]=x; this.Y[i]=y; this.Z[i]=z;
+      X[i]=x; Y[i]=y; Z[i]=z;
       let isLand=0;
       if(data){ const lat=Math.asin(y)*this.R2D, lon=Math.atan2(x,z)*this.R2D; const u=(lon+180)/360, v=(90-lat)/180; const px=Math.min(W-1,Math.max(0,(u*W)|0)), py=Math.min(H-1,Math.max(0,(v*H)|0)); if(data[(py*W+px)*4]>128) isLand=1; }
-      this.land[i]=isLand;
+      LD[i]=isLand;
     }
-    this.pointsReady = true;
+    this.currentCount=count;
     this.uploadGL();
+  }
+
+  // Ideal dot count for the current zoom (front hemisphere screen area ∝ zoom²), quantized so we
+  // only regenerate occasionally. Density-per-screen-pixel stays constant across zoom.
+  idealCount(){
+    const z=this.zoom||1;
+    const want=this.baseDots*z*z;
+    const q=Math.round(want/3000)*3000;             // quantize -> avoid constant rebuilds
+    return Math.max(12000, Math.min(this.maxDots, q));
   }
 
   // ---- data ----------------------------------------------------------
@@ -403,12 +423,23 @@ class Component extends DCLogic {
     const move=e=>{ const r=c.getBoundingClientRect(); this.mx=e.clientX-r.left; this.my=e.clientY-r.top; if(!this.dragging||this.pinching) return; const dx=e.clientX-this.lastX, dy=e.clientY-this.lastY; this.lastX=e.clientX; this.lastY=e.clientY; this.ay+=dx*0.0052; this.ax+=dy*0.0052; this.ayVel=dx*0.0052; this.axVel=dy*0.0052; };  // free, unclamped tilt — rotate in any direction
     const up=e=>{ if(this.dragging && e){ const dist=Math.hypot(e.clientX-this._downX,e.clientY-this._downY), dt=performance.now()-this._downT; if(dist<6 && dt<450) this.pickGlobe(e.clientX,e.clientY); } this.dragging=false; c.style.cursor='grab'; };
     c.addEventListener('pointerdown',down); window.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
-    // Trackpad-native wheel: pinch (ctrl+wheel) zooms, two-finger slide rotates.
-    // Mouse wheel zooms (mouse wheels send pure-vertical, large, quantized deltas with no deltaX).
+    // Wheel input — distinguish a MOUSE WHEEL (zoom) from a TRACKPAD two-finger scroll (rotate).
+    // Reliable signal: a real mouse wheel reports `wheelDeltaY` in multiples of 120 (one notch =
+    // ±120, fast spins = ±240/360…); a trackpad reports irregular values that are essentially
+    // never exact multiples of 120. We latch the detected device briefly so the pure-vertical part
+    // of a fast/momentum trackpad scroll can't be mistaken for a mouse.
     c.addEventListener('wheel',e=>{ e.preventDefault(); this.markInteract();
-      const isMouseWheel = !e.ctrlKey && e.deltaX===0 && Math.abs(e.deltaY)>=24 && Number.isInteger(e.deltaY);
-      if(e.ctrlKey || isMouseWheel){ const f=Math.exp(-e.deltaY*(isMouseWheel?0.0015:0.01)); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }
-      else { this.fly=null; this.ay-=e.deltaX*0.0045; this.ax-=e.deltaY*0.0045; this.ayVel=-e.deltaX*0.0009; this.axVel=-e.deltaY*0.0009; }  // reversed trackpad pan
+      const now=performance.now();
+      const wd=e.wheelDeltaY;
+      let dev;
+      if(typeof wd==='number' && wd!==0){ dev=(Math.abs(wd)%120===0)?'mouse':'trackpad'; }
+      else { dev=(e.deltaMode!==0 || (e.deltaX===0 && Number.isInteger(e.deltaY) && Math.abs(e.deltaY)>=40))?'mouse':'trackpad'; }   // Firefox fallback
+      if(e.ctrlKey) dev='trackpad';   // pinch
+      if(dev==='trackpad'){ this._wheelDev='trackpad'; this._wheelDevT=now; }
+      else { if(this._wheelDev!=='trackpad' || now-(this._wheelDevT||0)>500) this._wheelDev='mouse'; }
+      if(e.ctrlKey){ const f=Math.exp(-e.deltaY*0.01); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }            // trackpad pinch -> zoom
+      else if(this._wheelDev==='mouse'){ const f=Math.exp(-e.deltaY*0.0015); this.zoomT=Math.max(this.ZMIN,Math.min(this.ZMAX,this.zoomT*f)); }  // mouse wheel -> zoom
+      else { this.fly=null; this.ay-=e.deltaX*0.0045; this.ax-=e.deltaY*0.0045; this.ayVel=-e.deltaX*0.0009; this.axVel=-e.deltaY*0.0009; }      // trackpad two-finger slide -> rotate
     },{passive:false});
     // keyboard: arrows rotate, +/- zoom, space toggles drift
     window.addEventListener('keydown',e=>{
@@ -436,9 +467,8 @@ class Component extends DCLogic {
   bindUI(){
     const $=id=>document.getElementById(id);
     this.els.invite.addEventListener('click',()=>this.geolocate());
-    $('yah-readings').addEventListener('click',()=>this.openPanel());
+    $('yah-readings').addEventListener('click',()=>this.togglePanel());
     $('yah-close').addEventListener('click',()=>this.closePanel());
-    $('yah-sound').addEventListener('click',()=>this.toggleSound());
     $('yah-rotate').addEventListener('click',()=>this.toggleRotate());
     $('yah-labels').addEventListener('click',()=>this.toggleLabels());
     $('yah-themetoggle').addEventListener('click',()=>this.cycleTheme());
@@ -481,8 +511,22 @@ class Component extends DCLogic {
     el.innerHTML = light ? sun : moon;
   }
 
-  openPanel(){ this.animT.panel=1; }
-  closePanel(){ this.animT.panel=0; }
+  // Panel slides via a GPU-composited CSS transition (smooth on mobile, independent of the rAF
+  // loop). The frosted blur is applied only once it has settled OPEN — re-blurring the backdrop
+  // every frame during the slide is what made it lag, especially on phones.
+  openPanel(){
+    if(this.panelOpen) return; this.panelOpen=true; this.animT.panel=1;
+    const e=this.els.panel; e.style.transform='translateX(0)';
+    clearTimeout(this._blurT);
+    this._blurT=setTimeout(()=>{ if(this.panelOpen){ e.style.backdropFilter='blur(18px)'; e.style.webkitBackdropFilter='blur(18px)'; } },430);
+  }
+  closePanel(){
+    if(!this.panelOpen) return; this.panelOpen=false; this.animT.panel=0;
+    const e=this.els.panel; e.style.transform='translateX(101%)';
+    clearTimeout(this._blurT);
+    e.style.backdropFilter='none'; e.style.webkitBackdropFilter='none';   // drop blur immediately so the slide-out is cheap
+  }
+  togglePanel(){ this.panelOpen ? this.closePanel() : this.openPanel(); }
 
   showInvite(){ if(this.user) return; this.markInteract(); this.animT.invite=1; }
   hideInvite(){ this.animT.invite=0; }
@@ -490,13 +534,30 @@ class Component extends DCLogic {
   setInviteLabel(long, short){ if(this.els.inviteLabel) this.els.inviteLabel.textContent=long; if(this.els.inviteLabelSm) this.els.inviteLabelSm.textContent=short; }
 
   geolocate(){
+    if(this._locating) return; this._locating=true;
     this.setInviteLabel('Looking for you…','Looking…');
-    if(!navigator.geolocation){ this.hideInvite(); return; }
+    if(!navigator.geolocation){ this.ipLocate(); return; }
+    let done=false;
     navigator.geolocation.getCurrentPosition(
-      p=>this.setUser(p.coords.latitude,p.coords.longitude),
-      ()=>{ this.setInviteLabel('Find my place on Earth','Find me'); this.hideInvite(); },
-      {enableHighAccuracy:false,timeout:9000,maximumAge:600000}
+      p=>{ done=true; this._locating=false; this.setUser(p.coords.latitude,p.coords.longitude); },
+      ()=>{ if(!done) this.ipLocate(); },           // permission denied / blocked -> fall back to IP
+      {enableHighAccuracy:false,timeout:8000,maximumAge:600000}
     );
+  }
+
+  // Fallback when the precise Geolocation API is unavailable or denied (common when the page is
+  // embedded or not served over https): approximate the location from the visitor's IP instead.
+  ipLocate(){
+    const endpoints=['https://ipapi.co/json/','https://ipwho.is/'];
+    const tryNext=i=>{
+      if(i>=endpoints.length){ this._locating=false; this.setInviteLabel('Find my place on Earth','Find me'); this.showInvite(); this.toast('location unavailable'); return; }
+      fetch(endpoints[i]).then(r=>r.json()).then(d=>{
+        const lat=+(d.latitude), lon=+(d.longitude);
+        if(isFinite(lat)&&isFinite(lon)&&(lat||lon)){ this._locating=false; this.setUser(lat,lon); }
+        else throw 0;
+      }).catch(()=>tryNext(i+1));
+    };
+    tryNext(0);
   }
 
   setUser(lat,lon){
@@ -522,8 +583,9 @@ class Component extends DCLogic {
     this.ayVel=0; this.axVel=0;
   }
 
-  // set the focus point (roots the arcs) and emit a one-shot ripple from it
-  setFocus(vec){ this.focus={vec}; this.ripples.push({vec, t0:performance.now()}); if(this.ripples.length>4) this.ripples.shift(); }
+  // set the focus point and pick a RANDOM live disaster to link it to (re-rolled on every click,
+  // so the single arc hops to a different event each time you move).
+  setFocus(vec){ this.focus={vec}; if(this.events&&this.events.length){ this.arcEvent=this.events[Math.floor(Math.random()*this.events.length)]; } this.ripples.push({vec, t0:performance.now()}); if(this.ripples.length>4) this.ripples.shift(); }
 
   // convert a screen tap to the unit-sphere point under it (inverse of the draw projection)
   pickGlobe(clientX,clientY){
@@ -541,34 +603,7 @@ class Component extends DCLogic {
     this.els.poem.textContent = 'Everywhere it happens, it reaches here too. One world, one weather.';
   }
 
-  // ---- audio ---------------------------------------------------------
-  toggleSound(){
-    if(!this.audio){
-      const AC=window.AudioContext||window.webkitAudioContext; const ac=new AC();
-      // master: controlled ONLY by the toggle, so "off" always stays off
-      const master=ac.createGain(); master.gain.value=0; master.connect(ac.destination);
-      // mellow low-pass that slowly "breathes" — gives gentle motion without volume pumping
-      const lp=ac.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=680; lp.Q.value=0.2; lp.connect(master);
-      const flfo=ac.createOscillator(); flfo.type='sine'; flfo.frequency.value=0.045;
-      const fg=ac.createGain(); fg.gain.value=170; flfo.connect(fg); fg.connect(lp.frequency); flfo.start();
-      const mix=ac.createGain(); mix.gain.value=0.5; mix.connect(lp);
-      // a warm, open major chord in a calm mid register (C3–G3–C4–E4), each voice softly detune-layered
-      const voice=(f,gain,detune)=>{ const o=ac.createOscillator(); o.type='sine'; o.frequency.value=f; o.detune.value=detune||0; const g=ac.createGain(); g.gain.value=gain; o.connect(g); g.connect(mix); o.start(); return o; };
-      voice(130.81,0.42,-4); voice(130.81,0.42,4);    // C3 (chorused)
-      voice(196.00,0.30,-3); voice(196.00,0.30,5);    // G3
-      voice(261.63,0.22,0);                            // C4
-      voice(329.63,0.14,3);                            // E4 — soft shimmer
-      this.audio={ac,master};
-    }
-    if(this.audio.ac.state==='suspended') this.audio.ac.resume();
-    this.soundOn=!this.soundOn;
-    const g=this.audio.master.gain; const now=this.audio.ac.currentTime;
-    g.cancelScheduledValues(now); g.setValueAtTime(g.value,now); g.linearRampToValueAtTime(this.soundOn?0.075:0, now+(this.soundOn?2.2:1.1));
-    const onSvg='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>';
-    const muteSvg='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
-    this.els.soundGlyph.innerHTML = this.soundOn?onSvg:muteSvg;
-    this.els.soundGlyph.style.color = this.soundOn?'rgb(var(--accent))':'rgb(var(--ink-dim))';
-  }
+  // ---- audio removed ----
 
   share(){
     const text='You are here — one planet, no edges. '+ (this.user? ('I\'m at '+this.user.lat.toFixed(2)+', '+this.user.lon.toFixed(2)+'. ') : '') + 'We share one small, turning world.';
@@ -614,6 +649,14 @@ class Component extends DCLogic {
 
     // zoom smoothing
     this.zoom += (this.zoomT-this.zoom)*0.12;
+    // Regenerate the sphere at the ideal dot count for this zoom — but only when it has settled
+    // (and at most every ~140ms), so we get perfectly-even density without rebuilding every frame.
+    // Mid-zoom the dots simply grow to cover gaps; on settle they snap to the reference density.
+    if(this.pointsReady){
+      const settled=Math.abs(this.zoom-this.zoomT)<0.004;
+      const ideal=this.idealCount();
+      if(ideal!==this.currentCount && (settled || t-(this._lastRebuild||0)>140)){ this.rebuild(ideal); this._lastRebuild=t; }
+    }
     if(!this._sunT || t-this._sunT>1000){ this.updateSun(); this._sunT=t; }
 
     // parallax smoothing
@@ -641,19 +684,18 @@ class Component extends DCLogic {
     // paused (SPIN off) and everything settled, we stop clearing/redrawing, so the GPU compositor
     // reuses the last frame and the whole thing drops to ~0% CPU/GPU. This is the real heat fix. ----
     const inertia=(this.ayVel<0?-this.ayVel:this.ayVel)>2e-4||(this.axVel<0?-this.axVel:this.axVel)>2e-4;
-    const needsDraw=this.autoRotate||this.dragging||this.fly||inertia||this._parMoving||themeDelta>0.08||animDelta>0.003||(this.ripples&&this.ripples.length>0)||Math.abs(this.zoom-this.zoomT)>0.001;
-    if(needsDraw){ try{ this.draw(t); }catch(err){ if(!this._loggedErr){ this._loggedErr=1; console.error('DRAW ERROR:', err && err.message, err && err.stack); } } }
+    // The globe itself needs a full redraw only when it's actually moving. But arcs/pulses should
+    // keep living even when the globe is still — so when overlays are alive we do a cheap
+    // overlay-only redraw (the WebGL globe holds its last frame).
+    const globeMoving=this.autoRotate||this.dragging||this.fly||inertia||this._parMoving||themeDelta>0.08||animDelta>0.003||Math.abs(this.zoom-this.zoomT)>0.001;
+    const overlaysAlive=this.focus||(this.ripples&&this.ripples.length>0);
+    if(globeMoving){ try{ this.draw(t); }catch(err){ if(!this._loggedErr){ this._loggedErr=1; console.error('DRAW ERROR:', err && err.message, err && err.stack); } } }
+    else if(overlaysAlive){ try{ this.draw(t,true); }catch(err){ if(!this._loggedErr){ this._loggedErr=1; console.error('DRAW ERROR:', err && err.message, err && err.stack); } } }
     this.updateText(t);
     // Only touch the transition DOM while it's actually easing — writing identical transforms/
     // opacities every frame keeps those layers "dirty" and re-composited for no reason.
     if(animDelta>0.0006 || this._animSettling!==false){ this._animSettling = animDelta>0.0006;
       const A=this.anim, T=this.animT, e=this.els; for(const k in A){ A[k]+=(T[k]-A[k])*0.14; }
-      e.panel.style.transform='translateX('+((1-A.panel)*101).toFixed(2)+'%)';
-      // Apply the (expensive) frosted-glass blur ONLY while the panel is actually on-screen. A
-      // backdrop-filter left on an off-screen element makes the compositor re-blur every frame
-      // forever — a constant GPU drain that no amount of canvas idling can fix.
-      const blurOn=A.panel>0.012;
-      if(blurOn!==this._blurOn){ this._blurOn=blurOn; e.panel.style.backdropFilter=blurOn?'blur(20px)':'none'; e.panel.style.webkitBackdropFilter=blurOn?'blur(20px)':'none'; }
       e.invite.style.opacity=A.invite.toFixed(3); e.invite.style.pointerEvents=T.invite>0.5?'auto':'none';
       e.hint.style.opacity=A.hint.toFixed(3);
       e.toast.style.opacity=A.toast.toFixed(3); e.toast.style.transform='translate(-50%,'+((1-A.toast)*8).toFixed(1)+'px)'; }
@@ -748,8 +790,8 @@ class Component extends DCLogic {
     return p;
   }
   uploadGL(){
-    const gl=this.gl; if(!gl||!this.pointsReady) return;
-    const N=this.N, pos=new Float32Array(N*3), land=new Float32Array(N);
+    const gl=this.gl; if(!gl||!this.currentCount) return;
+    const N=this.currentCount, pos=new Float32Array(N*3), land=new Float32Array(N);
     for(let i=0;i<N;i++){ pos[i*3]=this.X[i]; pos[i*3+1]=this.Y[i]; pos[i*3+2]=this.Z[i]; land[i]=this.land[i]; }
     gl.bindBuffer(gl.ARRAY_BUFFER,this.glBuf); gl.bufferData(gl.ARRAY_BUFFER,pos,gl.STATIC_DRAW);
     gl.bindBuffer(gl.ARRAY_BUFFER,this.glLandBuf); gl.bufferData(gl.ARRAY_BUFFER,land,gl.STATIC_DRAW);
@@ -763,7 +805,12 @@ class Component extends DCLogic {
     gl.uniform1f(L.uSy,Math.sin(this.ay)); gl.uniform1f(L.uCy,Math.cos(this.ay));
     gl.uniform1f(L.uSx,Math.sin(this.ax)); gl.uniform1f(L.uCx,Math.cos(this.ax));
     gl.uniform2f(L.uCenter,cx,cy); gl.uniform2f(L.uViewport,this.w,this.h);
-    gl.uniform1f(L.uR,R); gl.uniform1f(L.uBaseR,Math.max(1.0,this.Rg*0.0125*Math.sqrt(this.zoom))); gl.uniform1f(L.uDpr,this.glDpr);
+    // Dot size keeps a CONSTANT screen-space density: radius tracks the spacing of however many
+    // dots are currently built (∝ R/√count). When the count is momentarily stale mid-zoom the
+    // dots grow to cover the gaps; once we rebuild at the ideal count they settle to reference size.
+    const cnt=this.currentCount||this.baseDots;
+    const baseR=2.236*R/Math.sqrt(cnt);   // 2.236 = 0.0125*√32000 -> matches the original look at zoom=1
+    gl.uniform1f(L.uR,R); gl.uniform1f(L.uBaseR,Math.max(1.0,baseR)); gl.uniform1f(L.uDpr,this.glDpr);
     const sun=this.sunVec||[0,0,1]; gl.uniform3f(L.uSun,sun[0],sun[1],sun[2]);
     const d=v=>new Float32Array([v[0]/255,v[1]/255,v[2]/255]);
     gl.uniform3fv(L.uDayLand,d(this.cur.land)); gl.uniform3fv(L.uDayWater,d(this.cur.water));
@@ -777,7 +824,7 @@ class Component extends DCLogic {
     gl.uniform3fv(L.uRipDir,rdir); gl.uniform1fv(L.uRipRing,rring); gl.uniform1fv(L.uRipFade,rfade);
     gl.bindBuffer(gl.ARRAY_BUFFER,this.glBuf); gl.enableVertexAttribArray(L.aPos); gl.vertexAttribPointer(L.aPos,3,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,this.glLandBuf); gl.enableVertexAttribArray(L.aLand); gl.vertexAttribPointer(L.aLand,1,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.POINTS,0,this.N);
+    gl.drawArrays(gl.POINTS,0,this.currentCount);
   }
 
   // one-shot tap/locate feedback: an expanding ring on the 2D overlay (replaces the old per-dot ripple)
@@ -792,7 +839,7 @@ class Component extends DCLogic {
     }
   }
 
-  draw(t){
+  draw(t, skipGL){
     const ctx=this.ctx; ctx.clearRect(0,0,this.w,this.h);
     if(!this.pointsReady) return;
     const cx=this.cx+this.px, cy=this.cy+this.py, R=this.Rg*this.zoom;
@@ -801,8 +848,13 @@ class Component extends DCLogic {
     const sun=this.sunVec||[0,0,1];
 
     // ---- DOTS: GPU path (WebGL, ~one draw call) with a Canvas2D fallback ----
-    if(this.gl && this.glReady){ this.drawGL(cx,cy,R); }
-    else { this.drawDots2D(ctx,t,cx,cy,R,sy,cyk,sx,cxk); }
+    // When only the overlays (arcs/pulses) are animating and the globe itself is static, we skip
+    // the globe redraw entirely — the WebGL canvas simply holds its last frame while we refresh
+    // just the cheap 2D overlay. That keeps the arcs alive at near-zero cost.
+    if(!skipGL){
+      if(this.gl && this.glReady){ this.drawGL(cx,cy,R); }
+      else { this.drawDots2D(ctx,t,cx,cy,R,sy,cyk,sx,cxk); }
+    }
 
     // ---- the sun's light: warm wash centred on the subsolar point ----
     const sp=this.rot(sun,sy,cyk,sx,cxk);
@@ -830,16 +882,16 @@ class Component extends DCLogic {
     // ---- event markers ----
     if(this.events){ this.drawMarkers(ctx,cx,cy,R,sy,cyk,sx,cxk,tt); }
 
-    // ---- selected place: persistent glow marker ----
+    // ---- selected place: persistent glow marker (RED so it stands out over green continents) ----
     if(this.focus){
       const r=this.rot(this.focus.vec,sy,cyk,sx,cxk);
       if(r[2]>0.02){
         const px=cx+r[0]*R, py=cy-r[1]*R, depth=Math.min(1,r[2]+0.2);
-        const accStr=this.cur.acc.map(Math.round).join(',');
+        const accStr='235,52,52';
         const pulse=0.82+0.18*Math.sin(tt*1.7);
         const gr=Math.max(13,R*0.085)*pulse;
         const g=ctx.createRadialGradient(px,py,0,px,py,gr);
-        g.addColorStop(0,'rgba('+accStr+','+(0.45*depth).toFixed(3)+')');
+        g.addColorStop(0,'rgba('+accStr+','+(0.5*depth).toFixed(3)+')');
         g.addColorStop(0.45,'rgba('+accStr+','+(0.14*depth).toFixed(3)+')');
         g.addColorStop(1,'rgba('+accStr+',0)');
         ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,gr,0,7); ctx.fill();
@@ -852,10 +904,12 @@ class Component extends DCLogic {
 
   // Canvas2D fallback for the globe dots (used only when WebGL is unavailable).
   drawDots2D(ctx,t,cx,cy,R,sy,cyk,sx,cxk){
-    const baseR=Math.max(1.0,this.Rg*0.0125*Math.sqrt(this.zoom));
+    const cnt=this.currentCount||this.baseDots;
+    const baseR=Math.max(1.0, 2.236*R/Math.sqrt(cnt));
+    const N=Math.min(cnt, 60000);   // cap the JS fallback loop for safety on no-WebGL devices
     if(!this._bw){ this._bw={x:[],y:[],r:[],a:[]}; this._bl={x:[],y:[],r:[],a:[]}; this._bwn={x:[],y:[],r:[],a:[]}; this._bln={x:[],y:[],r:[],a:[]}; }
     const BW=this._bw,BL=this._bl,BWn=this._bwn,BLn=this._bln; let nw=0,nl=0,nwn=0,nln=0;
-    const X=this.X,Y=this.Y,Zc=this.Z,LD=this.land,N=this.N;
+    const X=this.X,Y=this.Y,Zc=this.Z,LD=this.land;
     const sun=this.sunVec||[0,0,1];
     for(let i=0;i<N;i++){
       const x=X[i],y=Y[i],zc=Zc[i];
@@ -904,24 +958,29 @@ class Component extends DCLogic {
   rotDepth(v,sy,cyk,sx,cxk){ const z1=-v[0]*sy+v[2]*cyk; return v[1]*sx+z1*cxk; }
 
   drawArcs(ctx,cx,cy,R,sy,cyk,sx,cxk,tt){
-    const acc=this.cur.acc; const accStr=acc.map(Math.round).join(',');
-    // arcs only exist once you have a focus point (located or tapped): each live event is linked
-    // back to where you are — the "same boat" made literal. Pulses travel event -> you (incoming).
-    if(!this.focus) return;
-    let pairs=[];
-    this.events.forEach(e=>pairs.push([this.latlonToVec(e.lat,e.lon),this.focus.vec,e]));
-    const STEPS=30;
-    pairs.forEach((pr,idx)=>{
-      const a=pr[0],b=pr[1];
-      let dotp=a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; dotp=Math.max(-1,Math.min(1,dotp)); const om=Math.acos(dotp); if(om<1e-3) return; const so=Math.sin(om);
-      const lift=0.16+Math.min(0.16,om*0.07);
-      ctx.beginPath(); let started=false; let pts=[];
-      for(let s=0;s<=STEPS;s++){ const tt2=s/STEPS; const k1=Math.sin((1-tt2)*om)/so, k2=Math.sin(tt2*om)/so; let vx=k1*a[0]+k2*b[0], vy=k1*a[1]+k2*b[1], vz=k1*a[2]+k2*b[2]; const h=1+Math.sin(tt2*Math.PI)*lift; vx*=h;vy*=h;vz*=h; const r=this.rot([vx,vy,vz],sy,cyk,sx,cxk); const px=cx+r[0]*R, py=cy-r[1]*R; pts.push([px,py,r[2]]); }
-      // draw visible segments
-      for(let s=0;s<pts.length-1;s++){ const p=pts[s],q=pts[s+1]; if(p[2]<-0.05&&q[2]<-0.05) continue; const al=Math.max(0,Math.min(1,(Math.max(p[2],q[2])+0.2)))*0.5; ctx.strokeStyle='rgba('+accStr+','+al.toFixed(3)+')'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(p[0],p[1]); ctx.lineTo(q[0],q[1]); ctx.stroke(); }
-      // travelling pulse
-      const ph=(tt*0.22+idx*0.13)%1; const si=Math.floor(ph*(pts.length-1)); const pp=pts[si]; if(pp&&pp[2]>-0.02){ ctx.globalAlpha=Math.min(1,pp[2]+0.3); ctx.fillStyle='rgb('+accStr+')'; ctx.beginPath(); ctx.arc(pp[0],pp[1],2.0,0,7); ctx.fill(); ctx.globalAlpha=1; }
-    });
+    const accStr='235,52,52';   // red, matching the selected-point marker
+    // A SINGLE red arc connects you to one randomly-chosen live disaster (re-rolled each click);
+    // a comet glides along it from the event toward you.
+    if(!this.focus || !this.arcEvent) return;
+    const a=this.latlonToVec(this.arcEvent.lat,this.arcEvent.lon), b=this.focus.vec;
+    let dotp=a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; dotp=Math.max(-1,Math.min(1,dotp)); const om=Math.acos(dotp); if(om<1e-3) return; const so=Math.sin(om);
+    const lift=0.16+Math.min(0.16,om*0.07);
+    const at=u=>{ const k1=Math.sin((1-u)*om)/so, k2=Math.sin(u*om)/so; const h=1+Math.sin(u*Math.PI)*lift; return this.rot([(k1*a[0]+k2*b[0])*h,(k1*a[1]+k2*b[1])*h,(k1*a[2]+k2*b[2])*h],sy,cyk,sx,cxk); };
+    const STEPS=44;
+    // faint static arc
+    let prev=at(0);
+    for(let s=1;s<=STEPS;s++){ const cur=at(s/STEPS); if(!(prev[2]<-0.05&&cur[2]<-0.05)){ const al=Math.max(0,Math.min(1,(Math.max(prev[2],cur[2])+0.2)))*0.42; ctx.strokeStyle='rgba('+accStr+','+al.toFixed(3)+')'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(cx+prev[0]*R,cy-prev[1]*R); ctx.lineTo(cx+cur[0]*R,cy-cur[1]*R); ctx.stroke(); } prev=cur; }
+    // continuous comet: a smooth tapered streak (bright wide head -> thin faded tail)
+    const head=(tt*0.16)%1;
+    const LEN=0.18, SEG=22;
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    let pp=null;
+    for(let s=0;s<=SEG;s++){ const f=s/SEG; const u=head-LEN*f; if(u<0||u>1){ pp=null; continue; } const r=at(u); const sp=[cx+r[0]*R, cy-r[1]*R, r[2]];
+      if(pp && !(pp[2]<-0.02&&sp[2]<-0.02)){ const taper=1-f; const depth=Math.min(1,Math.max(pp[2],sp[2])+0.3);
+        ctx.strokeStyle='rgba('+accStr+','+(depth*taper*taper*0.95).toFixed(3)+')'; ctx.lineWidth=0.6+2.8*taper*taper;
+        ctx.beginPath(); ctx.moveTo(pp[0],pp[1]); ctx.lineTo(sp[0],sp[1]); ctx.stroke(); }
+      pp=sp; }
+    { const r=at(head); if(r[2]>-0.02){ ctx.globalAlpha=Math.min(1,r[2]+0.3); ctx.fillStyle='rgb('+accStr+')'; ctx.beginPath(); ctx.arc(cx+r[0]*R,cy-r[1]*R,2.0,0,7); ctx.fill(); ctx.globalAlpha=1; } }
   }
 
   drawMarkers(ctx,cx,cy,R,sy,cyk,sx,cxk,tt){
