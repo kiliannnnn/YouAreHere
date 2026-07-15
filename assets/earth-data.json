@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-07-14",
+    "updated": "2026-07-15",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-07-14T07:21:17.978Z",
-    "count": 8203145379,
+    "asOf": "2026-07-15T07:24:10.487Z",
+    "count": 8203344496,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,32 +59,22 @@
   ],
   "events": [
     {
+      "id": "usgs-us7000t0d0",
+      "type": "earthquake",
+      "name": "M6.2 earthquake",
+      "place": "Sarangani, Philippines",
+      "lat": 5.3269,
+      "lon": 125.1655,
+      "severity": 3,
+      "date": "2026-07-14"
+    },
+    {
       "id": "eonet-EONET_21324",
       "type": "wildfire",
       "name": "Prescribed Fire RX Center Range South, Morrison, Minnesota",
       "place": "",
       "lat": 46.16198333,
       "lon": -94.44528333,
-      "severity": 3,
-      "date": "2026-07-13"
-    },
-    {
-      "id": "usgs-us7000szzy",
-      "type": "earthquake",
-      "name": "M6.4 earthquake",
-      "place": "Lorengau, Papua New Guinea",
-      "lat": -3.2207,
-      "lon": 148.5218,
-      "severity": 3,
-      "date": "2026-07-13"
-    },
-    {
-      "id": "usgs-us7000t01n",
-      "type": "earthquake",
-      "name": "M6.3 earthquake",
-      "place": "southeast of the Loyalty Islands",
-      "lat": -22.7889,
-      "lon": 171.5199,
       "severity": 3,
       "date": "2026-07-13"
     },
@@ -457,6 +447,16 @@
       "lon": -157.622817,
       "severity": 3,
       "date": "2026-06-24"
+    },
+    {
+      "id": "usgs-us7000t0a3",
+      "type": "earthquake",
+      "name": "M5.6 earthquake",
+      "place": "Pichigua, Peru",
+      "lat": -14.5779,
+      "lon": -71.4358,
+      "severity": 2,
+      "date": "2026-07-14"
     }
   ]
 }
