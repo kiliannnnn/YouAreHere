@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-07-15",
+    "updated": "2026-07-16",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-07-15T07:24:10.487Z",
-    "count": 8203344496,
+    "asOf": "2026-07-16T07:32:42.634Z",
+    "count": 8203544394,
     "perSecond": 2.3
   },
   "climate": [
@@ -58,16 +58,6 @@
     }
   ],
   "events": [
-    {
-      "id": "usgs-us7000t0d0",
-      "type": "earthquake",
-      "name": "M6.2 earthquake",
-      "place": "Sarangani, Philippines",
-      "lat": 5.3269,
-      "lon": 125.1655,
-      "severity": 3,
-      "date": "2026-07-14"
-    },
     {
       "id": "eonet-EONET_21324",
       "type": "wildfire",
@@ -439,24 +429,34 @@
       "date": "2026-06-25"
     },
     {
-      "id": "eonet-EONET_21068",
-      "type": "wildfire",
-      "name": "Wildfire Mud, Yukon-Koyukuk, Alaska",
+      "id": "eonet-EONET_21373",
+      "type": "cyclone",
+      "name": "Tropical Storm Elida",
       "place": "",
-      "lat": 64.16785,
-      "lon": -157.622817,
-      "severity": 3,
-      "date": "2026-06-24"
+      "lat": 15.4,
+      "lon": -114.7,
+      "severity": 2,
+      "date": "2026-07-16"
     },
     {
-      "id": "usgs-us7000t0a3",
+      "id": "usgs-us7000t0ng",
       "type": "earthquake",
-      "name": "M5.6 earthquake",
-      "place": "Pichigua, Peru",
-      "lat": -14.5779,
-      "lon": -71.4358,
+      "name": "M5.7 earthquake",
+      "place": "east of the South Sandwich Islands",
+      "lat": -59.9671,
+      "lon": -19.003,
       "severity": 2,
-      "date": "2026-07-14"
+      "date": "2026-07-15"
+    },
+    {
+      "id": "usgs-us7000t0u6",
+      "type": "earthquake",
+      "name": "M5.8 earthquake",
+      "place": "south of the Fiji Islands",
+      "lat": -26.366,
+      "lon": -178.6944,
+      "severity": 2,
+      "date": "2026-07-15"
     }
   ]
 }
