@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-07-16",
+    "updated": "2026-07-17",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-07-16T07:32:42.634Z",
-    "count": 8203544394,
+    "asOf": "2026-07-17T07:29:25.305Z",
+    "count": 8203742660,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,12 +59,92 @@
   ],
   "events": [
     {
+      "id": "eonet-EONET_21376",
+      "type": "wildfire",
+      "name": "Wildfire 0450 COVE CREEK, Wheeler, Oregon",
+      "place": "",
+      "lat": 44.942899,
+      "lon": -120.346403,
+      "severity": 3,
+      "date": "2026-07-16"
+    },
+    {
+      "id": "eonet-EONET_21386",
+      "type": "wildfire",
+      "name": "Wildfire Little Knife, Lake, Minnesota",
+      "place": "",
+      "lat": 48.161067,
+      "lon": -91.104833,
+      "severity": 3,
+      "date": "2026-07-15"
+    },
+    {
+      "id": "eonet-EONET_21388",
+      "type": "wildfire",
+      "name": "Prescribed Fire RX Flowing 24, Clay, Minnesota",
+      "place": "",
+      "lat": 47.01508333,
+      "lon": -96.44761667,
+      "severity": 3,
+      "date": "2026-07-15"
+    },
+    {
+      "id": "eonet-EONET_21387",
+      "type": "wildfire",
+      "name": "Wildfire BUCKET SHOP (53)~, Hillsborough, Florida",
+      "place": "",
+      "lat": 27.6688889,
+      "lon": -82.0833333,
+      "severity": 3,
+      "date": "2026-07-15"
+    },
+    {
+      "id": "eonet-EONET_21395",
+      "type": "wildfire",
+      "name": "Wildfire Charger 2, Collier, Florida",
+      "place": "",
+      "lat": 25.973667,
+      "lon": -81.0615,
+      "severity": 3,
+      "date": "2026-07-15"
+    },
+    {
+      "id": "eonet-EONET_21378",
+      "type": "wildfire",
+      "name": "Wildfire THORN, San Diego, California",
+      "place": "",
+      "lat": 32.691104,
+      "lon": -116.332927,
+      "severity": 3,
+      "date": "2026-07-15"
+    },
+    {
       "id": "eonet-EONET_21324",
       "type": "wildfire",
       "name": "Prescribed Fire RX Center Range South, Morrison, Minnesota",
       "place": "",
       "lat": 46.16198333,
       "lon": -94.44528333,
+      "severity": 3,
+      "date": "2026-07-13"
+    },
+    {
+      "id": "eonet-EONET_21380",
+      "type": "wildfire",
+      "name": "Wildfire P-L Gulch, Rio Blanco, Colorado",
+      "place": "",
+      "lat": 39.87355,
+      "lon": -108.22355,
+      "severity": 3,
+      "date": "2026-07-13"
+    },
+    {
+      "id": "eonet-EONET_21389",
+      "type": "wildfire",
+      "name": "Prescribed Fire RX Chippewa Bottoms, Chippewa, Minnesota",
+      "place": "",
+      "lat": 45.13868333,
+      "lon": -96.01615,
       "severity": 3,
       "date": "2026-07-13"
     },
@@ -159,16 +239,6 @@
       "date": "2026-07-10"
     },
     {
-      "id": "eonet-EONET_21239",
-      "type": "wildfire",
-      "name": "Prescribed Fire RX Chippewa Prairie Unit 7 W413-20-28, Chippewa, Minnesota",
-      "place": "",
-      "lat": 45.13898333,
-      "lon": -96.01343333,
-      "severity": 3,
-      "date": "2026-07-09"
-    },
-    {
       "id": "eonet-EONET_21233",
       "type": "wildfire",
       "name": "Wildfire Rose Hill Bay, Duplin, North Carolina",
@@ -239,26 +309,6 @@
       "date": "2026-07-08"
     },
     {
-      "id": "eonet-EONET_21234",
-      "type": "wildfire",
-      "name": "Wildfire Avocado, Monroe, Florida",
-      "place": "",
-      "lat": 25.423833,
-      "lon": -80.928833,
-      "severity": 3,
-      "date": "2026-07-07"
-    },
-    {
-      "id": "eonet-EONET_21330",
-      "type": "wildfire",
-      "name": "Wildfire Thumb, St. Louis, Minnesota",
-      "place": "",
-      "lat": 48.287667,
-      "lon": -92.192167,
-      "severity": 3,
-      "date": "2026-07-07"
-    },
-    {
       "id": "eonet-EONET_21021",
       "type": "wildfire",
       "name": "Wildfire RA 6 ADA CO CLAREMONT, Ada, Idaho",
@@ -299,16 +349,6 @@
       "date": "2026-07-04"
     },
     {
-      "id": "eonet-EONET_21043",
-      "type": "wildfire",
-      "name": "Wildfire Black Bird Ranch (14), DeSoto, Florida",
-      "place": "",
-      "lat": 27.1283333,
-      "lon": -81.6786111,
-      "severity": 3,
-      "date": "2026-06-30"
-    },
-    {
       "id": "eonet-EONET_21085",
       "type": "wildfire",
       "name": "Prescribed Fire RX Brewster 5525, Brewster, Texas",
@@ -329,16 +369,6 @@
       "date": "2026-06-29"
     },
     {
-      "id": "eonet-EONET_21084",
-      "type": "wildfire",
-      "name": "Wildfire HELLS BAY (48), Orange, Florida",
-      "place": "",
-      "lat": 28.3491667,
-      "lon": -81.0536111,
-      "severity": 3,
-      "date": "2026-06-29"
-    },
-    {
       "id": "eonet-EONET_21035",
       "type": "wildfire",
       "name": "Wildfire Willow, Lake, Colorado",
@@ -347,16 +377,6 @@
       "lon": -106.44032,
       "severity": 3,
       "date": "2026-06-28"
-    },
-    {
-      "id": "eonet-EONET_21027",
-      "type": "wildfire",
-      "name": "Wildfire Snyder, Grand, Utah",
-      "place": "",
-      "lat": 39.007876,
-      "lon": -109.058533,
-      "severity": 3,
-      "date": "2026-06-27"
     },
     {
       "id": "eonet-EONET_21017",
@@ -409,54 +429,34 @@
       "date": "2026-06-26"
     },
     {
-      "id": "eonet-EONET_21056",
-      "type": "wildfire",
-      "name": "Wildfire Kilusiktok, Nome, Alaska",
-      "place": "",
-      "lat": 65.332833,
-      "lon": -159.667333,
-      "severity": 3,
-      "date": "2026-06-25"
-    },
-    {
-      "id": "eonet-EONET_21075",
-      "type": "wildfire",
-      "name": "Wildfire EHREN CUTOFF (51), Pasco, Florida",
-      "place": "",
-      "lat": 28.3311111,
-      "lon": -82.4180556,
-      "severity": 3,
-      "date": "2026-06-25"
-    },
-    {
       "id": "eonet-EONET_21373",
       "type": "cyclone",
       "name": "Tropical Storm Elida",
       "place": "",
-      "lat": 15.4,
-      "lon": -114.7,
+      "lat": 15.8,
+      "lon": -118.7,
+      "severity": 2,
+      "date": "2026-07-17"
+    },
+    {
+      "id": "usgs-us7000t173",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Shwebo, Burma (Myanmar)",
+      "lat": 22.8587,
+      "lon": 95.9644,
+      "severity": 2,
+      "date": "2026-07-17"
+    },
+    {
+      "id": "usgs-us7000t0x0",
+      "type": "earthquake",
+      "name": "M5.5 earthquake",
+      "place": "Volcano Islands, Japan region",
+      "lat": 22.8589,
+      "lon": 144.3909,
       "severity": 2,
       "date": "2026-07-16"
-    },
-    {
-      "id": "usgs-us7000t0ng",
-      "type": "earthquake",
-      "name": "M5.7 earthquake",
-      "place": "east of the South Sandwich Islands",
-      "lat": -59.9671,
-      "lon": -19.003,
-      "severity": 2,
-      "date": "2026-07-15"
-    },
-    {
-      "id": "usgs-us7000t0u6",
-      "type": "earthquake",
-      "name": "M5.8 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -26.366,
-      "lon": -178.6944,
-      "severity": 2,
-      "date": "2026-07-15"
     }
   ]
 }
