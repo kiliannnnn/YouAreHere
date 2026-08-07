@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-08-06",
+    "updated": "2026-08-07",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-08-06T07:49:05.327Z",
-    "count": 8207719774,
+    "asOf": "2026-08-07T06:33:26.274Z",
+    "count": 8207908054,
     "perSecond": 2.3
   },
   "climate": [
@@ -63,10 +63,60 @@
       "type": "cyclone",
       "name": "Super Typhoon Dolphin",
       "place": "",
-      "lat": 26.2,
-      "lon": 133.5,
+      "lat": 27.2,
+      "lon": 128.8,
       "severity": 3,
-      "date": "2026-08-06"
+      "date": "2026-08-07"
+    },
+    {
+      "id": "eonet-EONET_22195",
+      "type": "wildfire",
+      "name": "Wildfire BUZZARD, Kern, California",
+      "place": "",
+      "lat": 34.8997222,
+      "lon": -118.9227778,
+      "severity": 3,
+      "date": "2026-08-05"
+    },
+    {
+      "id": "eonet-EONET_22196",
+      "type": "wildfire",
+      "name": "Wildfire Wrights Spring, Klamath, Oregon",
+      "place": "",
+      "lat": 42.4695,
+      "lon": -121.728667,
+      "severity": 3,
+      "date": "2026-08-05"
+    },
+    {
+      "id": "eonet-EONET_22197",
+      "type": "wildfire",
+      "name": "Wildfire Bare, Sublette, Wyoming",
+      "place": "",
+      "lat": 42.758633,
+      "lon": -110.48225,
+      "severity": 3,
+      "date": "2026-08-04"
+    },
+    {
+      "id": "eonet-EONET_22198",
+      "type": "wildfire",
+      "name": "Wildfire GANN, Calaveras, California",
+      "place": "",
+      "lat": 38.111446,
+      "lon": -120.77336,
+      "severity": 3,
+      "date": "2026-08-03"
+    },
+    {
+      "id": "eonet-EONET_22201",
+      "type": "wildfire",
+      "name": "Wildfire Butte, Gila, Arizona",
+      "place": "",
+      "lat": 33.509722,
+      "lon": -110.163611,
+      "severity": 3,
+      "date": "2026-08-03"
     },
     {
       "id": "eonet-EONET_22105",
@@ -199,22 +249,22 @@
       "date": "2026-07-31"
     },
     {
-      "id": "eonet-EONET_22106",
-      "type": "wildfire",
-      "name": "Wildfire Big Rock, Jefferson, Idaho",
-      "place": "",
-      "lat": 43.63805,
-      "lon": -111.664267,
-      "severity": 3,
-      "date": "2026-07-31"
-    },
-    {
       "id": "eonet-EONET_21965",
       "type": "wildfire",
       "name": "Wildfire Camden McCarthy Overpass Fire, Camden, Georgia",
       "place": "",
       "lat": 30.9780556,
       "lon": -81.6666667,
+      "severity": 3,
+      "date": "2026-07-30"
+    },
+    {
+      "id": "eonet-EONET_22202",
+      "type": "wildfire",
+      "name": "Wildfire Moose Mountain, Clearwater, Idaho",
+      "place": "",
+      "lat": 46.774933,
+      "lon": -115.2167,
       "severity": 3,
       "date": "2026-07-30"
     },
@@ -275,16 +325,6 @@
       "place": "",
       "lat": 36.3258,
       "lon": -104.8503,
-      "severity": 3,
-      "date": "2026-07-27"
-    },
-    {
-      "id": "eonet-EONET_21971",
-      "type": "wildfire",
-      "name": "Wildfire FISH, Kern, California",
-      "place": "",
-      "lat": 35.2816667,
-      "lon": -118.65,
       "severity": 3,
       "date": "2026-07-27"
     },
@@ -417,46 +457,6 @@
       "lon": -113.859033,
       "severity": 3,
       "date": "2026-07-24"
-    },
-    {
-      "id": "eonet-EONET_21862",
-      "type": "wildfire",
-      "name": "Wildfire Locust Grove, Benton, Washington",
-      "place": "",
-      "lat": 46.1497222,
-      "lon": -119.1411111,
-      "severity": 3,
-      "date": "2026-07-24"
-    },
-    {
-      "id": "eonet-EONET_21825",
-      "type": "wildfire",
-      "name": "Wildfire Castle, Douglas, Oregon",
-      "place": "",
-      "lat": 43.114033,
-      "lon": -122.563283,
-      "severity": 3,
-      "date": "2026-07-23"
-    },
-    {
-      "id": "eonet-EONET_21834",
-      "type": "wildfire",
-      "name": "Wildfire FIELDS, Merced, California",
-      "place": "",
-      "lat": 37.528023,
-      "lon": -120.429683,
-      "severity": 3,
-      "date": "2026-07-23"
-    },
-    {
-      "id": "eonet-EONET_21837",
-      "type": "wildfire",
-      "name": "Wildfire 0587 SHINGLE, Wheeler, Oregon",
-      "place": "",
-      "lat": 44.468717,
-      "lon": -119.8976,
-      "severity": 3,
-      "date": "2026-07-23"
     }
   ]
 }
