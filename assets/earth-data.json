@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-08-16",
+    "updated": "2026-08-17",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-08-16T05:44:20.054Z",
-    "count": 8209689758,
+    "asOf": "2026-08-17T05:51:51.859Z",
+    "count": 8209889517,
     "perSecond": 2.3
   },
   "climate": [
@@ -58,26 +58,6 @@
     }
   ],
   "events": [
-    {
-      "id": "usgs-us6000tkyk",
-      "type": "earthquake",
-      "name": "M6.9 earthquake",
-      "place": "Pematangsiantar, Indonesia",
-      "lat": 3.0856,
-      "lon": 99.015,
-      "severity": 4,
-      "date": "2026-08-15"
-    },
-    {
-      "id": "usgs-us6000tl4w",
-      "type": "earthquake",
-      "name": "M6.1 earthquake",
-      "place": "Port-Olry, Vanuatu",
-      "lat": -14.5474,
-      "lon": 167.1934,
-      "severity": 3,
-      "date": "2026-08-16"
-    },
     {
       "id": "eonet-EONET_22607",
       "type": "wildfire",
@@ -457,6 +437,26 @@
       "lon": -113.020005,
       "severity": 3,
       "date": "2026-07-29"
+    },
+    {
+      "id": "eonet-EONET_22118",
+      "type": "wildfire",
+      "name": "Wildfire Rio Blanco, Archuleta, Colorado",
+      "place": "",
+      "lat": 37.124649,
+      "lon": -106.985207,
+      "severity": 3,
+      "date": "2026-07-28"
+    },
+    {
+      "id": "eonet-EONET_21972",
+      "type": "wildfire",
+      "name": "Wildfire Kohns, Campbell, Wyoming",
+      "place": "",
+      "lat": 44.456138,
+      "lon": -105.096105,
+      "severity": 3,
+      "date": "2026-07-27"
     }
   ]
 }
