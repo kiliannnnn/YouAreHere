@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-08-21",
+    "updated": "2026-08-22",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-08-21T05:49:02.146Z",
-    "count": 8210684007,
+    "asOf": "2026-08-22T05:43:40.076Z",
+    "count": 8210881986,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,334 +59,404 @@
   ],
   "events": [
     {
-      "id": "firms-21--6_16",
-      "type": "wildfire",
-      "name": "Active wildfires",
+      "id": "eonet-EONET_22926",
+      "type": "cyclone",
+      "name": "Typhoon Saudel",
       "place": "",
-      "lat": -6.134,
-      "lon": 16.429,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-20--9_22",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -9.071,
-      "lon": 22.463,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-19--12_16",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -11.875,
-      "lon": 16.482,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-18--8_24",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -7.708,
-      "lon": 24.137,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-17--12_18",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -11.899,
-      "lon": 17.867,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-15--11_29",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -10.512,
-      "lon": 28.83,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-13--11_18",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -10.52,
-      "lon": 18.271,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-12--8_26",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -7.687,
-      "lon": 25.613,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-11--12_15",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -11.931,
-      "lon": 15.044,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-10--4_19",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -4.276,
-      "lon": 19.069,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-9--4_14",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -4.371,
-      "lon": 13.631,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-7--14_16",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -13.535,
-      "lon": 16.439,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-6--9_16",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -8.864,
-      "lon": 16.283,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-4--9_25",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -8.952,
-      "lon": 25.218,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-3--10_19",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -10.409,
-      "lon": 19.498,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-1--10_21",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -10.489,
-      "lon": 21.021,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-0--9_19",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -9.106,
-      "lon": 19.32,
-      "severity": 5,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "firms-14-65_110",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": 64.741,
-      "lon": 109.568,
-      "severity": 5,
-      "date": "2026-08-20"
-    },
-    {
-      "id": "firms-8-66_76",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": 65.893,
-      "lon": 76.375,
-      "severity": 5,
-      "date": "2026-08-20"
-    },
-    {
-      "id": "firms-5-63_-119",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": 63.498,
-      "lon": -118.804,
-      "severity": 5,
-      "date": "2026-08-20"
-    },
-    {
-      "id": "usgs-us6000tm81",
-      "type": "earthquake",
-      "name": "M6.7 earthquake",
-      "place": "Aniso, Peru",
-      "lat": -14.6414,
-      "lon": -73.5236,
-      "severity": 4,
-      "date": "2026-08-20"
+      "lat": 17.9,
+      "lon": 146.5,
+      "severity": 3,
+      "date": "2026-08-22"
     },
     {
       "id": "eonet-EONET_22563",
       "type": "cyclone",
       "name": "Tropical Storm Lala",
       "place": "",
-      "lat": 25.2,
-      "lon": -172.4,
+      "lat": 28.1,
+      "lon": -170.7,
       "severity": 3,
       "date": "2026-08-21"
     },
     {
-      "id": "eonet-EONET_22926",
-      "type": "cyclone",
-      "name": "Tropical Storm Saudel",
+      "id": "eonet-EONET_22927",
+      "type": "wildfire",
+      "name": "Prescribed Fire RX Tom Green 7105, Tom Green, Texas",
       "place": "",
-      "lat": 14.7,
-      "lon": 149,
-      "severity": 2,
-      "date": "2026-08-21"
-    },
-    {
-      "id": "usgs-us6000tm2v",
-      "type": "earthquake",
-      "name": "M5.3 earthquake",
-      "place": "Ruteng, Indonesia",
-      "lat": -8.2215,
-      "lon": 120.6701,
-      "severity": 2,
+      "lat": 31.14888889,
+      "lon": -100.4783333,
+      "severity": 3,
       "date": "2026-08-20"
     },
     {
-      "id": "usgs-us6000tm2y",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Dunhuang, China",
-      "lat": 37.8058,
-      "lon": 95.4454,
-      "severity": 2,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22929",
+      "type": "wildfire",
+      "name": "Wildfire North Heglar, Cassia, Idaho",
+      "place": "",
+      "lat": 42.490167,
+      "lon": -113.094917,
+      "severity": 3,
+      "date": "2026-08-19"
     },
     {
-      "id": "eonet-EONET_22560",
-      "type": "cyclone",
-      "name": "Tropical Storm Cristobal",
+      "id": "eonet-EONET_22931",
+      "type": "wildfire",
+      "name": "Wildfire Windmill, Stillwater, Montana",
       "place": "",
-      "lat": 39.4,
-      "lon": -36.8,
-      "severity": 2,
+      "lat": 45.8358,
+      "lon": -109.52349,
+      "severity": 3,
+      "date": "2026-08-19"
+    },
+    {
+      "id": "eonet-EONET_22928",
+      "type": "wildfire",
+      "name": "Wildfire Mukluk, Southeast Fairbanks, Alaska",
+      "place": "",
+      "lat": 63.34225,
+      "lon": -143.0636,
+      "severity": 3,
+      "date": "2026-08-17"
+    },
+    {
+      "id": "eonet-EONET_22933",
+      "type": "wildfire",
+      "name": "Wildfire Sarpy, Big Horn, Montana",
+      "place": "",
+      "lat": 45.718833,
+      "lon": -107.4745,
+      "severity": 3,
+      "date": "2026-08-17"
+    },
+    {
+      "id": "eonet-EONET_22932",
+      "type": "wildfire",
+      "name": "Wildfire Jackson - Hwy 90, Jackson, Mississippi",
+      "place": "",
+      "lat": 30.4175,
+      "lon": -88.4663889,
+      "severity": 3,
+      "date": "2026-08-16"
+    },
+    {
+      "id": "eonet-EONET_22798",
+      "type": "wildfire",
+      "name": "Wildfire Picture Rock, Lake, Oregon",
+      "place": "",
+      "lat": 43.00919,
+      "lon": -120.774487,
+      "severity": 3,
+      "date": "2026-08-16"
+    },
+    {
+      "id": "eonet-EONET_22790",
+      "type": "wildfire",
+      "name": "Wildfire Burnt Canyon, Woodward, Oklahoma",
+      "place": "",
+      "lat": 36.5955556,
+      "lon": -99.2663889,
+      "severity": 3,
+      "date": "2026-08-15"
+    },
+    {
+      "id": "eonet-EONET_22795",
+      "type": "wildfire",
+      "name": "Wildfire Shoshone, Churchill, Nevada",
+      "place": "",
+      "lat": 39.82989,
+      "lon": -117.67618,
+      "severity": 3,
+      "date": "2026-08-15"
+    },
+    {
+      "id": "eonet-EONET_22799",
+      "type": "wildfire",
+      "name": "Wildfire THE RADIO TOWER, Miami-Dade, Florida",
+      "place": "",
+      "lat": 25.7111111,
+      "lon": -80.4744444,
+      "severity": 3,
+      "date": "2026-08-15"
+    },
+    {
+      "id": "eonet-EONET_22800",
+      "type": "wildfire",
+      "name": "Wildfire CATO 2, Chaves, New Mexico",
+      "place": "",
+      "lat": 33.50765,
+      "lon": -103.9452,
+      "severity": 3,
+      "date": "2026-08-15"
+    },
+    {
+      "id": "eonet-EONET_22801",
+      "type": "wildfire",
+      "name": "Wildfire Snake Mountain, Pushmataha, Oklahoma",
+      "place": "",
+      "lat": 34.4830556,
+      "lon": -95.1797222,
+      "severity": 3,
+      "date": "2026-08-14"
+    },
+    {
+      "id": "eonet-EONET_22796",
+      "type": "wildfire",
+      "name": "Wildfire Fielder Mtn, Jackson, Oregon",
+      "place": "",
+      "lat": 42.4217473,
+      "lon": -123.2067743,
+      "severity": 3,
       "date": "2026-08-13"
     },
     {
-      "id": "usgs-us6000tmc4",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Onna, Japan",
-      "lat": 26.4848,
-      "lon": 127.7859,
-      "severity": 1,
-      "date": "2026-08-21"
+      "id": "eonet-EONET_22607",
+      "type": "wildfire",
+      "name": "Wildfire Sheep Pen, Las Animas, Colorado",
+      "place": "",
+      "lat": 37.075637,
+      "lon": -103.285535,
+      "severity": 3,
+      "date": "2026-08-12"
     },
     {
-      "id": "usgs-us6000tm3t",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Levuka, Fiji",
-      "lat": -17.7971,
-      "lon": -178.6517,
-      "severity": 1,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22802",
+      "type": "wildfire",
+      "name": "Wildfire Austin Non-Stat, Clackamas, Oregon",
+      "place": "",
+      "lat": 45.02547389,
+      "lon": -121.9549232,
+      "severity": 3,
+      "date": "2026-08-12"
     },
     {
-      "id": "usgs-us6000tm42",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Lorengau, Papua New Guinea",
-      "lat": -1.1659,
-      "lon": 148.5355,
-      "severity": 1,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22614",
+      "type": "wildfire",
+      "name": "Wildfire PLAINS, San Luis Obispo, California",
+      "place": "",
+      "lat": 35.416592,
+      "lon": -120.001456,
+      "severity": 3,
+      "date": "2026-08-12"
     },
     {
-      "id": "usgs-us6000tm44",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Singaparna, Indonesia",
-      "lat": -8.0612,
-      "lon": 107.8108,
-      "severity": 1,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22613",
+      "type": "wildfire",
+      "name": "Wildfire ALPOWA, Asotin, Washington",
+      "place": "",
+      "lat": 46.40578,
+      "lon": -117.24742,
+      "severity": 3,
+      "date": "2026-08-11"
     },
     {
-      "id": "usgs-us6000tm8j",
-      "type": "earthquake",
-      "name": "M5.1 earthquake",
-      "place": "Kokopo, Papua New Guinea",
-      "lat": -5.3709,
-      "lon": 153.5631,
-      "severity": 1,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22610",
+      "type": "wildfire",
+      "name": "Wildfire Dos Pistolas, Brooks, Texas",
+      "place": "",
+      "lat": 27.10444444,
+      "lon": -98.35722222,
+      "severity": 3,
+      "date": "2026-08-11"
     },
     {
-      "id": "usgs-us6000tmb4",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Saipan, Northern Mariana Islands",
-      "lat": 15.9742,
-      "lon": 145.6176,
-      "severity": 1,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22616",
+      "type": "wildfire",
+      "name": "Wildfire XU Hill, Oglala Lakota, South Dakota",
+      "place": "",
+      "lat": 43.62272514,
+      "lon": -102.4230758,
+      "severity": 3,
+      "date": "2026-08-11"
     },
     {
-      "id": "usgs-us6000tmbw",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Pacific-Antarctic Ridge",
-      "lat": -56.5921,
-      "lon": -141.4541,
-      "severity": 1,
-      "date": "2026-08-20"
+      "id": "eonet-EONET_22612",
+      "type": "wildfire",
+      "name": "Wildfire Stallion, Washoe, Nevada",
+      "place": "",
+      "lat": 39.822833,
+      "lon": -119.525167,
+      "severity": 3,
+      "date": "2026-08-10"
+    },
+    {
+      "id": "eonet-EONET_22618",
+      "type": "wildfire",
+      "name": "Wildfire Bufford Creek, Stephens, Texas",
+      "place": "",
+      "lat": 32.7971975,
+      "lon": -98.82243696,
+      "severity": 3,
+      "date": "2026-08-10"
+    },
+    {
+      "id": "eonet-EONET_22617",
+      "type": "wildfire",
+      "name": "Wildfire Cold Springs, Converse, Wyoming",
+      "place": "",
+      "lat": 42.724444,
+      "lon": -105.491389,
+      "severity": 3,
+      "date": "2026-08-10"
+    },
+    {
+      "id": "eonet-EONET_22431",
+      "type": "wildfire",
+      "name": "Wildfire Timber, Monterey, California",
+      "place": "",
+      "lat": 36.215894,
+      "lon": -121.717508,
+      "severity": 3,
+      "date": "2026-08-09"
+    },
+    {
+      "id": "eonet-EONET_22428",
+      "type": "wildfire",
+      "name": "Wildfire Brown, Oldham, Texas",
+      "place": "",
+      "lat": 35.3735,
+      "lon": -102.989,
+      "severity": 3,
+      "date": "2026-08-09"
+    },
+    {
+      "id": "eonet-EONET_22424",
+      "type": "wildfire",
+      "name": "Wildfire WEISER KNOLL, Fremont, Wyoming",
+      "place": "",
+      "lat": 42.636437,
+      "lon": -108.607547,
+      "severity": 3,
+      "date": "2026-08-09"
+    },
+    {
+      "id": "eonet-EONET_22446",
+      "type": "wildfire",
+      "name": "Wildfire Rocky Canyon, Morgan, Utah",
+      "place": "",
+      "lat": 40.939517,
+      "lon": -111.642133,
+      "severity": 3,
+      "date": "2026-08-07"
+    },
+    {
+      "id": "eonet-EONET_22433",
+      "type": "wildfire",
+      "name": "Wildfire MP18, Humboldt, California",
+      "place": "",
+      "lat": 41.1330556,
+      "lon": -123.685,
+      "severity": 3,
+      "date": "2026-08-07"
+    },
+    {
+      "id": "eonet-EONET_22447",
+      "type": "wildfire",
+      "name": "Wildfire B.B, Osage, Oklahoma",
+      "place": "",
+      "lat": 36.907919,
+      "lon": -96.461093,
+      "severity": 3,
+      "date": "2026-08-06"
+    },
+    {
+      "id": "eonet-EONET_22444",
+      "type": "wildfire",
+      "name": "Wildfire 310, Garfield, Colorado",
+      "place": "",
+      "lat": 39.44445,
+      "lon": -107.983983,
+      "severity": 3,
+      "date": "2026-08-06"
+    },
+    {
+      "id": "eonet-EONET_22445",
+      "type": "wildfire",
+      "name": "Wildfire COTTONWOOD, Grant, Oregon",
+      "place": "",
+      "lat": 44.628133,
+      "lon": -119.380383,
+      "severity": 3,
+      "date": "2026-08-06"
+    },
+    {
+      "id": "eonet-EONET_22454",
+      "type": "wildfire",
+      "name": "Wildfire Montgomery Draw, Campbell, Wyoming",
+      "place": "",
+      "lat": 44.366767,
+      "lon": -105.8556,
+      "severity": 3,
+      "date": "2026-08-06"
+    },
+    {
+      "id": "eonet-EONET_22429",
+      "type": "wildfire",
+      "name": "Wildfire Frijoles, Santa Fe, New Mexico",
+      "place": "",
+      "lat": 35.908667,
+      "lon": -105.848167,
+      "severity": 3,
+      "date": "2026-08-05"
+    },
+    {
+      "id": "eonet-EONET_22197",
+      "type": "wildfire",
+      "name": "Wildfire Bare, Sublette, Wyoming",
+      "place": "",
+      "lat": 42.758633,
+      "lon": -110.48225,
+      "severity": 3,
+      "date": "2026-08-04"
+    },
+    {
+      "id": "eonet-EONET_22198",
+      "type": "wildfire",
+      "name": "Wildfire GANN, Calaveras, California",
+      "place": "",
+      "lat": 38.111446,
+      "lon": -120.77336,
+      "severity": 3,
+      "date": "2026-08-03"
+    },
+    {
+      "id": "eonet-EONET_22201",
+      "type": "wildfire",
+      "name": "Wildfire Butte, Gila, Arizona",
+      "place": "",
+      "lat": 33.509722,
+      "lon": -110.163611,
+      "severity": 3,
+      "date": "2026-08-03"
+    },
+    {
+      "id": "eonet-EONET_22108",
+      "type": "wildfire",
+      "name": "Wildfire Antelope Creek, Elko, Nevada",
+      "place": "",
+      "lat": 41.049033,
+      "lon": -116.543867,
+      "severity": 3,
+      "date": "2026-08-02"
+    },
+    {
+      "id": "eonet-EONET_22101",
+      "type": "wildfire",
+      "name": "Wildfire Middle Coulee, Chouteau, Montana",
+      "place": "",
+      "lat": 47.733335,
+      "lon": -110.990383,
+      "severity": 3,
+      "date": "2026-08-02"
+    },
+    {
+      "id": "eonet-EONET_22112",
+      "type": "wildfire",
+      "name": "Wildfire OLD TRAILS, Spokane, Washington",
+      "place": "",
+      "lat": 47.683851,
+      "lon": -117.533414,
+      "severity": 3,
+      "date": "2026-08-01"
     }
   ]
 }
