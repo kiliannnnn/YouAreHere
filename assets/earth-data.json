@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-10-16",
+    "updated": "2026-10-17",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-10-16T09:52:32.536Z",
-    "count": 8221845931,
+    "asOf": "2026-10-17T09:24:22.923Z",
+    "count": 8222040765,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,122 +59,192 @@
   ],
   "events": [
     {
-      "id": "firms-19--12_-43",
+      "id": "firms-21--8_-55",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -11.654,
-      "lon": -43.424,
+      "lat": -7.697,
+      "lon": -55.091,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-18--3_-49",
+      "id": "firms-20-10_27",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.083,
-      "lon": -49.34,
+      "lat": 10.301,
+      "lon": 26.879,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-17--6_-43",
+      "id": "firms-19--17_33",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -5.928,
-      "lon": -43.383,
+      "lat": -16.605,
+      "lon": 33.16,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-16--8_114",
+      "id": "firms-18--10_30",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -7.976,
-      "lon": 113.714,
+      "lat": -10.416,
+      "lon": 30.27,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-15--23_129",
+      "id": "firms-17--6_-53",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -22.683,
-      "lon": 129.332,
+      "lat": -5.964,
+      "lon": -53.447,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-13--22_140",
+      "id": "firms-16--11_33",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -21.54,
-      "lon": 140.494,
+      "lat": -10.636,
+      "lon": 32.951,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-12--3_-51",
+      "id": "firms-15--14_21",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.282,
-      "lon": -50.678,
+      "lat": -13.74,
+      "lon": 21.214,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-8--3_112",
+      "id": "firms-14--13_24",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.051,
-      "lon": 112.442,
+      "lat": -13.401,
+      "lon": 23.909,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-6--4_-55",
+      "id": "firms-13--9_-75",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -4.251,
-      "lon": -55.489,
+      "lat": -8.788,
+      "lon": -74.865,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-5-51_125",
+      "id": "firms-12--15_48",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": 50.836,
-      "lon": 124.816,
+      "lat": -15.084,
+      "lon": 48.168,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-4--17_123",
+      "id": "firms-11-10_25",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -16.924,
-      "lon": 122.85,
+      "lat": 10.043,
+      "lon": 25.272,
       "severity": 5,
       "date": "2026-10-16"
     },
     {
-      "id": "firms-1--3_105",
+      "id": "firms-10--18_36",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.334,
-      "lon": 105.196,
+      "lat": -17.944,
+      "lon": 36.067,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-9--18_33",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -17.979,
+      "lon": 33.271,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-8--8_141",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -7.633,
+      "lon": 140.891,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-7--23_129",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -22.669,
+      "lon": 129.311,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-6-10_29",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": 10.195,
+      "lon": 28.879,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-4--3_-60",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -3.47,
+      "lon": -59.769,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-2--3_105",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -3.358,
+      "lon": 105.224,
+      "severity": 5,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "firms-1--19_35",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -19.144,
+      "lon": 34.835,
       "severity": 5,
       "date": "2026-10-16"
     },
@@ -183,89 +253,9 @@
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.194,
-      "lon": -54.163,
+      "lat": -3.235,
+      "lon": -54.179,
       "severity": 5,
-      "date": "2026-10-16"
-    },
-    {
-      "id": "firms-21--15_-42",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -14.878,
-      "lon": -41.633,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "firms-20--13_143",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -13.452,
-      "lon": 142.913,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "firms-14-10_25",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": 10.037,
-      "lon": 25.377,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "firms-11--15_24",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -14.671,
-      "lon": 24.015,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "firms-9--15_21",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -14.606,
-      "lon": 21.376,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "firms-7--19_35",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -19.171,
-      "lon": 34.812,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "firms-3--17_33",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -16.671,
-      "lon": 33.303,
-      "severity": 5,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "usgs-us6000u2mq",
-      "type": "earthquake",
-      "name": "M6.9 earthquake",
-      "place": "Ozernovskiy, Russia",
-      "lat": 51.9848,
-      "lon": 157.2701,
-      "severity": 4,
       "date": "2026-10-16"
     },
     {
@@ -273,50 +263,60 @@
       "type": "cyclone",
       "name": "Hurricane Trudy",
       "place": "",
-      "lat": 14.1,
-      "lon": -101.9,
+      "lat": 15.1,
+      "lon": -102.5,
       "severity": 3,
-      "date": "2026-10-16"
+      "date": "2026-10-17"
+    },
+    {
+      "id": "eonet-EONET_25339",
+      "type": "cyclone",
+      "name": "Typhoon Champi",
+      "place": "",
+      "lat": 12.4,
+      "lon": 148.6,
+      "severity": 3,
+      "date": "2026-10-17"
+    },
+    {
+      "id": "usgs-us6000u2y1",
+      "type": "earthquake",
+      "name": "M5.7 earthquake",
+      "place": "Khuzdar, Pakistan",
+      "lat": 28.0179,
+      "lon": 66.1708,
+      "severity": 2,
+      "date": "2026-10-17"
     },
     {
       "id": "eonet-EONET_25094",
       "type": "cyclone",
       "name": "Hurricane Simon",
       "place": "",
-      "lat": 19.3,
-      "lon": -108.3,
+      "lat": 21.3,
+      "lon": -110,
       "severity": 2,
       "date": "2026-10-16"
     },
     {
-      "id": "usgs-aka2026ukynnb",
-      "type": "earthquake",
-      "name": "M5.6 earthquake",
-      "place": "Lake Minchumina, Alaska",
-      "lat": 64.22,
-      "lon": -152.746,
+      "id": "eonet-EONET_25340",
+      "type": "cyclone",
+      "name": "Tropical Cyclone 01P",
+      "place": "",
+      "lat": -12.7,
+      "lon": -163.4,
       "severity": 2,
-      "date": "2026-10-15"
+      "date": "2026-10-16"
     },
     {
-      "id": "usgs-us6000u2hp",
+      "id": "usgs-us6000u2v8",
       "type": "earthquake",
       "name": "M5.2 earthquake",
-      "place": "Sola, Vanuatu",
-      "lat": -13.8878,
-      "lon": 166.0921,
+      "place": "off the coast of Ecuador",
+      "lat": 1.2955,
+      "lon": -85.2725,
       "severity": 2,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "usgs-us6000u2hv",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Hihifo, Tonga",
-      "lat": -15.0429,
-      "lon": -173.4439,
-      "severity": 2,
-      "date": "2026-10-15"
+      "date": "2026-10-16"
     },
     {
       "id": "eonet-EONET_25046",
@@ -327,16 +327,6 @@
       "lon": 157.2,
       "severity": 2,
       "date": "2026-10-13"
-    },
-    {
-      "id": "eonet-EONET_24875",
-      "type": "cyclone",
-      "name": "Cyclone Rachel",
-      "place": "",
-      "lat": 33.9,
-      "lon": -115.4,
-      "severity": 2,
-      "date": "2026-10-11"
     },
     {
       "id": "eonet-EONET_25063",
@@ -369,74 +359,104 @@
       "date": "2026-09-26"
     },
     {
-      "id": "usgs-us6000u2n4",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Brisas Barra de Suchiate, Mexico",
-      "lat": 13.934,
-      "lon": -92.8623,
-      "severity": 1,
-      "date": "2026-10-16"
-    },
-    {
-      "id": "usgs-us6000u2p2",
+      "id": "usgs-us6000u2x7",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Kinablangan, Philippines",
-      "lat": 7.8392,
-      "lon": 126.799,
+      "place": "Puerto Madero, Mexico",
+      "lat": 14.0576,
+      "lon": -93.2479,
       "severity": 1,
-      "date": "2026-10-16"
+      "date": "2026-10-17"
     },
     {
-      "id": "usgs-us6000u2gd",
+      "id": "usgs-us6000u2xs",
       "type": "earthquake",
       "name": "M4.8 earthquake",
-      "place": "off the coast of Ecuador",
-      "lat": 0.7509,
-      "lon": -85.429,
+      "place": "Alo, Wallis and Futuna",
+      "lat": -16.0441,
+      "lon": -177.7283,
       "severity": 1,
-      "date": "2026-10-15"
+      "date": "2026-10-17"
     },
     {
-      "id": "usgs-us6000u2hr",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Nikolski, Alaska",
-      "lat": 52.0024,
-      "lon": -169.576,
-      "severity": 1,
-      "date": "2026-10-15"
-    },
-    {
-      "id": "usgs-us6000u2ht",
+      "id": "usgs-us6000u2yw",
       "type": "earthquake",
       "name": "M4.5 earthquake",
-      "place": "Los Asientos, Panama",
-      "lat": 7.4452,
-      "lon": -80.0893,
+      "place": "Ruteng, Indonesia",
+      "lat": -8.1086,
+      "lon": 120.2824,
       "severity": 1,
-      "date": "2026-10-15"
+      "date": "2026-10-17"
     },
     {
-      "id": "usgs-us6000u2i2",
+      "id": "usgs-us6000u2yz",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Sola, Vanuatu",
+      "lat": -13.3461,
+      "lon": 167.0474,
+      "severity": 1,
+      "date": "2026-10-17"
+    },
+    {
+      "id": "usgs-us6000u2z9",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Norsup, Vanuatu",
+      "lat": -15.5117,
+      "lon": 168.2516,
+      "severity": 1,
+      "date": "2026-10-17"
+    },
+    {
+      "id": "usgs-us6000u2ph",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Soconusco, Mexico",
+      "lat": 15.2777,
+      "lon": -92.7881,
+      "severity": 1,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "usgs-us6000u2pl",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Vilyuchinsk, Russia",
-      "lat": 51.3801,
-      "lon": 159.8474,
+      "place": "Merizo Village, Guam",
+      "lat": 12.328,
+      "lon": 144.1189,
       "severity": 1,
-      "date": "2026-10-15"
+      "date": "2026-10-16"
     },
     {
-      "id": "usgs-us6000u2i9",
+      "id": "usgs-us6000u2pp",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Lamitan, Philippines",
+      "lat": 6.0268,
+      "lon": 125.7789,
+      "severity": 1,
+      "date": "2026-10-16"
+    },
+    {
+      "id": "usgs-us6000u2pw",
       "type": "earthquake",
       "name": "M4.5 earthquake",
-      "place": "Tamarindo, Costa Rica",
-      "lat": 10.3031,
-      "lon": -86.049,
+      "place": "Juradó, Colombia",
+      "lat": 6.853,
+      "lon": -77.3681,
       "severity": 1,
-      "date": "2026-10-15"
+      "date": "2026-10-16"
+    },
+    {
+      "id": "usgs-us6000u2q5",
+      "type": "earthquake",
+      "name": "M5.0 earthquake",
+      "place": "Auckland Islands, New Zealand region",
+      "lat": -49.8826,
+      "lon": 163.4041,
+      "severity": 1,
+      "date": "2026-10-16"
     }
   ]
 }
