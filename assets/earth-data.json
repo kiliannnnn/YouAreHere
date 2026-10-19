@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-10-18",
+    "updated": "2026-10-19",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-10-18T09:39:20.641Z",
-    "count": 8222241549,
+    "asOf": "2026-10-19T10:48:27.552Z",
+    "count": 8222449807,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,234 +59,244 @@
   ],
   "events": [
     {
-      "id": "eonet-EONET_25339",
-      "type": "cyclone",
-      "name": "Super Typhoon Champi",
-      "place": "",
-      "lat": 13.1,
-      "lon": 143.4,
-      "severity": 5,
-      "date": "2026-10-18"
-    },
-    {
-      "id": "firms-21--19_35",
+      "id": "firms-21--3_152",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -18.899,
-      "lon": 35.445,
+      "lat": -3.092,
+      "lon": 151.576,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-20--17_33",
+      "id": "firms-19--15_26",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -16.702,
-      "lon": 33.1,
+      "lat": -14.973,
+      "lon": 25.77,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-19--15_24",
+      "id": "firms-18--3_114",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -14.781,
-      "lon": 24.067,
+      "lat": -2.872,
+      "lon": 113.808,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-18--19_20",
+      "id": "firms-17--8_140",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -18.99,
-      "lon": 19.894,
+      "lat": -7.672,
+      "lon": 139.568,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-17-19_-155",
+      "id": "firms-16--4_144",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": 19.407,
-      "lon": -155.28,
+      "lat": -4.166,
+      "lon": 144.353,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-16--15_21",
+      "id": "firms-15--15_135",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -14.696,
-      "lon": 21.144,
+      "lat": -14.676,
+      "lon": 135.127,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-15--8_142",
+      "id": "firms-14--8_142",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -7.946,
-      "lon": 142.19,
+      "lat": -7.967,
+      "lon": 142.316,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-14--16_21",
+      "id": "firms-13--17_132",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -16.359,
-      "lon": 20.894,
+      "lat": -17.192,
+      "lon": 131.829,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-13--11_33",
+      "id": "firms-10--19_135",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -10.624,
-      "lon": 32.915,
+      "lat": -19.338,
+      "lon": 134.754,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-12--4_-56",
+      "id": "firms-9--16_129",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -4.245,
-      "lon": -55.502,
+      "lat": -16.488,
+      "lon": 129.17,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-10--15_48",
+      "id": "firms-8--4_138",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -15.248,
-      "lon": 48.133,
+      "lat": -4.059,
+      "lon": 138.205,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-9--13_23",
+      "id": "firms-6--23_129",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -13.183,
-      "lon": 22.966,
+      "lat": -22.6,
+      "lon": 129.199,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-7--6_35",
+      "id": "firms-4--8_141",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -5.692,
-      "lon": 34.701,
+      "lat": -7.724,
+      "lon": 141.096,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
-      "id": "firms-6--3_-54",
+      "id": "firms-1--18_133",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.17,
-      "lon": -54.181,
+      "lat": -17.644,
+      "lon": 133.138,
       "severity": 5,
-      "date": "2026-10-17"
-    },
-    {
-      "id": "firms-4--16_45",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -16.288,
-      "lon": 45.163,
-      "severity": 5,
-      "date": "2026-10-17"
-    },
-    {
-      "id": "firms-3--3_111",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -2.828,
-      "lon": 110.85,
-      "severity": 5,
-      "date": "2026-10-17"
-    },
-    {
-      "id": "firms-2--3_114",
-      "type": "wildfire",
-      "name": "Active wildfires",
-      "place": "",
-      "lat": -2.683,
-      "lon": 113.942,
-      "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
     },
     {
       "id": "firms-0--3_112",
       "type": "wildfire",
       "name": "Active wildfires",
       "place": "",
-      "lat": -3.048,
-      "lon": 112.321,
+      "lat": -3.078,
+      "lon": 112.301,
       "severity": 5,
-      "date": "2026-10-17"
+      "date": "2026-10-19"
+    },
+    {
+      "id": "eonet-EONET_25339",
+      "type": "cyclone",
+      "name": "Super Typhoon Champi",
+      "place": "",
+      "lat": 14,
+      "lon": 139.2,
+      "severity": 5,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "firms-20--16_45",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -16.237,
+      "lon": 45.131,
+      "severity": 5,
+      "date": "2026-10-18"
+    },
+    {
+      "id": "firms-12--18_36",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -17.954,
+      "lon": 36.158,
+      "severity": 5,
+      "date": "2026-10-18"
+    },
+    {
+      "id": "firms-11--19_35",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -19.174,
+      "lon": 34.804,
+      "severity": 5,
+      "date": "2026-10-18"
+    },
+    {
+      "id": "firms-5--3_111",
+      "type": "wildfire",
+      "name": "Active wildfires",
+      "place": "",
+      "lat": -2.834,
+      "lon": 110.895,
+      "severity": 5,
+      "date": "2026-10-18"
     },
     {
       "id": "eonet-EONET_25290",
       "type": "cyclone",
       "name": "Hurricane Trudy",
       "place": "",
-      "lat": 17.9,
-      "lon": -105.5,
+      "lat": 19.6,
+      "lon": -107.4,
       "severity": 3,
-      "date": "2026-10-18"
+      "date": "2026-10-19"
     },
     {
-      "id": "usgs-us6000u34e",
+      "id": "usgs-us6000u3bc",
       "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Ruteng, Indonesia",
-      "lat": -8.1449,
-      "lon": 120.2734,
-      "severity": 2,
-      "date": "2026-10-18"
+      "name": "M6.0 earthquake",
+      "place": "Port-Olry, Vanuatu",
+      "lat": -14.0533,
+      "lon": 165.6761,
+      "severity": 3,
+      "date": "2026-10-19"
     },
     {
       "id": "eonet-EONET_25340",
       "type": "cyclone",
-      "name": "Tropical Cyclone 01P",
+      "name": "Tropical Cyclone Wati",
       "place": "",
-      "lat": -14.8,
-      "lon": -163.2,
+      "lat": -18.6,
+      "lon": -160.2,
       "severity": 2,
-      "date": "2026-10-17"
+      "date": "2026-10-18"
     },
     {
-      "id": "usgs-us6000u309",
+      "id": "usgs-us6000u37h",
       "type": "earthquake",
       "name": "M5.2 earthquake",
-      "place": "Brisas Barra de Suchiate, Mexico",
-      "lat": 14.0469,
-      "lon": -92.8552,
+      "place": "‘Ohonua, Tonga",
+      "lat": -21.541,
+      "lon": -174.2956,
       "severity": 2,
-      "date": "2026-10-17"
+      "date": "2026-10-18"
     },
     {
       "id": "eonet-EONET_25094",
@@ -297,16 +307,6 @@
       "lon": -110,
       "severity": 2,
       "date": "2026-10-16"
-    },
-    {
-      "id": "eonet-EONET_25046",
-      "type": "cyclone",
-      "name": "Typhoon Koguma",
-      "place": "",
-      "lat": 38.3,
-      "lon": 157.2,
-      "severity": 2,
-      "date": "2026-10-13"
     },
     {
       "id": "eonet-EONET_25063",
@@ -329,34 +329,124 @@
       "date": "2026-09-30"
     },
     {
-      "id": "usgs-us6000u32r",
+      "id": "usgs-us6000u3a8",
       "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Kainantu, Papua New Guinea",
-      "lat": -6.5103,
-      "lon": 146.0489,
+      "name": "M4.9 earthquake",
+      "place": "San Juan del Sur, Nicaragua",
+      "lat": 11.1229,
+      "lon": -86.4815,
+      "severity": 1,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "usgs-us6000u3ar",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Banda Sea",
+      "lat": -6.3365,
+      "lon": 129.9289,
+      "severity": 1,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "usgs-us6000u3bs",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Lunca Jariștei, Romania",
+      "lat": 45.481,
+      "lon": 26.2168,
+      "severity": 1,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "usgs-us6000u3bv",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Tobelo, Indonesia",
+      "lat": 2.4339,
+      "lon": 126.7168,
+      "severity": 1,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "usgs-us6000u3bz",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Sola, Vanuatu",
+      "lat": -12.9533,
+      "lon": 167.046,
+      "severity": 1,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "usgs-us6000u3c1",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Labuan Bajo, Indonesia",
+      "lat": -8.1064,
+      "lon": 120.1872,
+      "severity": 1,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "usgs-us6000u35l",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Kermadec Islands, New Zealand",
+      "lat": -30.1265,
+      "lon": -177.3838,
       "severity": 1,
       "date": "2026-10-18"
     },
     {
-      "id": "usgs-us6000u300",
+      "id": "usgs-us6000u366",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Tambolaka, Indonesia",
-      "lat": -9.3596,
-      "lon": 118.5983,
+      "place": "Carlsberg Ridge",
+      "lat": 1.452,
+      "lon": 66.9867,
       "severity": 1,
-      "date": "2026-10-17"
+      "date": "2026-10-18"
     },
     {
-      "id": "usgs-us6000u30x",
+      "id": "usgs-us6000u36d",
       "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Uyuni, Bolivia",
-      "lat": -21.1752,
-      "lon": -67.2144,
+      "name": "M4.7 earthquake",
+      "place": "Sandy Point Town, Saint Kitts and Nevis",
+      "lat": 17.2531,
+      "lon": -63.0065,
       "severity": 1,
-      "date": "2026-10-17"
+      "date": "2026-10-18"
+    },
+    {
+      "id": "usgs-us6000u36m",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Río Grande, Panama",
+      "lat": 7.7244,
+      "lon": -81.3297,
+      "severity": 1,
+      "date": "2026-10-18"
+    },
+    {
+      "id": "usgs-us6000u38b",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Kokopo, Papua New Guinea",
+      "lat": -5.6049,
+      "lon": 151.8407,
+      "severity": 1,
+      "date": "2026-10-18"
+    },
+    {
+      "id": "usgs-us6000u38i",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Fiji region",
+      "lat": -20.9271,
+      "lon": -178.6587,
+      "severity": 1,
+      "date": "2026-10-18"
     }
   ]
 }
