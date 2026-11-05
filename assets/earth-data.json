@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-04",
+    "updated": "2026-11-05",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-04T13:01:45.926Z",
-    "count": 8225647724,
+    "asOf": "2026-11-05T13:13:44.873Z",
+    "count": 8225848097,
     "perSecond": 2.3
   },
   "climate": [
@@ -58,16 +58,6 @@
     }
   ],
   "events": [
-    {
-      "id": "eonet-EONET_25728",
-      "type": "cyclone",
-      "name": "Super Typhoon In-fa",
-      "place": "",
-      "lat": 24.4,
-      "lon": 138.4,
-      "severity": 3,
-      "date": "2026-11-04"
-    },
     {
       "id": "eonet-EONET_25984",
       "type": "wildfire",
@@ -149,6 +139,16 @@
       "date": "2026-10-16"
     },
     {
+      "id": "eonet-EONET_25728",
+      "type": "cyclone",
+      "name": "Super Typhoon In-fa",
+      "place": "",
+      "lat": 29.4,
+      "lon": 141.5,
+      "severity": 2,
+      "date": "2026-11-05"
+    },
+    {
       "id": "eonet-EONET_25964",
       "type": "cyclone",
       "name": "Tropical Cyclone Murasu",
@@ -159,84 +159,54 @@
       "date": "2026-11-03"
     },
     {
-      "id": "usgs-us7000tvie",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Volcano Islands, Japan region",
-      "lat": 24.1441,
-      "lon": 141.6725,
-      "severity": 2,
-      "date": "2026-11-03"
-    },
-    {
-      "id": "usgs-us7000tvs3",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Mid-Indian Ridge",
-      "lat": -35.5195,
-      "lon": 78.3027,
-      "severity": 2,
-      "date": "2026-11-03"
-    },
-    {
-      "id": "usgs-us7000tvtj",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Kyzyl-Eshme, Kyrgyzstan",
-      "lat": 39.3619,
-      "lon": 73.3023,
-      "severity": 2,
-      "date": "2026-11-03"
-    },
-    {
-      "id": "usgs-us7000tvuv",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Fiji region",
-      "lat": -19.2691,
-      "lon": -177.5052,
-      "severity": 1,
-      "date": "2026-11-04"
-    },
-    {
-      "id": "usgs-us7000tvwj",
+      "id": "usgs-nc75462637",
       "type": "earthquake",
       "name": "M5.0 earthquake",
-      "place": "Sarangani, Philippines",
-      "lat": 4.3895,
-      "lon": 127.0325,
+      "place": "Petrolia, CA",
+      "lat": 40.4073333333333,
+      "lon": -125.585333333333,
+      "severity": 1,
+      "date": "2026-11-05"
+    },
+    {
+      "id": "usgs-us7000tw76",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "Masumbwe, Tanzania",
+      "lat": -3.4641,
+      "lon": 32.149,
+      "severity": 1,
+      "date": "2026-11-05"
+    },
+    {
+      "id": "usgs-us7000tw7b",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Sea of Okhotsk",
+      "lat": 49.2594,
+      "lon": 147.7534,
+      "severity": 1,
+      "date": "2026-11-05"
+    },
+    {
+      "id": "usgs-us7000tw3k",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Chinandega, Nicaragua",
+      "lat": 12.6311,
+      "lon": -87.1544,
       "severity": 1,
       "date": "2026-11-04"
     },
     {
-      "id": "usgs-us7000tv5i",
+      "id": "usgs-us7000tw43",
       "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "South Sandwich Islands region",
-      "lat": -58.819,
-      "lon": -26.3766,
+      "name": "M4.6 earthquake",
+      "place": "south of the Fiji Islands",
+      "lat": -25.2286,
+      "lon": 179.8797,
       "severity": 1,
-      "date": "2026-11-03"
-    },
-    {
-      "id": "usgs-us7000tva7",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Gorontalo, Indonesia",
-      "lat": -0.2295,
-      "lon": 123.1532,
-      "severity": 1,
-      "date": "2026-11-03"
-    },
-    {
-      "id": "usgs-ci41572064",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Delta, B.C., MX",
-      "lat": 32.4308333333333,
-      "lon": -115.179666666667,
-      "severity": 1,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     }
   ]
 }
