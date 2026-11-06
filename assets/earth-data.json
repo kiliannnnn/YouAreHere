@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-05",
+    "updated": "2026-11-06",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-05T13:13:44.873Z",
-    "count": 8225848097,
+    "asOf": "2026-11-06T12:58:23.023Z",
+    "count": 8226044697,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,6 +59,36 @@
   ],
   "events": [
     {
+      "id": "usgs-us7000twg9",
+      "type": "earthquake",
+      "name": "M6.1 earthquake",
+      "place": "Hasaki, Japan",
+      "lat": 34.9677,
+      "lon": 142.1175,
+      "severity": 3,
+      "date": "2026-11-06"
+    },
+    {
+      "id": "usgs-us7000tw8r",
+      "type": "earthquake",
+      "name": "M6.1 earthquake",
+      "place": "Fiji region",
+      "lat": -21.1984,
+      "lon": -178.7145,
+      "severity": 3,
+      "date": "2026-11-05"
+    },
+    {
+      "id": "eonet-EONET_26057",
+      "type": "wildfire",
+      "name": "Wildfire Wild River, Coos, New Hampshire",
+      "place": "",
+      "lat": 44.330583,
+      "lon": -71.031283,
+      "severity": 3,
+      "date": "2026-11-02"
+    },
+    {
       "id": "eonet-EONET_25984",
       "type": "wildfire",
       "name": "Prescribed Fire Dry Lake Hills Piles RX, Coconino, Arizona",
@@ -67,6 +97,16 @@
       "lon": -111.616667,
       "severity": 3,
       "date": "2026-10-30"
+    },
+    {
+      "id": "eonet-EONET_26056",
+      "type": "wildfire",
+      "name": "Prescribed Fire TON RX - BAILEY LOST HP, Okanogan, Washington",
+      "place": "",
+      "lat": 48.532726,
+      "lon": -119.055205,
+      "severity": 3,
+      "date": "2026-10-29"
     },
     {
       "id": "eonet-EONET_25827",
@@ -159,54 +199,74 @@
       "date": "2026-11-03"
     },
     {
-      "id": "usgs-nc75462637",
+      "id": "usgs-us7000twdd",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Lae, Papua New Guinea",
+      "lat": -5.9168,
+      "lon": 146.6624,
+      "severity": 1,
+      "date": "2026-11-06"
+    },
+    {
+      "id": "usgs-us7000tweb",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Isangel, Vanuatu",
+      "lat": -19.3647,
+      "lon": 168.7529,
+      "severity": 1,
+      "date": "2026-11-06"
+    },
+    {
+      "id": "usgs-us7000tweq",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "False Pass, Alaska",
+      "lat": 53.6347,
+      "lon": -162.9502,
+      "severity": 1,
+      "date": "2026-11-06"
+    },
+    {
+      "id": "usgs-us7000twfk",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Balangonan, Philippines",
+      "lat": 5.2999,
+      "lon": 125.0977,
+      "severity": 1,
+      "date": "2026-11-06"
+    },
+    {
+      "id": "usgs-us7000tw8p",
       "type": "earthquake",
       "name": "M5.0 earthquake",
-      "place": "Petrolia, CA",
-      "lat": 40.4073333333333,
-      "lon": -125.585333333333,
+      "place": "Thang, India",
+      "lat": 35.6318,
+      "lon": 77.9399,
       "severity": 1,
       "date": "2026-11-05"
     },
     {
-      "id": "usgs-us7000tw76",
+      "id": "usgs-us7000twaq",
       "type": "earthquake",
-      "name": "M5.1 earthquake",
-      "place": "Masumbwe, Tanzania",
-      "lat": -3.4641,
-      "lon": 32.149,
+      "name": "M4.6 earthquake",
+      "place": "Watari, Japan",
+      "lat": 37.9934,
+      "lon": 141.2636,
       "severity": 1,
       "date": "2026-11-05"
     },
     {
-      "id": "usgs-us7000tw7b",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Sea of Okhotsk",
-      "lat": 49.2594,
-      "lon": 147.7534,
-      "severity": 1,
-      "date": "2026-11-05"
-    },
-    {
-      "id": "usgs-us7000tw3k",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Chinandega, Nicaragua",
-      "lat": 12.6311,
-      "lon": -87.1544,
-      "severity": 1,
-      "date": "2026-11-04"
-    },
-    {
-      "id": "usgs-us7000tw43",
+      "id": "usgs-us7000twcy",
       "type": "earthquake",
       "name": "M4.6 earthquake",
       "place": "south of the Fiji Islands",
-      "lat": -25.2286,
-      "lon": 179.8797,
+      "lat": -23.5322,
+      "lon": 179.9392,
       "severity": 1,
-      "date": "2026-11-04"
+      "date": "2026-11-05"
     }
   ]
 }
