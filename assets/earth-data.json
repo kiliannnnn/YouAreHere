@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-06",
+    "updated": "2026-11-07",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-06T12:58:23.023Z",
-    "count": 8226044697,
+    "asOf": "2026-11-07T11:44:48.627Z",
+    "count": 8226233264,
     "perSecond": 2.3
   },
   "climate": [
@@ -58,26 +58,6 @@
     }
   ],
   "events": [
-    {
-      "id": "usgs-us7000twg9",
-      "type": "earthquake",
-      "name": "M6.1 earthquake",
-      "place": "Hasaki, Japan",
-      "lat": 34.9677,
-      "lon": 142.1175,
-      "severity": 3,
-      "date": "2026-11-06"
-    },
-    {
-      "id": "usgs-us7000tw8r",
-      "type": "earthquake",
-      "name": "M6.1 earthquake",
-      "place": "Fiji region",
-      "lat": -21.1984,
-      "lon": -178.7145,
-      "severity": 3,
-      "date": "2026-11-05"
-    },
     {
       "id": "eonet-EONET_26057",
       "type": "wildfire",
@@ -149,34 +129,14 @@
       "date": "2026-10-17"
     },
     {
-      "id": "eonet-EONET_25454",
-      "type": "wildfire",
-      "name": "Prescribed Fire Rx Polk 9275, Polk, Texas",
-      "place": "",
-      "lat": 30.57111111,
-      "lon": -94.72916667,
-      "severity": 3,
-      "date": "2026-10-16"
-    },
-    {
-      "id": "eonet-EONET_25452",
-      "type": "wildfire",
-      "name": "Wildfire NORTE, Orange, California",
-      "place": "",
-      "lat": 33.47965118,
-      "lon": -117.63483,
-      "severity": 3,
-      "date": "2026-10-16"
-    },
-    {
-      "id": "eonet-EONET_25450",
-      "type": "wildfire",
-      "name": "Wildfire COOLEY, Mendocino, California",
-      "place": "",
-      "lat": 38.819722,
-      "lon": -123.188056,
-      "severity": 3,
-      "date": "2026-10-16"
+      "id": "usgs-us7000twrq",
+      "type": "earthquake",
+      "name": "M5.5 earthquake",
+      "place": "Hasaki, Japan",
+      "lat": 36.1884,
+      "lon": 141.4404,
+      "severity": 2,
+      "date": "2026-11-07"
     },
     {
       "id": "eonet-EONET_25728",
@@ -199,74 +159,44 @@
       "date": "2026-11-03"
     },
     {
-      "id": "usgs-us7000twdd",
+      "id": "usgs-us7000twqw",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Lae, Papua New Guinea",
-      "lat": -5.9168,
-      "lon": 146.6624,
+      "place": "South Sandwich Islands region",
+      "lat": -57.9579,
+      "lon": -25.8023,
+      "severity": 1,
+      "date": "2026-11-07"
+    },
+    {
+      "id": "usgs-us7000twhq",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Palekastro, Greece",
+      "lat": 34.3043,
+      "lon": 26.4987,
       "severity": 1,
       "date": "2026-11-06"
     },
     {
-      "id": "usgs-us7000tweb",
+      "id": "usgs-us7000twmr",
       "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Isangel, Vanuatu",
-      "lat": -19.3647,
-      "lon": 168.7529,
+      "name": "M4.8 earthquake",
+      "place": "Poso, Indonesia",
+      "lat": -1.2393,
+      "lon": 120.4589,
       "severity": 1,
       "date": "2026-11-06"
     },
     {
-      "id": "usgs-us7000tweq",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "False Pass, Alaska",
-      "lat": 53.6347,
-      "lon": -162.9502,
-      "severity": 1,
-      "date": "2026-11-06"
-    },
-    {
-      "id": "usgs-us7000twfk",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Balangonan, Philippines",
-      "lat": 5.2999,
-      "lon": 125.0977,
-      "severity": 1,
-      "date": "2026-11-06"
-    },
-    {
-      "id": "usgs-us7000tw8p",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Thang, India",
-      "lat": 35.6318,
-      "lon": 77.9399,
-      "severity": 1,
-      "date": "2026-11-05"
-    },
-    {
-      "id": "usgs-us7000twaq",
+      "id": "usgs-us7000twqm",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Watari, Japan",
-      "lat": 37.9934,
-      "lon": 141.2636,
+      "place": "Yigo Village, Guam",
+      "lat": 13.5679,
+      "lon": 144.9932,
       "severity": 1,
-      "date": "2026-11-05"
-    },
-    {
-      "id": "usgs-us7000twcy",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -23.5322,
-      "lon": 179.9392,
-      "severity": 1,
-      "date": "2026-11-05"
+      "date": "2026-11-06"
     }
   ]
 }
