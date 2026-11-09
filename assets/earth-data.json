@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-08",
+    "updated": "2026-11-09",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-08T11:57:13.067Z",
-    "count": 8226433696,
+    "asOf": "2026-11-09T13:56:17.164Z",
+    "count": 8226648847,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,6 +59,16 @@
   ],
   "events": [
     {
+      "id": "usgs-us7000tx16",
+      "type": "earthquake",
+      "name": "M6.4 earthquake",
+      "place": "Lata, Solomon Islands",
+      "lat": -10.8669,
+      "lon": 165.5616,
+      "severity": 3,
+      "date": "2026-11-09"
+    },
+    {
       "id": "eonet-EONET_26057",
       "type": "wildfire",
       "name": "Wildfire Wild River, Coos, New Hampshire",
@@ -109,34 +119,34 @@
       "date": "2026-10-22"
     },
     {
-      "id": "eonet-EONET_25455",
-      "type": "wildfire",
-      "name": "Prescribed Fire STE - Goodin Ridge RX, McCreary, Kentucky",
-      "place": "",
-      "lat": 36.948746,
-      "lon": -84.376511,
-      "severity": 3,
-      "date": "2026-10-18"
+      "id": "usgs-us7000tx1f",
+      "type": "earthquake",
+      "name": "M5.7 earthquake",
+      "place": "Hasaki, Japan",
+      "lat": 36.2471,
+      "lon": 141.8299,
+      "severity": 2,
+      "date": "2026-11-09"
     },
     {
-      "id": "usgs-us7000twt0",
+      "id": "usgs-us7000tx32",
       "type": "earthquake",
-      "name": "M5.5 earthquake",
-      "place": "Hamakita, Japan",
-      "lat": 34.8611,
-      "lon": 137.691,
+      "name": "M5.4 earthquake",
+      "place": "Masohi, Indonesia",
+      "lat": -3.0627,
+      "lon": 130.3905,
       "severity": 2,
-      "date": "2026-11-07"
+      "date": "2026-11-09"
     },
     {
-      "id": "usgs-us7000twun",
+      "id": "usgs-us7000tx38",
       "type": "earthquake",
-      "name": "M5.8 earthquake",
-      "place": "central Mid-Atlantic Ridge",
-      "lat": 7.4618,
-      "lon": -36.8221,
+      "name": "M5.3 earthquake",
+      "place": "Lagunas, Peru",
+      "lat": -4.9495,
+      "lon": -75.0002,
       "severity": 2,
-      "date": "2026-11-07"
+      "date": "2026-11-09"
     },
     {
       "id": "eonet-EONET_25728",
@@ -149,124 +159,94 @@
       "date": "2026-11-05"
     },
     {
-      "id": "eonet-EONET_25964",
-      "type": "cyclone",
-      "name": "Tropical Cyclone Murasu",
-      "place": "",
-      "lat": 15.8,
-      "lon": 80.2,
-      "severity": 2,
-      "date": "2026-11-03"
-    },
-    {
-      "id": "usgs-us7000twvb",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Honmachi, Japan",
-      "lat": 32.5014,
-      "lon": 130.4721,
-      "severity": 1,
-      "date": "2026-11-08"
-    },
-    {
-      "id": "usgs-us7000twx1",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Miyako, Japan",
-      "lat": 39.8647,
-      "lon": 143.5257,
-      "severity": 1,
-      "date": "2026-11-08"
-    },
-    {
-      "id": "usgs-us7000twsp",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Fiji region",
-      "lat": -20.8363,
-      "lon": -178.7119,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twss",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Khorixas, Namibia",
-      "lat": -19.7402,
-      "lon": 14.6467,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twsy",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Pedasí, Panama",
-      "lat": 7.5067,
-      "lon": -79.921,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twt8",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Salinas, Ecuador",
-      "lat": -1.8505,
-      "lon": -81.1439,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twtv",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Masachapa, Nicaragua",
-      "lat": 11.526,
-      "lon": -87.0544,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twu1",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Ambon, Indonesia",
-      "lat": -3.905,
-      "lon": 128.5121,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twuq",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "La Gomera, Guatemala",
-      "lat": 13.5083,
-      "lon": -91.4602,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twur",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Gadung, Philippines",
-      "lat": 6.706,
-      "lon": 123.6541,
-      "severity": 1,
-      "date": "2026-11-07"
-    },
-    {
-      "id": "usgs-us7000twus",
+      "id": "usgs-us7000tx0f",
       "type": "earthquake",
       "name": "M5.1 earthquake",
-      "place": "Hihifo, Tonga",
-      "lat": -15.6837,
-      "lon": -172.9847,
+      "place": "south of the Fiji Islands",
+      "lat": -23.6774,
+      "lon": 179.2119,
       "severity": 1,
-      "date": "2026-11-07"
+      "date": "2026-11-09"
+    },
+    {
+      "id": "usgs-us7000tx0x",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "south of the Fiji Islands",
+      "lat": -25.1858,
+      "lon": -176.9956,
+      "severity": 1,
+      "date": "2026-11-09"
+    },
+    {
+      "id": "usgs-us7000tx2g",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Klyuchi, Russia",
+      "lat": 55.8343,
+      "lon": 160.9753,
+      "severity": 1,
+      "date": "2026-11-09"
+    },
+    {
+      "id": "usgs-us7000tx3c",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Tobelo, Indonesia",
+      "lat": 4.1741,
+      "lon": 127.7802,
+      "severity": 1,
+      "date": "2026-11-09"
+    },
+    {
+      "id": "usgs-us7000tx3n",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "İmamoğlu, Turkey",
+      "lat": 37.39,
+      "lon": 35.5394,
+      "severity": 1,
+      "date": "2026-11-09"
+    },
+    {
+      "id": "usgs-us7000twyc",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "central Mid-Atlantic Ridge",
+      "lat": 7.703,
+      "lon": -36.9451,
+      "severity": 1,
+      "date": "2026-11-08"
+    },
+    {
+      "id": "usgs-us7000twyd",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Tobelo, Indonesia",
+      "lat": 2.5497,
+      "lon": 128.6755,
+      "severity": 1,
+      "date": "2026-11-08"
+    },
+    {
+      "id": "usgs-us7000twz2",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Onagawa Chō, Japan",
+      "lat": 38.3782,
+      "lon": 141.937,
+      "severity": 1,
+      "date": "2026-11-08"
+    },
+    {
+      "id": "usgs-us7000twzn",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Kokopo, Papua New Guinea",
+      "lat": -5.0941,
+      "lon": 151.4884,
+      "severity": 1,
+      "date": "2026-11-08"
     }
   ]
 }
