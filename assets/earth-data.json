@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-10",
+    "updated": "2026-11-11",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-10T13:29:41.185Z",
-    "count": 8226843897,
+    "asOf": "2026-11-11T12:44:35.450Z",
+    "count": 8227036394,
     "perSecond": 2.3
   },
   "climate": [
@@ -58,16 +58,6 @@
     }
   ],
   "events": [
-    {
-      "id": "eonet-EONET_26157",
-      "type": "cyclone",
-      "name": "Typhoon Cempaka",
-      "place": "",
-      "lat": 25.4,
-      "lon": 139.9,
-      "severity": 3,
-      "date": "2026-11-10"
-    },
     {
       "id": "eonet-EONET_26258",
       "type": "wildfire",
@@ -153,28 +143,58 @@
       "type": "cyclone",
       "name": "Tropical Storm Pena",
       "place": "",
-      "lat": 11.7,
-      "lon": -163.3,
+      "lat": 10.5,
+      "lon": -165.6,
       "severity": 2,
-      "date": "2026-11-10"
+      "date": "2026-11-11"
     },
     {
-      "id": "usgs-us7000tx8d",
+      "id": "eonet-EONET_26157",
+      "type": "cyclone",
+      "name": "Typhoon Cempaka",
+      "place": "",
+      "lat": 27.7,
+      "lon": 146.7,
+      "severity": 2,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txb8",
       "type": "earthquake",
-      "name": "M5.4 earthquake",
-      "place": "Pulau Pulau Tanimbar, Indonesia",
-      "lat": -7.8742,
-      "lon": 130.2935,
+      "name": "M5.6 earthquake",
+      "place": "Puerto San José, Guatemala",
+      "lat": 13.5381,
+      "lon": -90.8798,
       "severity": 2,
       "date": "2026-11-10"
     },
     {
-      "id": "usgs-us7000tx8s",
+      "id": "usgs-us7000txbi",
       "type": "earthquake",
       "name": "M5.2 earthquake",
-      "place": "Lata, Solomon Islands",
-      "lat": -10.7818,
-      "lon": 165.6239,
+      "place": "Labuha, Indonesia",
+      "lat": -0.9226,
+      "lon": 128.7092,
+      "severity": 2,
+      "date": "2026-11-10"
+    },
+    {
+      "id": "usgs-us7000txc3",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Mid-Indian Ridge",
+      "lat": -20.7528,
+      "lon": 68.4755,
+      "severity": 2,
+      "date": "2026-11-10"
+    },
+    {
+      "id": "usgs-us7000txc0",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Popondetta, Papua New Guinea",
+      "lat": -8.7206,
+      "lon": 148.0429,
       "severity": 2,
       "date": "2026-11-10"
     },
@@ -189,114 +209,124 @@
       "date": "2026-11-08"
     },
     {
-      "id": "usgs-us7000tx8i",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "north of Franz Josef Land",
-      "lat": 86.7236,
-      "lon": 65.2936,
-      "severity": 1,
-      "date": "2026-11-10"
-    },
-    {
-      "id": "usgs-us7000tx96",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Hitachi, Japan",
-      "lat": 36.3338,
-      "lon": 141.4659,
-      "severity": 1,
-      "date": "2026-11-10"
-    },
-    {
-      "id": "usgs-us7000tx9i",
+      "id": "usgs-us7000txfz",
       "type": "earthquake",
       "name": "M4.7 earthquake",
-      "place": "Tateyama, Japan",
-      "lat": 34.1962,
-      "lon": 140.1377,
+      "place": "Tofino, Canada",
+      "lat": 49.0876,
+      "lon": -127.6912,
       "severity": 1,
-      "date": "2026-11-10"
+      "date": "2026-11-11"
     },
     {
-      "id": "usgs-us7000tx9n",
+      "id": "usgs-us7000txgg",
       "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "northern Mid-Atlantic Ridge",
-      "lat": 34.8774,
-      "lon": -35.075,
+      "name": "M4.6 earthquake",
+      "place": "Hasaki, Japan",
+      "lat": 36.1492,
+      "lon": 142.185,
       "severity": 1,
-      "date": "2026-11-10"
+      "date": "2026-11-11"
     },
     {
-      "id": "usgs-us7000tx9z",
+      "id": "usgs-us7000txgq",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Malfa, Italy",
+      "lat": 38.7563,
+      "lon": 14.2589,
+      "severity": 1,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txgv",
       "type": "earthquake",
       "name": "M5.0 earthquake",
-      "place": "Fef, Indonesia",
-      "lat": -0.4928,
-      "lon": 132.859,
+      "place": "Kuril’sk, Russia",
+      "lat": 44.3915,
+      "lon": 149.4063,
+      "severity": 1,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txhi",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "Balleny Islands region",
+      "lat": -62.4284,
+      "lon": 155.0206,
+      "severity": 1,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txi0",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Merizo Village, Guam",
+      "lat": 12.8418,
+      "lon": 143.3322,
+      "severity": 1,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txir",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "Pulau Pulau Tanimbar, Indonesia",
+      "lat": -7.9445,
+      "lon": 130.2513,
+      "severity": 1,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txis",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "Calama, Chile",
+      "lat": -22.5427,
+      "lon": -69.1693,
+      "severity": 1,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "usgs-us7000txay",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Höfn, Iceland",
+      "lat": 64.7124,
+      "lon": -17.2814,
       "severity": 1,
       "date": "2026-11-10"
     },
     {
-      "id": "usgs-us7000tx47",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Mid-Indian Ridge",
-      "lat": -28.1856,
-      "lon": 74.3713,
-      "severity": 1,
-      "date": "2026-11-09"
-    },
-    {
-      "id": "usgs-us7000tx6j",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Kirakira, Solomon Islands",
-      "lat": -10.5301,
-      "lon": 163.8048,
-      "severity": 1,
-      "date": "2026-11-09"
-    },
-    {
-      "id": "usgs-us7000tx6l",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -23.675,
-      "lon": -179.9613,
-      "severity": 1,
-      "date": "2026-11-09"
-    },
-    {
-      "id": "usgs-us7000tx6m",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Port-Olry, Vanuatu",
-      "lat": -14.2428,
-      "lon": 165.9539,
-      "severity": 1,
-      "date": "2026-11-09"
-    },
-    {
-      "id": "usgs-us7000tx7h",
+      "id": "usgs-us7000txb6",
       "type": "earthquake",
       "name": "M4.7 earthquake",
-      "place": "Attu Station, Alaska",
-      "lat": 52.7984,
-      "lon": 171.6466,
+      "place": "Java, Indonesia",
+      "lat": -6.9525,
+      "lon": 106.9355,
       "severity": 1,
-      "date": "2026-11-09"
+      "date": "2026-11-10"
     },
     {
-      "id": "usgs-us7000tx7v",
+      "id": "usgs-us7000txbj",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Lata, Solomon Islands",
+      "lat": -10.8979,
+      "lon": 165.7366,
+      "severity": 1,
+      "date": "2026-11-10"
+    },
+    {
+      "id": "usgs-us7000txea",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -24.5715,
-      "lon": -177.3757,
+      "place": "Port-Olry, Vanuatu",
+      "lat": -13.9345,
+      "lon": 165.5166,
       "severity": 1,
-      "date": "2026-11-09"
+      "date": "2026-11-10"
     }
   ]
 }
