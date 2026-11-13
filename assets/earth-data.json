@@ -1,20 +1,20 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-12",
+    "updated": "2026-11-13",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-12T13:47:41.923Z",
-    "count": 8227243822,
+    "asOf": "2026-11-13T13:08:53.189Z",
+    "count": 8227437186,
     "perSecond": 2.3
   },
   "climate": [
     {
       "key": "temp",
       "label": "Global temp anomaly",
-      "value": 1.38,
+      "value": 1.55,
       "unit": "°C",
       "trend": "up",
       "context": "vs. 1951–1980 mean",
@@ -58,6 +58,36 @@
     }
   ],
   "events": [
+    {
+      "id": "eonet-EONET_26331",
+      "type": "wildfire",
+      "name": "Wildfire Red Hill, Perry, Mississippi",
+      "place": "",
+      "lat": 31.130069,
+      "lon": -89.063853,
+      "severity": 3,
+      "date": "2026-11-12"
+    },
+    {
+      "id": "eonet-EONET_26332",
+      "type": "wildfire",
+      "name": "Prescribed Fire Bienville CPT 29 Sub 2 RX, Scott, Mississippi",
+      "place": "",
+      "lat": 32.425,
+      "lon": -89.5974,
+      "severity": 3,
+      "date": "2026-11-11"
+    },
+    {
+      "id": "eonet-EONET_26333",
+      "type": "wildfire",
+      "name": "Prescribed Fire Compartment 170 RX, Greene, Georgia",
+      "place": "",
+      "lat": 33.747313,
+      "lon": -83.259363,
+      "severity": 3,
+      "date": "2026-11-09"
+    },
     {
       "id": "eonet-EONET_26258",
       "type": "wildfire",
@@ -119,42 +149,22 @@
       "date": "2026-10-28"
     },
     {
-      "id": "eonet-EONET_25827",
-      "type": "wildfire",
-      "name": "Wildfire South Tank Trail, Perry, Mississippi",
-      "place": "",
-      "lat": 31.085833,
-      "lon": -89.097783,
-      "severity": 3,
-      "date": "2026-10-28"
-    },
-    {
-      "id": "eonet-EONET_25590",
-      "type": "wildfire",
-      "name": "Wildfire BEE HAVEN (2) (24-06), Hamilton, Florida",
-      "place": "",
-      "lat": 30.4952778,
-      "lon": -82.8577778,
-      "severity": 3,
-      "date": "2026-10-22"
-    },
-    {
       "id": "eonet-EONET_26158",
       "type": "cyclone",
       "name": "Tropical Storm Pena",
       "place": "",
       "lat": 9.8,
-      "lon": -171.3,
+      "lon": -173.2,
       "severity": 2,
       "date": "2026-11-12"
     },
     {
-      "id": "usgs-us7000txqr",
+      "id": "usgs-us7000txwp",
       "type": "earthquake",
-      "name": "M5.4 earthquake",
-      "place": "South Sandwich Islands region",
-      "lat": -59.0326,
-      "lon": -26.0288,
+      "name": "M5.8 earthquake",
+      "place": "Kavieng, Papua New Guinea",
+      "lat": -1.5882,
+      "lon": 149.8877,
       "severity": 2,
       "date": "2026-11-12"
     },
@@ -179,104 +189,144 @@
       "date": "2026-11-08"
     },
     {
-      "id": "usgs-us7000txqa",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Severo-Kuril’sk, Russia",
-      "lat": 50.4399,
-      "lon": 156.6137,
-      "severity": 1,
-      "date": "2026-11-12"
-    },
-    {
-      "id": "usgs-us7000txqx",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Noda, Japan",
-      "lat": 40.3593,
-      "lon": 143.6115,
-      "severity": 1,
-      "date": "2026-11-12"
-    },
-    {
-      "id": "usgs-us7000txrk",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "off the coast of Oregon",
-      "lat": 44.4539,
-      "lon": -129.6205,
-      "severity": 1,
-      "date": "2026-11-12"
-    },
-    {
-      "id": "usgs-us7000txjg",
+      "id": "usgs-us7000txx9",
       "type": "earthquake",
       "name": "M5.1 earthquake",
-      "place": "South Sandwich Islands region",
-      "lat": -56.0247,
-      "lon": -27.7366,
+      "place": "Moíres, Greece",
+      "lat": 34.6967,
+      "lon": 24.8798,
       "severity": 1,
-      "date": "2026-11-11"
+      "date": "2026-11-13"
     },
     {
-      "id": "usgs-us7000txm8",
-      "type": "earthquake",
-      "name": "M5.1 earthquake",
-      "place": "Panguna, Papua New Guinea",
-      "lat": -6.3288,
-      "lon": 154.7612,
-      "severity": 1,
-      "date": "2026-11-11"
-    },
-    {
-      "id": "usgs-us7000txmq",
+      "id": "usgs-us7000txxl",
       "type": "earthquake",
       "name": "M5.0 earthquake",
-      "place": "Ancud, Chile",
-      "lat": -41.5234,
-      "lon": -74.1759,
+      "place": "Mwene-Ditu, Democratic Republic of the Congo",
+      "lat": -6.9392,
+      "lon": 22.68,
       "severity": 1,
-      "date": "2026-11-11"
+      "date": "2026-11-13"
     },
     {
-      "id": "usgs-us7000txmx",
+      "id": "usgs-us7000txxv",
       "type": "earthquake",
       "name": "M4.5 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -23.5023,
-      "lon": -179.8474,
+      "place": "Levuka, Fiji",
+      "lat": -17.9443,
+      "lon": -178.0523,
       "severity": 1,
-      "date": "2026-11-11"
+      "date": "2026-11-13"
     },
     {
-      "id": "usgs-us7000txni",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Camiña, Chile",
-      "lat": -19.6783,
-      "lon": -69.3312,
-      "severity": 1,
-      "date": "2026-11-11"
-    },
-    {
-      "id": "usgs-us7000txpa",
+      "id": "usgs-us7000txxy",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Georgetown, Saint Helena",
-      "lat": -7.9928,
-      "lon": -13.3536,
+      "place": "Pagan region, Northern Mariana Islands",
+      "lat": 18.8925,
+      "lon": 145.6025,
       "severity": 1,
-      "date": "2026-11-11"
+      "date": "2026-11-13"
     },
     {
-      "id": "usgs-us7000txpk",
+      "id": "usgs-us7000txy5",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Labuan Lombok, Indonesia",
+      "lat": -8.262,
+      "lon": 116.7507,
+      "severity": 1,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "usgs-us7000txyr",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Gyalshing, India",
-      "lat": 27.8692,
-      "lon": 87.8857,
+      "place": "Río Grande, Panama",
+      "lat": 7.7821,
+      "lon": -81.4943,
       "severity": 1,
-      "date": "2026-11-11"
+      "date": "2026-11-13"
+    },
+    {
+      "id": "usgs-us7000txz0",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Barcelona, Philippines",
+      "lat": 8.2136,
+      "lon": 127.2035,
+      "severity": 1,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "usgs-us7000txz3",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "southeast of the Loyalty Islands",
+      "lat": -22.3729,
+      "lon": 173.4492,
+      "severity": 1,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "usgs-us7000txzd",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Houma, Tonga",
+      "lat": -21.3036,
+      "lon": -175.8541,
+      "severity": 1,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "usgs-us7000txsr",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Tako, Japan",
+      "lat": 35.7319,
+      "lon": 140.5102,
+      "severity": 1,
+      "date": "2026-11-12"
+    },
+    {
+      "id": "usgs-us7000txtd",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Bitung, Indonesia",
+      "lat": 1.1216,
+      "lon": 126.1127,
+      "severity": 1,
+      "date": "2026-11-12"
+    },
+    {
+      "id": "usgs-us7000txvw",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Weining, China",
+      "lat": 27.2239,
+      "lon": 104.1911,
+      "severity": 1,
+      "date": "2026-11-12"
+    },
+    {
+      "id": "usgs-us7000txw9",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "western Indian-Antarctic Ridge",
+      "lat": -51.4273,
+      "lon": 139.5909,
+      "severity": 1,
+      "date": "2026-11-12"
+    },
+    {
+      "id": "usgs-us7000txwi",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Akureyri, Iceland",
+      "lat": 64.6502,
+      "lon": -17.6047,
+      "severity": 1,
+      "date": "2026-11-12"
     }
   ]
 }
