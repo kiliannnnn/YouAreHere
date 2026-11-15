@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-14",
+    "updated": "2026-11-15",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-14T12:13:25.961Z",
-    "count": 8227628254,
+    "asOf": "2026-11-15T12:46:13.962Z",
+    "count": 8227831500,
     "perSecond": 2.3
   },
   "climate": [
@@ -149,64 +149,14 @@
       "date": "2026-10-28"
     },
     {
-      "id": "usgs-us7000ty6n",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "off the west coast of northern Sumatra",
-      "lat": 3.304,
-      "lon": 92.8261,
-      "severity": 2,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty7d",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "State of Yap, Federated States of Micronesia",
-      "lat": 9.7032,
-      "lon": 147.3631,
-      "severity": 2,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty84",
+      "id": "usgs-us7000tyca",
       "type": "earthquake",
       "name": "M5.5 earthquake",
-      "place": "northern Mid-Atlantic Ridge",
-      "lat": 30.122,
-      "lon": -42.6346,
+      "place": "Fiji region",
+      "lat": -19.5554,
+      "lon": -177.8215,
       "severity": 2,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty0s",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "West Chile Rise",
-      "lat": -36.4434,
-      "lon": -97.9785,
-      "severity": 2,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty14",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Kuqa, China",
-      "lat": 42.1734,
-      "lon": 83.6657,
-      "severity": 2,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty1a",
-      "type": "earthquake",
-      "name": "M5.8 earthquake",
-      "place": "Changuillo, Peru",
-      "lat": -14.9934,
-      "lon": -75.8807,
-      "severity": 2,
-      "date": "2026-11-13"
+      "date": "2026-11-15"
     },
     {
       "id": "eonet-EONET_26158",
@@ -229,134 +179,94 @@
       "date": "2026-11-11"
     },
     {
-      "id": "usgs-us7000ty6e",
+      "id": "usgs-us7000tybx",
       "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Fiji region",
-      "lat": -19.5803,
-      "lon": -177.739,
+      "name": "M4.8 earthquake",
+      "place": "Albardón, Argentina",
+      "lat": -31.3221,
+      "lon": -68.6822,
       "severity": 1,
-      "date": "2026-11-14"
+      "date": "2026-11-15"
     },
     {
-      "id": "usgs-us7000ty6p",
+      "id": "usgs-us7000tyd3",
       "type": "earthquake",
       "name": "M4.7 earthquake",
-      "place": "San Antonio de los Cobres, Argentina",
-      "lat": -23.9436,
-      "lon": -66.7642,
+      "place": "Houma, Tonga",
+      "lat": -20.589,
+      "lon": -175.9354,
       "severity": 1,
-      "date": "2026-11-14"
+      "date": "2026-11-15"
     },
     {
-      "id": "usgs-us7000ty73",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "western Indian-Antarctic Ridge",
-      "lat": -50.3735,
-      "lon": 139.6657,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty7h",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Hihifo, Tonga",
-      "lat": -15.0887,
-      "lon": -173.446,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty16",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Guaymate, Dominican Republic",
-      "lat": 18.5286,
-      "lon": -69.0533,
-      "severity": 1,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty3g",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -23.1808,
-      "lon": 178.9205,
-      "severity": 1,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty3q",
-      "type": "earthquake",
-      "name": "M5.1 earthquake",
-      "place": "South Sandwich Islands region",
-      "lat": -58.962,
-      "lon": -25.7253,
-      "severity": 1,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty3x",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Chaparral, Colombia",
-      "lat": 3.6793,
-      "lon": -75.5584,
-      "severity": 1,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty43",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Kavieng, Papua New Guinea",
-      "lat": -1.4671,
-      "lon": 149.9613,
-      "severity": 1,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty4n",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "La Libertad, El Salvador",
-      "lat": 13.2186,
-      "lon": -89.4564,
-      "severity": 1,
-      "date": "2026-11-13"
-    },
-    {
-      "id": "usgs-us7000ty4w",
+      "id": "usgs-us7000ty90",
       "type": "earthquake",
       "name": "M4.9 earthquake",
       "place": "south of the Kermadec Islands",
-      "lat": -32.746,
-      "lon": -178.6351,
+      "lat": -33.0019,
+      "lon": -178.3404,
       "severity": 1,
-      "date": "2026-11-13"
+      "date": "2026-11-14"
     },
     {
-      "id": "usgs-us7000ty53",
+      "id": "usgs-us7000ty9l",
       "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Yudomari, Japan",
-      "lat": 29.5604,
-      "lon": 130.4805,
+      "name": "M4.9 earthquake",
+      "place": "Tagbina, Philippines",
+      "lat": 8.3996,
+      "lon": 126.2112,
       "severity": 1,
-      "date": "2026-11-13"
+      "date": "2026-11-14"
     },
     {
-      "id": "usgs-us7000ty59",
+      "id": "usgs-us7000ty9n",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Lebu, Chile",
-      "lat": -37.922,
-      "lon": -74.7229,
+      "place": "San Antonio de los Cobres, Argentina",
+      "lat": -24.049,
+      "lon": -66.9029,
       "severity": 1,
-      "date": "2026-11-13"
+      "date": "2026-11-14"
+    },
+    {
+      "id": "usgs-us7000ty9v",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Pondaguitan, Philippines",
+      "lat": 5.5982,
+      "lon": 126.6097,
+      "severity": 1,
+      "date": "2026-11-14"
+    },
+    {
+      "id": "usgs-us7000ty9z",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "Yacuiba, Bolivia",
+      "lat": -22.2364,
+      "lon": -63.653,
+      "severity": 1,
+      "date": "2026-11-14"
+    },
+    {
+      "id": "usgs-us7000tyan",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Ruteng, Indonesia",
+      "lat": -8.3823,
+      "lon": 120.443,
+      "severity": 1,
+      "date": "2026-11-14"
+    },
+    {
+      "id": "usgs-us7000tyay",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
+      "place": "east central Pacific Ocean",
+      "lat": 3.7323,
+      "lon": -99.113,
+      "severity": 1,
+      "date": "2026-11-14"
     }
   ]
 }
