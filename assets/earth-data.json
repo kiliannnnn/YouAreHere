@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-15",
+    "updated": "2026-11-16",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-15T12:46:13.962Z",
-    "count": 8227831500,
+    "asOf": "2026-11-16T13:41:18.446Z",
+    "count": 8228037820,
     "perSecond": 2.3
   },
   "climate": [
@@ -149,12 +149,22 @@
       "date": "2026-10-28"
     },
     {
-      "id": "usgs-us7000tyca",
+      "id": "usgs-us7000tyhr",
+      "type": "earthquake",
+      "name": "M5.4 earthquake",
+      "place": "Anamizu, Japan",
+      "lat": 37.3664,
+      "lon": 136.7444,
+      "severity": 2,
+      "date": "2026-11-16"
+    },
+    {
+      "id": "usgs-us7000tyek",
       "type": "earthquake",
       "name": "M5.5 earthquake",
-      "place": "Fiji region",
-      "lat": -19.5554,
-      "lon": -177.8215,
+      "place": "Union, Philippines",
+      "lat": 9.7595,
+      "lon": 126.2,
       "severity": 2,
       "date": "2026-11-15"
     },
@@ -179,94 +189,54 @@
       "date": "2026-11-11"
     },
     {
-      "id": "usgs-us7000tybx",
+      "id": "usgs-us7000tyil",
+      "type": "earthquake",
+      "name": "M5.0 earthquake",
+      "place": "Sarangani, Philippines",
+      "lat": 4.7842,
+      "lon": 125.4267,
+      "severity": 1,
+      "date": "2026-11-16"
+    },
+    {
+      "id": "usgs-us7000tyf4",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "Gorontalo, Indonesia",
+      "lat": 1.7527,
+      "lon": 122.1345,
+      "severity": 1,
+      "date": "2026-11-15"
+    },
+    {
+      "id": "usgs-us7000tyfh",
+      "type": "earthquake",
+      "name": "M5.0 earthquake",
+      "place": "Pārūn, Afghanistan",
+      "lat": 36.0947,
+      "lon": 70.9503,
+      "severity": 1,
+      "date": "2026-11-15"
+    },
+    {
+      "id": "usgs-us7000tyg6",
+      "type": "earthquake",
+      "name": "M5.0 earthquake",
+      "place": "Ambon, Indonesia",
+      "lat": -5.9449,
+      "lon": 128.7523,
+      "severity": 1,
+      "date": "2026-11-15"
+    },
+    {
+      "id": "usgs-us7000tygk",
       "type": "earthquake",
       "name": "M4.8 earthquake",
-      "place": "Albardón, Argentina",
-      "lat": -31.3221,
-      "lon": -68.6822,
+      "place": "Petropavlovsk-Kamchatsky, Russia",
+      "lat": 52.4937,
+      "lon": 160.494,
       "severity": 1,
       "date": "2026-11-15"
-    },
-    {
-      "id": "usgs-us7000tyd3",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Houma, Tonga",
-      "lat": -20.589,
-      "lon": -175.9354,
-      "severity": 1,
-      "date": "2026-11-15"
-    },
-    {
-      "id": "usgs-us7000ty90",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "south of the Kermadec Islands",
-      "lat": -33.0019,
-      "lon": -178.3404,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty9l",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Tagbina, Philippines",
-      "lat": 8.3996,
-      "lon": 126.2112,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty9n",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "San Antonio de los Cobres, Argentina",
-      "lat": -24.049,
-      "lon": -66.9029,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty9v",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Pondaguitan, Philippines",
-      "lat": 5.5982,
-      "lon": 126.6097,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000ty9z",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Yacuiba, Bolivia",
-      "lat": -22.2364,
-      "lon": -63.653,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000tyan",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Ruteng, Indonesia",
-      "lat": -8.3823,
-      "lon": 120.443,
-      "severity": 1,
-      "date": "2026-11-14"
-    },
-    {
-      "id": "usgs-us7000tyay",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "east central Pacific Ocean",
-      "lat": 3.7323,
-      "lon": -99.113,
-      "severity": 1,
-      "date": "2026-11-14"
     }
   ]
 }
