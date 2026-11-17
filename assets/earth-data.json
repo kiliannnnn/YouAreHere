@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-16",
+    "updated": "2026-11-17",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-16T13:41:18.446Z",
-    "count": 8228037820,
+    "asOf": "2026-11-17T14:28:17.403Z",
+    "count": 8228243024,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,12 +59,62 @@
   ],
   "events": [
     {
-      "id": "eonet-EONET_26331",
-      "type": "wildfire",
-      "name": "Wildfire Red Hill, Perry, Mississippi",
+      "id": "eonet-EONET_26463",
+      "type": "cyclone",
+      "name": "Tropical Cyclone Xavier",
       "place": "",
-      "lat": 31.130069,
-      "lon": -89.063853,
+      "lat": -9.1,
+      "lon": -163.5,
+      "severity": 5,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "usgs-us7000tymu",
+      "type": "earthquake",
+      "name": "M6.6 earthquake",
+      "place": "Tual, Indonesia",
+      "lat": -6.0804,
+      "lon": 131.4868,
+      "severity": 4,
+      "date": "2026-11-16"
+    },
+    {
+      "id": "eonet-EONET_26469",
+      "type": "wildfire",
+      "name": "Prescribed Fire rx-Northern Scuppernong, Waukesha, Wisconsin",
+      "place": "",
+      "lat": 42.9241779,
+      "lon": -88.4829256,
+      "severity": 3,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "eonet-EONET_26464",
+      "type": "wildfire",
+      "name": "Wildfire 201W, Perry, Mississippi",
+      "place": "",
+      "lat": 31.119783,
+      "lon": -89.079783,
+      "severity": 3,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "eonet-EONET_26468",
+      "type": "wildfire",
+      "name": "Prescribed Fire Holly Springs 119-1 &amp; 84-2 RX, Lafayette, Mississippi",
+      "place": "",
+      "lat": 34.49329,
+      "lon": -89.421184,
+      "severity": 3,
+      "date": "2026-11-12"
+    },
+    {
+      "id": "eonet-EONET_26467",
+      "type": "wildfire",
+      "name": "Prescribed Fire 3R RX - KRUMM MP, Stevens, Washington",
+      "place": "",
+      "lat": 48.402056,
+      "lon": -117.533129,
       "severity": 3,
       "date": "2026-11-12"
     },
@@ -139,34 +189,14 @@
       "date": "2026-10-29"
     },
     {
-      "id": "eonet-EONET_26259",
-      "type": "wildfire",
-      "name": "Prescribed Fire 3R RX - DRUMMOND MP, Stevens, Washington",
-      "place": "",
-      "lat": 48.402056,
-      "lon": -117.533129,
-      "severity": 3,
-      "date": "2026-10-28"
-    },
-    {
-      "id": "usgs-us7000tyhr",
+      "id": "usgs-us7000tykh",
       "type": "earthquake",
       "name": "M5.4 earthquake",
-      "place": "Anamizu, Japan",
-      "lat": 37.3664,
-      "lon": 136.7444,
+      "place": "Changuillo, Peru",
+      "lat": -15.0306,
+      "lon": -76.0259,
       "severity": 2,
       "date": "2026-11-16"
-    },
-    {
-      "id": "usgs-us7000tyek",
-      "type": "earthquake",
-      "name": "M5.5 earthquake",
-      "place": "Union, Philippines",
-      "lat": 9.7595,
-      "lon": 126.2,
-      "severity": 2,
-      "date": "2026-11-15"
     },
     {
       "id": "eonet-EONET_26158",
@@ -179,64 +209,74 @@
       "date": "2026-11-12"
     },
     {
-      "id": "eonet-EONET_26157",
-      "type": "cyclone",
-      "name": "Typhoon Cempaka",
-      "place": "",
-      "lat": 30.2,
-      "lon": 154.1,
-      "severity": 2,
-      "date": "2026-11-11"
-    },
-    {
-      "id": "usgs-us7000tyil",
+      "id": "usgs-us7000tyq5",
       "type": "earthquake",
       "name": "M5.0 earthquake",
-      "place": "Sarangani, Philippines",
-      "lat": 4.7842,
-      "lon": 125.4267,
+      "place": "Kirakira, Solomon Islands",
+      "lat": -11.5293,
+      "lon": 162.5497,
+      "severity": 1,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "usgs-us7000tyqi",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Port-Olry, Vanuatu",
+      "lat": -15.005,
+      "lon": 167.3139,
+      "severity": 1,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "usgs-us7000tyrv",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Oxford, New Zealand",
+      "lat": -43.0226,
+      "lon": 171.805,
+      "severity": 1,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "usgs-us7000tyrw",
+      "type": "earthquake",
+      "name": "M4.9 earthquake",
+      "place": "Noda, Japan",
+      "lat": 40.6353,
+      "lon": 143.7461,
+      "severity": 1,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "usgs-us7000tysa",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Alotau, Papua New Guinea",
+      "lat": -10.2678,
+      "lon": 149.5845,
+      "severity": 1,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "usgs-us7000tymc",
+      "type": "earthquake",
+      "name": "M4.6 earthquake",
+      "place": "Kavieng, Papua New Guinea",
+      "lat": -1.7205,
+      "lon": 149.8061,
       "severity": 1,
       "date": "2026-11-16"
     },
     {
-      "id": "usgs-us7000tyf4",
+      "id": "usgs-us7000tyns",
       "type": "earthquake",
-      "name": "M5.1 earthquake",
-      "place": "Gorontalo, Indonesia",
-      "lat": 1.7527,
-      "lon": 122.1345,
+      "name": "M4.6 earthquake",
+      "place": "Isangel, Vanuatu",
+      "lat": -20.7669,
+      "lon": 169.818,
       "severity": 1,
-      "date": "2026-11-15"
-    },
-    {
-      "id": "usgs-us7000tyfh",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Pārūn, Afghanistan",
-      "lat": 36.0947,
-      "lon": 70.9503,
-      "severity": 1,
-      "date": "2026-11-15"
-    },
-    {
-      "id": "usgs-us7000tyg6",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Ambon, Indonesia",
-      "lat": -5.9449,
-      "lon": 128.7523,
-      "severity": 1,
-      "date": "2026-11-15"
-    },
-    {
-      "id": "usgs-us7000tygk",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Petropavlovsk-Kamchatsky, Russia",
-      "lat": 52.4937,
-      "lon": 160.494,
-      "severity": 1,
-      "date": "2026-11-15"
+      "date": "2026-11-16"
     }
   ]
 }
