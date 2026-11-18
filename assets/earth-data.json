@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-17",
+    "updated": "2026-11-18",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-17T14:28:17.403Z",
-    "count": 8228243024,
+    "asOf": "2026-11-18T14:03:00.122Z",
+    "count": 8228438254,
     "perSecond": 2.3
   },
   "climate": [
@@ -63,20 +63,10 @@
       "type": "cyclone",
       "name": "Tropical Cyclone Xavier",
       "place": "",
-      "lat": -9.1,
-      "lon": -163.5,
+      "lat": -10.2,
+      "lon": -164,
       "severity": 5,
-      "date": "2026-11-17"
-    },
-    {
-      "id": "usgs-us7000tymu",
-      "type": "earthquake",
-      "name": "M6.6 earthquake",
-      "place": "Tual, Indonesia",
-      "lat": -6.0804,
-      "lon": 131.4868,
-      "severity": 4,
-      "date": "2026-11-16"
+      "date": "2026-11-18"
     },
     {
       "id": "eonet-EONET_26469",
@@ -189,94 +179,164 @@
       "date": "2026-10-29"
     },
     {
-      "id": "usgs-us7000tykh",
-      "type": "earthquake",
-      "name": "M5.4 earthquake",
-      "place": "Changuillo, Peru",
-      "lat": -15.0306,
-      "lon": -76.0259,
-      "severity": 2,
-      "date": "2026-11-16"
-    },
-    {
-      "id": "eonet-EONET_26158",
+      "id": "eonet-EONET_26494",
       "type": "cyclone",
-      "name": "Tropical Storm Pena",
+      "name": "Tropical Cyclone Akvan",
       "place": "",
-      "lat": 9.8,
-      "lon": -173.2,
+      "lat": 13.1,
+      "lon": 86.9,
       "severity": 2,
-      "date": "2026-11-12"
+      "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyq5",
+      "id": "usgs-us7000tyw6",
       "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Kirakira, Solomon Islands",
-      "lat": -11.5293,
-      "lon": 162.5497,
-      "severity": 1,
+      "name": "M5.3 earthquake",
+      "place": "Karakenja, Tajikistan",
+      "lat": 39.1912,
+      "lon": 71.5875,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyw8",
+      "type": "earthquake",
+      "name": "M5.3 earthquake",
+      "place": "Comandău, Romania",
+      "lat": 45.6863,
+      "lon": 26.452,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tywi",
+      "type": "earthquake",
+      "name": "M5.8 earthquake",
+      "place": "Merizo Village, Guam",
+      "lat": 12.1387,
+      "lon": 143.8866,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyx2",
+      "type": "earthquake",
+      "name": "M5.8 earthquake",
+      "place": "Madang, Papua New Guinea",
+      "lat": -5.7009,
+      "lon": 146.5479,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyxc",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Ruteng, Indonesia",
+      "lat": -8.151,
+      "lon": 120.6489,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyxz",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Galapagos Triple Junction region",
+      "lat": 0.4346,
+      "lon": -103.0838,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyy8",
+      "type": "earthquake",
+      "name": "M5.9 earthquake",
+      "place": "San Juan, Peru",
+      "lat": -15.1438,
+      "lon": -75.9238,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyyw",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Ryōtsu-minato, Japan",
+      "lat": 38.7192,
+      "lon": 137.8725,
+      "severity": 2,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tysq",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "south of the Kermadec Islands",
+      "lat": -32.3057,
+      "lon": 179.8423,
+      "severity": 2,
       "date": "2026-11-17"
     },
     {
-      "id": "usgs-us7000tyqi",
+      "id": "usgs-us7000tywx",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Nabire, Indonesia",
+      "lat": -2.9907,
+      "lon": 136.6576,
+      "severity": 1,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "usgs-us7000tyza",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Port-Olry, Vanuatu",
-      "lat": -15.005,
-      "lon": 167.3139,
+      "place": "West Chile Rise",
+      "lat": -39.6909,
+      "lon": -91.5033,
       "severity": 1,
-      "date": "2026-11-17"
+      "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyrv",
+      "id": "usgs-us7000tyt3",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Oxford, New Zealand",
-      "lat": -43.0226,
-      "lon": 171.805,
+      "place": "Ozernovskiy, Russia",
+      "lat": 51.9624,
+      "lon": 157.7885,
       "severity": 1,
       "date": "2026-11-17"
     },
     {
-      "id": "usgs-us7000tyrw",
+      "id": "usgs-us7000tyt9",
       "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Noda, Japan",
-      "lat": 40.6353,
-      "lon": 143.7461,
+      "name": "M4.8 earthquake",
+      "place": "Kavieng, Papua New Guinea",
+      "lat": -1.6653,
+      "lon": 149.8973,
       "severity": 1,
       "date": "2026-11-17"
     },
     {
-      "id": "usgs-us7000tysa",
+      "id": "usgs-us7000tytz",
       "type": "earthquake",
       "name": "M4.5 earthquake",
-      "place": "Alotau, Papua New Guinea",
-      "lat": -10.2678,
-      "lon": 149.5845,
+      "place": "Port-Vila, Vanuatu",
+      "lat": -17.5637,
+      "lon": 168.1379,
       "severity": 1,
       "date": "2026-11-17"
     },
     {
-      "id": "usgs-us7000tymc",
+      "id": "usgs-us7000tyvt",
       "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Kavieng, Papua New Guinea",
-      "lat": -1.7205,
-      "lon": 149.8061,
+      "name": "M4.5 earthquake",
+      "place": "Owen Fracture Zone region",
+      "lat": 13.022,
+      "lon": 57.6884,
       "severity": 1,
-      "date": "2026-11-16"
-    },
-    {
-      "id": "usgs-us7000tyns",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Isangel, Vanuatu",
-      "lat": -20.7669,
-      "lon": 169.818,
-      "severity": 1,
-      "date": "2026-11-16"
+      "date": "2026-11-17"
     }
   ]
 }
