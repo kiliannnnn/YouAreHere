@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-18",
+    "updated": "2026-11-19",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-18T14:03:00.122Z",
-    "count": 8228438254,
+    "asOf": "2026-11-19T14:27:40.353Z",
+    "count": 8228640379,
     "perSecond": 2.3
   },
   "climate": [
@@ -63,9 +63,19 @@
       "type": "cyclone",
       "name": "Tropical Cyclone Xavier",
       "place": "",
-      "lat": -10.2,
-      "lon": -164,
-      "severity": 5,
+      "lat": -10.6,
+      "lon": -163.2,
+      "severity": 4,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "usgs-us7000tz37",
+      "type": "earthquake",
+      "name": "M6.1 earthquake",
+      "place": "Pacific-Antarctic Ridge",
+      "lat": -57.7514,
+      "lon": -146.746,
+      "severity": 3,
       "date": "2026-11-18"
     },
     {
@@ -183,160 +193,130 @@
       "type": "cyclone",
       "name": "Tropical Cyclone Akvan",
       "place": "",
-      "lat": 13.1,
-      "lon": 86.9,
+      "lat": 15.1,
+      "lon": 85.4,
       "severity": 2,
-      "date": "2026-11-18"
+      "date": "2026-11-19"
     },
     {
-      "id": "usgs-us7000tyw6",
+      "id": "usgs-us6000ubxb",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Teluk Dalam, Indonesia",
+      "lat": 0.5027,
+      "lon": 96.6318,
+      "severity": 2,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "usgs-us7000tz1a",
       "type": "earthquake",
       "name": "M5.3 earthquake",
-      "place": "Karakenja, Tajikistan",
-      "lat": 39.1912,
-      "lon": 71.5875,
-      "severity": 2,
-      "date": "2026-11-18"
-    },
-    {
-      "id": "usgs-us7000tyw8",
-      "type": "earthquake",
-      "name": "M5.3 earthquake",
-      "place": "Comandău, Romania",
-      "lat": 45.6863,
-      "lon": 26.452,
-      "severity": 2,
-      "date": "2026-11-18"
-    },
-    {
-      "id": "usgs-us7000tywi",
-      "type": "earthquake",
-      "name": "M5.8 earthquake",
       "place": "Merizo Village, Guam",
-      "lat": 12.1387,
-      "lon": 143.8866,
+      "lat": 12.0918,
+      "lon": 143.9927,
       "severity": 2,
       "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyx2",
+      "id": "usgs-us7000tz1n",
       "type": "earthquake",
-      "name": "M5.8 earthquake",
-      "place": "Madang, Papua New Guinea",
-      "lat": -5.7009,
-      "lon": 146.5479,
+      "name": "M5.3 earthquake",
+      "place": "Tsunagi, Japan",
+      "lat": 32.2779,
+      "lon": 130.4609,
       "severity": 2,
       "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyxc",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Ruteng, Indonesia",
-      "lat": -8.151,
-      "lon": 120.6489,
-      "severity": 2,
-      "date": "2026-11-18"
-    },
-    {
-      "id": "usgs-us7000tyxz",
+      "id": "usgs-us6000ubw3",
       "type": "earthquake",
       "name": "M5.2 earthquake",
-      "place": "Galapagos Triple Junction region",
-      "lat": 0.4346,
-      "lon": -103.0838,
+      "place": "Attu Station, Alaska",
+      "lat": 51.3379,
+      "lon": 172.8596,
       "severity": 2,
       "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyy8",
+      "id": "usgs-us6000ubxa",
       "type": "earthquake",
-      "name": "M5.9 earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Kilimatinde, Tanzania",
+      "lat": -5.5109,
+      "lon": 35.0903,
+      "severity": 1,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "usgs-us6000uby4",
+      "type": "earthquake",
+      "name": "M4.8 earthquake",
+      "place": "Guayaquil, Ecuador",
+      "lat": -2.4019,
+      "lon": -79.8204,
+      "severity": 1,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "usgs-us6000ubyt",
+      "type": "earthquake",
+      "name": "M4.7 earthquake",
       "place": "San Juan, Peru",
-      "lat": -15.1438,
-      "lon": -75.9238,
-      "severity": 2,
-      "date": "2026-11-18"
-    },
-    {
-      "id": "usgs-us7000tyyw",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "Ryōtsu-minato, Japan",
-      "lat": 38.7192,
-      "lon": 137.8725,
-      "severity": 2,
-      "date": "2026-11-18"
-    },
-    {
-      "id": "usgs-us7000tysq",
-      "type": "earthquake",
-      "name": "M5.2 earthquake",
-      "place": "south of the Kermadec Islands",
-      "lat": -32.3057,
-      "lon": 179.8423,
-      "severity": 2,
-      "date": "2026-11-17"
-    },
-    {
-      "id": "usgs-us7000tywx",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Nabire, Indonesia",
-      "lat": -2.9907,
-      "lon": 136.6576,
+      "lat": -15.3841,
+      "lon": -76.0248,
       "severity": 1,
-      "date": "2026-11-18"
+      "date": "2026-11-19"
     },
     {
-      "id": "usgs-us7000tyza",
+      "id": "usgs-us6000ubz1",
+      "type": "earthquake",
+      "name": "M5.0 earthquake",
+      "place": "Rabaul, Papua New Guinea",
+      "lat": -4.2965,
+      "lon": 151.8945,
+      "severity": 1,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "usgs-us6000ubzm",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "West Chile Rise",
-      "lat": -39.6909,
-      "lon": -91.5033,
+      "place": "Atka, Alaska",
+      "lat": 51.6797,
+      "lon": -174.66,
+      "severity": 1,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "usgs-us7000tz33",
+      "type": "earthquake",
+      "name": "M4.5 earthquake",
+      "place": "Ollagüe, Chile",
+      "lat": -21.411,
+      "lon": -68.368,
       "severity": 1,
       "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyt3",
+      "id": "usgs-us6000ubvu",
       "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Ozernovskiy, Russia",
-      "lat": 51.9624,
-      "lon": 157.7885,
+      "name": "M4.7 earthquake",
+      "place": "Lorengau, Papua New Guinea",
+      "lat": -2.9421,
+      "lon": 146.4693,
       "severity": 1,
-      "date": "2026-11-17"
+      "date": "2026-11-18"
     },
     {
-      "id": "usgs-us7000tyt9",
+      "id": "usgs-us6000ubwa",
       "type": "earthquake",
       "name": "M4.8 earthquake",
-      "place": "Kavieng, Papua New Guinea",
-      "lat": -1.6653,
-      "lon": 149.8973,
+      "place": "Santa Gertrudis Miramar, Mexico",
+      "lat": 15.9616,
+      "lon": -95.4267,
       "severity": 1,
-      "date": "2026-11-17"
-    },
-    {
-      "id": "usgs-us7000tytz",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Port-Vila, Vanuatu",
-      "lat": -17.5637,
-      "lon": 168.1379,
-      "severity": 1,
-      "date": "2026-11-17"
-    },
-    {
-      "id": "usgs-us7000tyvt",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Owen Fracture Zone region",
-      "lat": 13.022,
-      "lon": 57.6884,
-      "severity": 1,
-      "date": "2026-11-17"
+      "date": "2026-11-18"
     }
   ]
 }
