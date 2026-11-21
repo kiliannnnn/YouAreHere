@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-20",
+    "updated": "2026-11-21",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-20T14:02:55.132Z",
-    "count": 8228835683,
+    "asOf": "2026-11-21T13:29:32.501Z",
+    "count": 8229029797,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,24 +59,84 @@
   ],
   "events": [
     {
-      "id": "eonet-EONET_26463",
-      "type": "cyclone",
-      "name": "Tropical Cyclone Xavier",
-      "place": "",
-      "lat": -11,
-      "lon": -162.8,
-      "severity": 3,
-      "date": "2026-11-20"
+      "id": "usgs-us6000ucfm",
+      "type": "earthquake",
+      "name": "M6.7 earthquake",
+      "place": "Carhuamayo, Peru",
+      "lat": -10.8548,
+      "lon": -75.9779,
+      "severity": 4,
+      "date": "2026-11-21"
     },
     {
-      "id": "eonet-EONET_26469",
+      "id": "usgs-us6000ucij",
+      "type": "earthquake",
+      "name": "M6.8 earthquake",
+      "place": "Lospalos, Timor Leste",
+      "lat": -7.7324,
+      "lon": 127.5407,
+      "severity": 4,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "eonet-EONET_26572",
       "type": "wildfire",
-      "name": "Prescribed Fire rx-Northern Scuppernong, Waukesha, Wisconsin",
+      "name": "Prescribed Fire rx-Lapham Good Oak 2026, Waukesha, Wisconsin",
       "place": "",
-      "lat": 42.9241779,
-      "lon": -88.4829256,
+      "lat": 43.0403647,
+      "lon": -88.3992015,
       "severity": 3,
-      "date": "2026-11-13"
+      "date": "2026-11-18"
+    },
+    {
+      "id": "eonet-EONET_26571",
+      "type": "wildfire",
+      "name": "Prescribed Fire OAK Compartment 29 RX, Bibb, Alabama",
+      "place": "",
+      "lat": 32.945935,
+      "lon": -87.347136,
+      "severity": 3,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "eonet-EONET_26569",
+      "type": "wildfire",
+      "name": "Prescribed Fire 2027 TXTMR HFR RX, Matagorda, Texas",
+      "place": "",
+      "lat": 28.762433,
+      "lon": -95.80795,
+      "severity": 3,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "eonet-EONET_26568",
+      "type": "wildfire",
+      "name": "Wildfire Greene - Caney Creek Lane, Greene, Tennessee",
+      "place": "",
+      "lat": 36.36301667,
+      "lon": -82.7985,
+      "severity": 3,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "eonet-EONET_26575",
+      "type": "wildfire",
+      "name": "Prescribed Fire Elk/Clark Piles RX, Coconino, Arizona",
+      "place": "",
+      "lat": 35.050444,
+      "lon": -111.578139,
+      "severity": 3,
+      "date": "2026-11-16"
+    },
+    {
+      "id": "eonet-EONET_26573",
+      "type": "wildfire",
+      "name": "Prescribed Fire STEELY MILL RX, El Dorado, California",
+      "place": "",
+      "lat": 38.619383,
+      "lon": -120.50025,
+      "severity": 3,
+      "date": "2026-11-16"
     },
     {
       "id": "eonet-EONET_26464",
@@ -109,6 +169,16 @@
       "date": "2026-11-12"
     },
     {
+      "id": "eonet-EONET_26576",
+      "type": "wildfire",
+      "name": "Prescribed Fire TSK Compartment 6 RX, Macon, Alabama",
+      "place": "",
+      "lat": 32.446972,
+      "lon": -85.653222,
+      "severity": 3,
+      "date": "2026-11-11"
+    },
+    {
       "id": "eonet-EONET_26332",
       "type": "wildfire",
       "name": "Prescribed Fire Bienville CPT 29 Sub 2 RX, Scott, Mississippi",
@@ -117,6 +187,16 @@
       "lon": -89.5974,
       "severity": 3,
       "date": "2026-11-11"
+    },
+    {
+      "id": "eonet-EONET_26577",
+      "type": "wildfire",
+      "name": "Prescribed Fire Strawberry RX, Wasatch, Utah",
+      "place": "",
+      "lat": 40.31,
+      "lon": -111.2668,
+      "severity": 3,
+      "date": "2026-11-10"
     },
     {
       "id": "eonet-EONET_26333",
@@ -139,16 +219,6 @@
       "date": "2026-11-05"
     },
     {
-      "id": "eonet-EONET_26260",
-      "type": "wildfire",
-      "name": "Prescribed Fire Cold Springs RX, Wasatch, Utah",
-      "place": "",
-      "lat": 40.511329,
-      "lon": -110.943493,
-      "severity": 3,
-      "date": "2026-11-03"
-    },
-    {
       "id": "eonet-EONET_26057",
       "type": "wildfire",
       "name": "Wildfire Wild River, Coos, New Hampshire",
@@ -159,34 +229,34 @@
       "date": "2026-11-02"
     },
     {
-      "id": "eonet-EONET_25984",
-      "type": "wildfire",
-      "name": "Prescribed Fire Dry Lake Hills Piles RX, Coconino, Arizona",
+      "id": "eonet-EONET_26463",
+      "type": "cyclone",
+      "name": "Tropical Cyclone Xavier",
       "place": "",
-      "lat": 35.266667,
-      "lon": -111.616667,
-      "severity": 3,
-      "date": "2026-10-30"
+      "lat": -11.6,
+      "lon": -164.7,
+      "severity": 2,
+      "date": "2026-11-21"
     },
     {
-      "id": "usgs-us6000uc4v",
+      "id": "usgs-us6000ucky",
       "type": "earthquake",
-      "name": "M5.6 earthquake",
-      "place": "southeast of the Loyalty Islands",
-      "lat": -24.6996,
-      "lon": 171.2326,
+      "name": "M5.2 earthquake",
+      "place": "Tateyama, Japan",
+      "lat": 34.0109,
+      "lon": 140.2109,
       "severity": 2,
-      "date": "2026-11-20"
+      "date": "2026-11-21"
     },
     {
-      "id": "usgs-us6000uc82",
+      "id": "usgs-us6000ucly",
       "type": "earthquake",
-      "name": "M5.4 earthquake",
-      "place": "Carlsberg Ridge",
-      "lat": 9.7949,
-      "lon": 57.7485,
+      "name": "M5.9 earthquake",
+      "place": "Yanglong, China",
+      "lat": 37.1958,
+      "lon": 96.6398,
       "severity": 2,
-      "date": "2026-11-20"
+      "date": "2026-11-21"
     },
     {
       "id": "eonet-EONET_26494",
@@ -199,104 +269,74 @@
       "date": "2026-11-19"
     },
     {
-      "id": "usgs-us6000uc2q",
+      "id": "usgs-us6000ucg8",
       "type": "earthquake",
-      "name": "M5.3 earthquake",
-      "place": "South Georgia Island region",
-      "lat": -55.0035,
-      "lon": -33.5069,
-      "severity": 2,
-      "date": "2026-11-19"
-    },
-    {
-      "id": "usgs-us6000uc5s",
-      "type": "earthquake",
-      "name": "M4.8 earthquake",
-      "place": "Calingasta, Argentina",
-      "lat": -31.4302,
-      "lon": -69.1883,
+      "name": "M4.7 earthquake",
+      "place": "Calama, Chile",
+      "lat": -22.2307,
+      "lon": -68.6409,
       "severity": 1,
-      "date": "2026-11-20"
+      "date": "2026-11-21"
     },
     {
-      "id": "usgs-us6000uc6c",
+      "id": "usgs-us6000ucga",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Madang, Papua New Guinea",
-      "lat": -5.219,
-      "lon": 145.2974,
+      "place": "Reykjanes Ridge",
+      "lat": 58.3017,
+      "lon": -31.7606,
       "severity": 1,
-      "date": "2026-11-20"
+      "date": "2026-11-21"
     },
     {
-      "id": "usgs-nc75468702",
+      "id": "usgs-us6000uci2",
       "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Pinnacles, CA",
-      "lat": 36.5934982299805,
-      "lon": -121.220664978027,
+      "name": "M4.9 earthquake",
+      "place": "Port-Vila, Vanuatu",
+      "lat": -17.1789,
+      "lon": 168.0998,
       "severity": 1,
-      "date": "2026-11-20"
+      "date": "2026-11-21"
     },
     {
-      "id": "usgs-us6000uc8d",
+      "id": "usgs-aka2026xblysq",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Koróni, Greece",
-      "lat": 36.4406,
-      "lon": 22.082,
+      "place": "Akhiok, Alaska",
+      "lat": 55.071,
+      "lon": -153.842,
       "severity": 1,
-      "date": "2026-11-20"
+      "date": "2026-11-21"
     },
     {
-      "id": "usgs-us6000uc96",
+      "id": "usgs-us6000uc9c",
       "type": "earthquake",
-      "name": "M5.1 earthquake",
-      "place": "Balangonan, Philippines",
-      "lat": 5.4441,
-      "lon": 125.2986,
-      "severity": 1,
-      "date": "2026-11-20"
-    },
-    {
-      "id": "usgs-us6000uc1x",
-      "type": "earthquake",
-      "name": "M5.1 earthquake",
+      "name": "M4.7 earthquake",
       "place": "Illapel, Chile",
-      "lat": -31.8465,
-      "lon": -72.1843,
+      "lat": -31.7842,
+      "lon": -72.1485,
       "severity": 1,
-      "date": "2026-11-19"
+      "date": "2026-11-20"
     },
     {
-      "id": "usgs-us6000uc26",
+      "id": "usgs-us6000ucd6",
+      "type": "earthquake",
+      "name": "M5.1 earthquake",
+      "place": "Port-Olry, Vanuatu",
+      "lat": -14.835,
+      "lon": 167.29,
+      "severity": 1,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "usgs-us6000ucf0",
       "type": "earthquake",
       "name": "M4.9 earthquake",
-      "place": "Xichang, China",
-      "lat": 27.9346,
-      "lon": 102.1326,
+      "place": "Pangai, Tonga",
+      "lat": -20.3204,
+      "lon": -173.4099,
       "severity": 1,
-      "date": "2026-11-19"
-    },
-    {
-      "id": "usgs-us6000uc2t",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "central East Pacific Rise",
-      "lat": -9.1894,
-      "lon": -109.9127,
-      "severity": 1,
-      "date": "2026-11-19"
-    },
-    {
-      "id": "usgs-us6000uc3v",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Tual, Indonesia",
-      "lat": -6.0263,
-      "lon": 130.6505,
-      "severity": 1,
-      "date": "2026-11-19"
+      "date": "2026-11-20"
     }
   ]
 }
