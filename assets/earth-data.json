@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-23",
+    "updated": "2026-11-24",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-23T16:00:55.525Z",
-    "count": 8229448128,
+    "asOf": "2026-11-24T15:54:58.748Z",
+    "count": 8229646027,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,14 +59,24 @@
   ],
   "events": [
     {
-      "id": "usgs-us6000ucvm",
+      "id": "usgs-us6000ud6h",
       "type": "earthquake",
-      "name": "M6.5 earthquake",
-      "place": "Vanuatu region",
-      "lat": -13.5846,
-      "lon": 172.2672,
-      "severity": 4,
-      "date": "2026-11-23"
+      "name": "M6.4 earthquake",
+      "place": "Mauritius - Reunion region",
+      "lat": -17.7049,
+      "lon": 65.6995,
+      "severity": 3,
+      "date": "2026-11-24"
+    },
+    {
+      "id": "eonet-EONET_26661",
+      "type": "wildfire",
+      "name": "Wildfire Little Ridge, Highland, Virginia",
+      "place": "",
+      "lat": 38.313617,
+      "lon": -79.791367,
+      "severity": 3,
+      "date": "2026-11-21"
     },
     {
       "id": "eonet-EONET_26572",
@@ -115,6 +125,16 @@
       "place": "",
       "lat": 35.050444,
       "lon": -111.578139,
+      "severity": 3,
+      "date": "2026-11-16"
+    },
+    {
+      "id": "eonet-EONET_26665",
+      "type": "wildfire",
+      "name": "Prescribed Fire RX D7 Second Skinny Landings, Mineral, Montana",
+      "place": "",
+      "lat": 47.122717,
+      "lon": -114.752017,
       "severity": 3,
       "date": "2026-11-16"
     },
@@ -209,6 +229,26 @@
       "date": "2026-11-05"
     },
     {
+      "id": "usgs-us6000ud3i",
+      "type": "earthquake",
+      "name": "M5.3 earthquake",
+      "place": "Mangan, India",
+      "lat": 27.8328,
+      "lon": 87.9467,
+      "severity": 2,
+      "date": "2026-11-24"
+    },
+    {
+      "id": "usgs-us6000ud6z",
+      "type": "earthquake",
+      "name": "M5.2 earthquake",
+      "place": "Puerto Madero, Mexico",
+      "lat": 14.442,
+      "lon": -93.2417,
+      "severity": 2,
+      "date": "2026-11-24"
+    },
+    {
       "id": "eonet-EONET_26463",
       "type": "cyclone",
       "name": "Tropical Cyclone Xavier",
@@ -217,36 +257,6 @@
       "lon": -168.8,
       "severity": 2,
       "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucx6",
-      "type": "earthquake",
-      "name": "M5.4 earthquake",
-      "place": "Lospalos, Timor Leste",
-      "lat": -7.4408,
-      "lon": 128.2414,
-      "severity": 2,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucxi",
-      "type": "earthquake",
-      "name": "M5.5 earthquake",
-      "place": "west of Macquarie Island",
-      "lat": -60.6317,
-      "lon": 153.8482,
-      "severity": 2,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucuf",
-      "type": "earthquake",
-      "name": "M5.4 earthquake",
-      "place": "Carhuamayo, Peru",
-      "lat": -10.8345,
-      "lon": -76.0169,
-      "severity": 2,
-      "date": "2026-11-22"
     },
     {
       "id": "eonet-EONET_26494",
@@ -259,134 +269,54 @@
       "date": "2026-11-19"
     },
     {
-      "id": "usgs-us6000ucv4",
+      "id": "usgs-us6000ud3m",
       "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Bitung, Indonesia",
-      "lat": 2.9773,
-      "lon": 126.4079,
+      "name": "M4.5 earthquake",
+      "place": "La Tronosa, Panama",
+      "lat": 7.5171,
+      "lon": -80.6224,
       "severity": 1,
-      "date": "2026-11-23"
+      "date": "2026-11-24"
     },
     {
-      "id": "usgs-us6000ucvh",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Kuqa, China",
-      "lat": 41.9264,
-      "lon": 82.544,
-      "severity": 1,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucwd",
+      "id": "usgs-us6000ud73",
       "type": "earthquake",
       "name": "M5.0 earthquake",
-      "place": "Kokopo, Papua New Guinea",
-      "lat": -4.7591,
-      "lon": 153.6467,
+      "place": "Piti Village, Guam",
+      "lat": 13.5637,
+      "lon": 144.4957,
       "severity": 1,
-      "date": "2026-11-23"
+      "date": "2026-11-24"
     },
     {
-      "id": "usgs-us6000ucws",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Bitung, Indonesia",
-      "lat": 1.3824,
-      "lon": 126.1133,
-      "severity": 1,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucxy",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Vanuatu region",
-      "lat": -13.7025,
-      "lon": 170.8708,
-      "severity": 1,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucy6",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Tyrma, Russia",
-      "lat": 49.7598,
-      "lon": 131.5672,
-      "severity": 1,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucy7",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "Finschhafen, Papua New Guinea",
-      "lat": -6.7526,
-      "lon": 147.6543,
-      "severity": 1,
-      "date": "2026-11-23"
-    },
-    {
-      "id": "usgs-us6000ucyd",
+      "id": "usgs-us6000ud7h",
       "type": "earthquake",
       "name": "M4.8 earthquake",
-      "place": "Tobi Village, Palau",
-      "lat": 1.3368,
-      "lon": 132.0172,
+      "place": "Vallenar, Chile",
+      "lat": -28.6118,
+      "lon": -71.4886,
       "severity": 1,
-      "date": "2026-11-23"
+      "date": "2026-11-24"
     },
     {
-      "id": "usgs-us6000uctj",
-      "type": "earthquake",
-      "name": "M4.6 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -24.8265,
-      "lon": 179.6648,
-      "severity": 1,
-      "date": "2026-11-22"
-    },
-    {
-      "id": "usgs-us6000ucu7",
+      "id": "usgs-us6000ud7z",
       "type": "earthquake",
       "name": "M4.7 earthquake",
-      "place": "Isangel, Vanuatu",
-      "lat": -19.6421,
-      "lon": 169.0592,
+      "place": "Güvercinlik, Turkey",
+      "lat": 37.0918,
+      "lon": 27.779,
       "severity": 1,
-      "date": "2026-11-22"
+      "date": "2026-11-24"
     },
     {
-      "id": "usgs-us6000ucu8",
+      "id": "usgs-us6000ud2y",
       "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "south of the Fiji Islands",
-      "lat": -22.0776,
-      "lon": -178.1773,
+      "name": "M4.6 earthquake",
+      "place": "Merizo Village, Guam",
+      "lat": 12.276,
+      "lon": 144.0194,
       "severity": 1,
-      "date": "2026-11-22"
-    },
-    {
-      "id": "usgs-us6000ucuj",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "Calama, Chile",
-      "lat": -21.9972,
-      "lon": -68.7311,
-      "severity": 1,
-      "date": "2026-11-22"
-    },
-    {
-      "id": "usgs-us6000ucuk",
-      "type": "earthquake",
-      "name": "M4.9 earthquake",
-      "place": "Port-Olry, Vanuatu",
-      "lat": -14.1955,
-      "lon": 165.7555,
-      "severity": 1,
-      "date": "2026-11-22"
+      "date": "2026-11-23"
     }
   ]
 }
