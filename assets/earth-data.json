@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Planetary readings",
-    "updated": "2026-11-25",
+    "updated": "2026-11-26",
     "source": "USGS · NASA EONET · NASA FIRMS · NOAA · NASA GISTEMP — refreshed daily by GitHub Actions.",
     "note": "Disaster dots warm toward the dominant nearby event hue; severity (1–5) drives the blend."
   },
   "population": {
-    "asOf": "2026-11-25T15:38:38.245Z",
-    "count": 8229842492,
+    "asOf": "2026-11-26T15:20:36.831Z",
+    "count": 8230038725,
     "perSecond": 2.3
   },
   "climate": [
@@ -59,104 +59,54 @@
   ],
   "events": [
     {
-      "id": "usgs-us6000udd1",
-      "type": "earthquake",
-      "name": "M5.9 earthquake",
-      "place": "Balleny Islands region",
-      "lat": -63.0918,
-      "lon": 170.9371,
-      "severity": 2,
-      "date": "2026-11-25"
-    },
-    {
-      "id": "usgs-us6000ude3",
+      "id": "usgs-us6000udjx",
       "type": "earthquake",
       "name": "M5.2 earthquake",
       "place": "Hicks Bay, New Zealand",
-      "lat": -36.0191,
-      "lon": 178.3688,
+      "lat": -35.9665,
+      "lon": 178.6429,
       "severity": 2,
-      "date": "2026-11-25"
+      "date": "2026-11-26"
     },
     {
-      "id": "usgs-us6000udef",
+      "id": "usgs-us6000udm8",
       "type": "earthquake",
-      "name": "M5.3 earthquake",
-      "place": "Hengchun, Taiwan",
-      "lat": 21.8162,
-      "lon": 121.5241,
+      "name": "M5.5 earthquake",
+      "place": "Taliwang, Indonesia",
+      "lat": -10.5618,
+      "lon": 117.1955,
       "severity": 2,
-      "date": "2026-11-25"
+      "date": "2026-11-26"
     },
     {
-      "id": "usgs-us6000uddj",
+      "id": "usgs-us6000udmc",
       "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Kimbe, Papua New Guinea",
-      "lat": -6.3544,
-      "lon": 151.5376,
-      "severity": 1,
-      "date": "2026-11-25"
+      "name": "M5.2 earthquake",
+      "place": "Houma, Tonga",
+      "lat": -20.5363,
+      "lon": -177.7629,
+      "severity": 2,
+      "date": "2026-11-26"
     },
     {
-      "id": "usgs-us6000udf2",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Luwuk, Indonesia",
-      "lat": -0.3849,
-      "lon": 123.0018,
-      "severity": 1,
-      "date": "2026-11-25"
-    },
-    {
-      "id": "usgs-us6000ud7z",
-      "type": "earthquake",
-      "name": "M4.7 earthquake",
-      "place": "Güvercinlik, Turkey",
-      "lat": 37.0918,
-      "lon": 27.779,
-      "severity": 1,
-      "date": "2026-11-24"
-    },
-    {
-      "id": "usgs-us6000udb8",
+      "id": "usgs-us6000udki",
       "type": "earthquake",
       "name": "M4.6 earthquake",
-      "place": "Ovalle, Chile",
-      "lat": -30.9455,
-      "lon": -71.5206,
+      "place": "Puerto Madero, Mexico",
+      "lat": 14.164,
+      "lon": -93.126,
       "severity": 1,
-      "date": "2026-11-24"
+      "date": "2026-11-26"
     },
     {
-      "id": "usgs-us6000udbn",
-      "type": "earthquake",
-      "name": "M5.0 earthquake",
-      "place": "Kokopo, Papua New Guinea",
-      "lat": -5.6002,
-      "lon": 153.6843,
-      "severity": 1,
-      "date": "2026-11-24"
-    },
-    {
-      "id": "usgs-us6000udcc",
-      "type": "earthquake",
-      "name": "M4.5 earthquake",
-      "place": "San Juan, Peru",
-      "lat": -15.3841,
-      "lon": -75.766,
-      "severity": 1,
-      "date": "2026-11-24"
-    },
-    {
-      "id": "usgs-us6000udck",
+      "id": "usgs-us6000udht",
       "type": "earthquake",
       "name": "M4.7 earthquake",
-      "place": "Cabatuan, Philippines",
-      "lat": 10.9039,
-      "lon": 122.4796,
+      "place": "Port-Vila, Vanuatu",
+      "lat": -17.6508,
+      "lon": 168.224,
       "severity": 1,
-      "date": "2026-11-24"
+      "date": "2026-11-25"
     }
   ]
 }
